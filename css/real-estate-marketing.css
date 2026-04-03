@@ -1,0 +1,273 @@
+/* Real Estate Lead Domination Landing Page Styles */
+
+.re-hero {
+  padding: 120px 24px 70px;
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.re-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.re-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.re-hero-content h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(38px, 5vw, 64px);
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+.re-hero-content h1 .highlight {
+  color: var(--c-accent);
+}
+
+.re-hero-content p {
+  font-size: 18px;
+  color: var(--c-muted);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.re-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.re-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #334155;
+  font-size: 16px;
+}
+
+.re-benefit-item svg {
+  color: #00b894;
+  flex-shrink: 0;
+}
+
+.re-hero-media {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.re-hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.re-metrics-bar {
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 24px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+}
+
+.re-metrics-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.re-metric-item h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  margin: 0 0 4px;
+  color: #fff;
+}
+
+.re-metric-item p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.re-section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.re-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.re-section-header h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0 0 16px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.re-section-header p {
+  font-size: 18px;
+  color: var(--c-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.re-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.re-feature-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.re-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+.re-feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(108, 99, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--c-accent);
+}
+
+.re-feature-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  margin: 0 0 12px;
+  color: #0f172a;
+}
+
+.re-feature-card p {
+  margin: 0;
+  color: var(--c-muted);
+  line-height: 1.6;
+}
+
+.re-social-proof {
+  background: var(--c-surface);
+  padding: 80px 24px;
+  border-radius: 24px;
+  margin: 40px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.re-social-proof h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  margin: 0 0 30px;
+}
+
+.re-cta-section {
+  background: linear-gradient(135deg, var(--c-accent), #4f46e5);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 1000px;
+  margin: 80px auto;
+}
+
+.re-cta-section h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.re-cta-section p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.re-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--c-accent);
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.re-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .re-hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .re-hero-media {
+    order: -1;
+  }
+  .re-metrics-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .re-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .re-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .re-metrics-inner {
+    grid-template-columns: 1fr;
+  }
+}

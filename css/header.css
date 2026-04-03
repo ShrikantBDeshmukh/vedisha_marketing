@@ -1,0 +1,136 @@
+/* =========================================
+   Global Header – Vedisha Marketing
+   ========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9997;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.site-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--c-text);
+}
+
+.site-brand__mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 800;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 1), rgba(0, 212, 170, 1));
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.18);
+}
+
+.site-brand__text {
+  font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-nav a {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(71, 85, 105, 0.92);
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 12px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--c-text);
+  background: rgba(15, 23, 42, 0.05);
+  transform: translateY(-1px);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--c-text);
+  background: rgba(108, 99, 255, 0.10);
+  border: 1px solid rgba(108, 99, 255, 0.22);
+}
+
+.site-nav__cta {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+  border: 0;
+  font-weight: 700;
+}
+
+.site-nav__cta:hover {
+  background: linear-gradient(135deg, #00d4aa, #6c63ff);
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 64px;
+    left: 12px;
+    right: 12px;
+    display: none;
+    flex-direction: column;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--c-border);
+    box-shadow: var(--shadow-2);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
