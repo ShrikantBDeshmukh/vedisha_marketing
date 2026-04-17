@@ -5,6 +5,7 @@ const dir = process.cwd();
 const htmlFiles = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 
 const MASTER_HEADER = `  <header class="site-header" id="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-header__inner">
       <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
          <div class="site-brand__mark">V</div>
@@ -43,7 +44,7 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="work.html">Work</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
@@ -94,7 +95,6 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
         </div>
       </div>
     </div>
-    <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button>
   </footer>`;
 
 htmlFiles.forEach(file => {
