@@ -3,12 +3,14 @@
    ========================================= */
 
 .compare-wrap {
-  overflow: hidden;
+  overflow-x: auto !important;
+  display: block;
   border-radius: var(--radius-lg);
   border: 1px solid var(--c-border);
   background: #fff;
   box-shadow: var(--shadow-2);
   margin-bottom: 80px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .compare-table {
@@ -45,6 +47,12 @@
 
 .compare-table tr:last-child td {
   border-bottom: none;
+}
+
+.table-wrapper {
+  overflow-x: auto !important;
+  display: block;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 768px) {

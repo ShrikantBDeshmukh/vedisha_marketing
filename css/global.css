@@ -43,7 +43,7 @@
   --fs-h3: clamp(1.75rem, 5vw, 2.5rem);
   --fs-h4: clamp(1.25rem, 4vw, 1.75rem);
   --fs-body: clamp(1rem, 1.2vw, 1.25rem);
-  --fs-sm: 0.875rem;
+  --fs-sm: 0.9375rem; /* ~15px */
 }
 
 /* Global Responsive Base */
@@ -51,6 +51,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Smooth Scrolling (avoid for reduced motion users) */
@@ -75,6 +79,9 @@ body {
   line-height: 1.6;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }
 
 /* Fluid Headings with premium tracking */
@@ -161,7 +168,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: var(--space-sm) var(--space-lg);
+  padding: 16px 32px;
+  min-height: 48px;
   border-radius: 99px;
   text-decoration: none;
   font-family: var(--font-display);

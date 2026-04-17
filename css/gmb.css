@@ -72,6 +72,13 @@
   gap: 32px;
 }
 
+.table-wrapper {
+  overflow-x: auto !important;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 32px;
+}
+
 .card {
   background: #fff;
   border: 1px solid var(--c-border);
@@ -88,12 +95,9 @@
 
 .gmb-pricing-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   background: #fff;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--c-border);
-  box-shadow: var(--shadow-2);
 }
 
 .gmb-pricing-table th {
