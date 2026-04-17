@@ -1,0 +1,131 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{CANONICAL_URL}}#organization",
+      "name": "{{BUSINESS_NAME}}",
+      "legalName": "{{LEGAL_NAME}}",
+      "url": "{{WEBSITE_URL}}",
+      "logo": "{{LOGO_URL}}",
+      "image": [
+        "{{PRIMARY_IMAGE_URL}}"
+      ],
+      "description": "{{BUSINESS_DESCRIPTION}}",
+      "telephone": "{{PHONE_E164}}",
+      "email": "{{PUBLIC_EMAIL}}",
+      "sameAs": [
+        "{{SOCIAL_URL_1}}",
+        "{{SOCIAL_URL_2}}",
+        "{{SOCIAL_URL_3}}"
+      ],
+      "foundingDate": "{{FOUNDING_DATE_YYYY_MM_DD}}",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "{{PHONE_E164}}",
+          "email": "{{PUBLIC_EMAIL}}",
+          "areaServed": "{{AREA_SERVED}}",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "{{CANONICAL_URL}}#localbusiness",
+      "name": "{{BUSINESS_NAME}}",
+      "url": "{{WEBSITE_URL}}",
+      "telephone": "{{PHONE_E164}}",
+      "priceRange": "{{PRICE_RANGE}}",
+      "image": [
+        "{{PRIMARY_IMAGE_URL}}"
+      ],
+      "description": "{{BUSINESS_DESCRIPTION}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ADDRESS_STREET}}",
+        "addressLocality": "{{ADDRESS_CITY}}",
+        "addressRegion": "{{ADDRESS_STATE_OR_REGION}}",
+        "postalCode": "{{ADDRESS_POSTAL_CODE}}",
+        "addressCountry": "{{ADDRESS_COUNTRY_CODE}}"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{LATITUDE}}",
+        "longitude": "{{LONGITUDE}}"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "{{OPENS_HH_MM}}",
+          "closes": "{{CLOSES_HH_MM}}"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "{{AREA_SERVED}}"
+        }
+      ],
+      "hasMap": "{{GOOGLE_MAPS_URL}}",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "Google Business Profile",
+          "value": "{{GBP_PLACE_ID_OR_CID}}"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "{{CANONICAL_URL}}#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{CANONICAL_URL}}#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q1}}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{FAQ_A1_40_TO_60_WORDS}}"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q2}}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{FAQ_A2_40_TO_60_WORDS}}"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q3}}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{FAQ_A3_40_TO_60_WORDS}}"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q4}}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{FAQ_A4_40_TO_60_WORDS}}"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -5,16 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Work – Vedisha Marketing</title>
   <meta name="description" content="See sample deliverables and concept case studies that show how Vedisha Marketing works—AI speed, human craft, and measurable strategy.">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/work.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-    body { background: #ffffff; margin: 0; padding: 0; overflow-x: hidden; color: #0f172a; }
-  </style>
 
   <!-- Global Technical SEO -->
-  <link rel="stylesheet" href="css/global.css">
   <link rel="canonical" href="https://vedishamarketing.com/work.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Work – Vedisha Marketing">
@@ -53,144 +49,133 @@
 </head>
 <body class="work-page">
 
+    <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
   <section class="work-hero">
+    <div class="status-badge">Our Portfolio</div>
     <h1>Sample work you can expect from a <span class="gradient-text">new</span> studio.</h1>
     <p>
-      We’re newly opened—so instead of listing “big-name clients”, we show the kind of deliverables we build and the approach we use.
-      Want to be an early partner? <a href="contact.html" style="color: var(--c-link); font-weight: 700; text-decoration: none;">Let’s talk.</a>
+      We’re focused on high-impact deliverables: sharp positioning, PR readiness, and performance growth. 
+      Early partners get senior attention and boutique speed. <a href="contact.html">Let’s talk.</a>
     </p>
   </section>
 
   <!-- Category Filters -->
   <section class="work-filters" aria-label="Filter Work by Category">
-    <button class="filter-btn active" data-filter="all">All Work</button>
-    <button class="filter-btn" data-filter="branding">Branding & Messaging</button>
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="branding">Positioning & Messaging</button>
     <button class="filter-btn" data-filter="pr">PR & Reputation</button>
     <button class="filter-btn" data-filter="growth">Performance & Growth</button>
   </section>
 
-  <!-- Masonry Grid Wrapper -->
+  <!-- Grid Wrapper -->
   <main class="masonry-wrapper" id="main">
     <div class="masonry-grid">
 
-      <!-- Case 1: TechGiant -->
-      <article class="work-card" data-category="branding growth">
+      <!-- Case 1: Branding -->
+      <article class="work-card" data-category="branding">
         <div class="work-card-media">
-          <img src="images/work-sample-1.jpg" alt="Sample work cover: messaging and launch planning" class="cover-img" loading="lazy">
-          <div class="work-card-overlay"></div>
-          <div class="work-card-logo">Sample</div>
+          <img src="images/work-sample-1.jpg" alt="B2B SaaS Messaging Sprint" class="cover-img" loading="lazy">
         </div>
         <div class="work-card-content">
-          <span class="work-category">Branding &amp; Messaging</span>
-          <h3>Positioning + Messaging Sprint (B2B SaaS)</h3>
-          <p class="work-card-desc">A fast, structured sprint to clarify positioning, sharpen the homepage narrative, and ship a messaging kit your team can execute.</p>
+          <span class="work-category">Branding & Messaging</span>
+          <h3>The Messaging Sprint</h3>
+          <p class="work-card-desc">A fast, structured sprint to clarify positioning and ship a messaging kit your team can execute immediately.</p>
           <div class="work-results">
             <ul>
-              <li>Deliverables: positioning statement, ICP, value props, proof points</li>
-              <li>Outputs: homepage outline + 3 ad angles</li>
+              <li>Deliverables: Positioning Statement, ICP, Value Props</li>
               <li>Timeline: 5–7 business days</li>
             </ul>
           </div>
-          <button class="view-case-btn" data-project="techgiant">View full case</button>
+          <button class="view-case-btn" data-project="techgiant">View Approach</button>
         </div>
       </article>
 
-      <!-- Case 2: Fashion Brand -->
+      <!-- Case 2: PR -->
       <article class="work-card" data-category="pr">
         <div class="work-card-media">
-          <img src="images/work-sample-2.jpg" alt="Sample work cover: reputation and PR response" class="cover-img" loading="lazy">
-          <div class="work-card-overlay"></div>
-          <div class="work-card-logo">Sample</div>
+          <img src="images/work-sample-2.jpg" alt="Reputation Response Kit" class="cover-img" loading="lazy">
         </div>
         <div class="work-card-content">
-          <span class="work-category">PR &amp; Reputation</span>
-          <h3>Reputation Response Kit (for sudden scrutiny)</h3>
-          <p class="work-card-desc">A ready-to-use response kit for fast-moving situations: holding statements, FAQ, internal comms, and a narrative reset plan.</p>
+          <span class="work-category">PR & Reputation</span>
+          <h3>Reputation Ready</h3>
+          <p class="work-card-desc">A ready-to-use response kit for fast-moving situations: holding statements, FAQ, and a narrative reset plan.</p>
           <div class="work-results">
             <ul>
-              <li>Deliverables: holding statement, Q&amp;A, escalation map</li>
-              <li>Channel pack: social, email, press, website banner</li>
-              <li>Timeline: 24–72 hours (depending on inputs)</li>
+              <li>Deliverables: Holding Statement, Q&A, Escalation Map</li>
+              <li>Timeline: 24–72 hours</li>
             </ul>
           </div>
-          <button class="view-case-btn" data-project="fashion">View full case</button>
+          <button class="view-case-btn" data-project="fashion">View Approach</button>
         </div>
       </article>
 
-      <!-- Case 3: FinCore Product Launch -->
+      <!-- Case 3: Growth -->
       <article class="work-card" data-category="growth">
         <div class="work-card-media">
-          <img src="images/work-sample-3.jpg" alt="Sample work cover: performance testing and creative angles" class="cover-img" loading="lazy">
-          <div class="work-card-overlay"></div>
-          <div class="work-card-logo">Sample</div>
+          <img src="images/work-sample-3.jpg" alt="Creative Testing System" class="cover-img" loading="lazy">
         </div>
         <div class="work-card-content">
-           <span class="work-category">Performance &amp; Growth</span>
-           <h3>Creative Testing System (Meta/Google)</h3>
-           <p class="work-card-desc">A repeatable system for testing angles, hooks, and landing page variants—built to learn fast and scale what works.</p>
-           <div class="work-results">
-             <ul>
-               <li>Deliverables: test plan + creative brief templates</li>
-               <li>Outputs: 12 ad variations + 2 landing page drafts</li>
-               <li>Cadence: weekly iterations</li>
-             </ul>
-           </div>
-           <button class="view-case-btn" data-project="finance">View full case</button>
+          <span class="work-category">Performance & Growth</span>
+          <h3>The Testing Engine</h3>
+          <p class="work-card-desc">A repeatable system for testing angles, hooks, and landing page variants—built to learn fast and scale what works.</p>
+          <div class="work-results">
+            <ul>
+              <li>Deliverables: Test Plan, Creative Briefs, 12 Ad Variants</li>
+              <li>Cadence: Weekly Iterations</li>
+            </ul>
+          </div>
+          <button class="view-case-btn" data-project="finance">View Approach</button>
         </div>
       </article>
 
     </div>
   </main>
 
-  <!-- ═══════════════════════════════════════
-       CASE STUDY MODAL (Hidden by default)
-       ═══════════════════════════════════════ -->
+  <!-- Case Study Modal -->
   <div class="case-modal-overlay" id="caseModal">
     <div class="case-modal-content">
-      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-
-      <div class="modal-hero" id="mHero">
-        <div class="modal-hero-overlay"></div>
-      </div>
-
+      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">×</button>
       <div class="modal-body">
         <h2 class="modal-title" id="mTitle">Project Title</h2>
-
         <div class="modal-overview">
           <div class="modal-text" id="mText">
              <!-- Populated via JS -->
           </div>
-
           <aside class="modal-sidebar">
              <div class="modal-sidebar-block">
-               <div class="modal-sidebar-label" id="mMetric1Label">Metric 1</div>
-               <div class="metric-highlight" id="mMetric1Val">--</div>
+               <div class="modal-sidebar-label" id="mMetric1Label">Focus</div>
+               <div class="metric-highlight" id="mMetric1Val">Speed</div>
              </div>
              <div class="modal-sidebar-block">
-               <div class="modal-sidebar-label" id="mMetric2Label">Metric 2</div>
-               <div class="metric-highlight" id="mMetric2Val">--</div>
-             </div>
-             <div class="modal-sidebar-block" style="margin-top: 40px;">
-               <div class="modal-sidebar-label">Services</div>
-               <div class="modal-sidebar-value" id="mServices">Services list</div>
+               <div class="modal-sidebar-label" id="mMetric2Label">Impact</div>
+               <div class="metric-highlight" id="mMetric2Val">High</div>
              </div>
           </aside>
         </div>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ═══════════════════════════════════════
-       GLOBAL FOOTER
-       ═══════════════════════════════════════ -->
-  <footer class="site-footer" id="site-footer">
+  <!-- Global Footer -->
+    <footer class="site-footer" id="site-footer">
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -199,8 +184,8 @@
             <span class="logo-text">Vedisha Marketing</span>
           </a>
           <p class="footer-tagline">
-            Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> –
-          built with care for clarity, speed, and trust.
+            Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> —
+            built with care for clarity, speed, and trust.
           </p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -210,7 +195,18 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="gmb.html">GMB Optimization</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
@@ -219,6 +215,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="faq.html">FAQ</a></li>
+              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
               <li><a href="careers.html">Careers</a></li>
             </ul>
           </div>
@@ -255,7 +252,9 @@
   <script src="js/work.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/header.js"></script>
-
+  <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
 </body>
 </html>

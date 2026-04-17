@@ -16,6 +16,7 @@
   const navItems = [
     { href: base + 'index.html', label: 'Home', match: ['index.html', ''] },
     { href: base + 'services.html', label: 'Services', match: ['services.html'] },
+    { href: base + 'ai-visibility-boost.html', label: 'AI Visibility Boost', match: ['ai-visibility-boost.html'] },
     { href: base + 'work.html', label: 'Work', match: ['work.html', 'portfolio.html', 'case-studies.html'] },
     { href: base + 'clients.html', label: 'Clients', match: ['clients.html'] },
     { href: base + 'insights.html', label: 'Insights', match: ['insights.html', 'blog.html'] },
@@ -46,7 +47,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         ${linksHtml}
-        <a class="site-nav__cta" href="${base}contact.html">Contact</a>
+        <a class="site-nav__cta" href="${base}contact.html">Get Free Audit</a>
       </nav>
     </div>
   `;

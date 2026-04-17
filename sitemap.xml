@@ -1,117 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages (Priority 1.0) -->
   <url>
-    <loc>https://vedishamarketing.com/index.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/index.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/about.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/services.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/services.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/gmb.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/work.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/content-geo.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/contact.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Service Deep-Dive Pages (Priority 0.7) -->
   <url>
-    <loc>https://vedishamarketing.com/static-website-seo-launch.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/meta-google-ads-management.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/clients.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/work.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/insights.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/contact.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/blog.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/case-studies.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/meta-google-ads-management.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/faq.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/static-website-seo-launch.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/ai-visibility-boost.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/local-lead-combo.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/gmb.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/real-estate-marketing.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Insights & Resources (Priority 0.6) -->
+  <url>
+    <loc>https://vedishamarketing.in/blog.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/insights/agency-evaluation-checklist.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/careers.html</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://vedishamarketing.in/insights/saas-landing-page-audit.html</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/portfolio.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.com/insights/ai-human-marketing-revolution.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/insights/campaign-planning-ai.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://vedishamarketing.in/insights/brand-positioning-sprint.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.com/insights/new-pr-playbook.html</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://vedishamarketing.in/insights/ai-human-marketing-revolution.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>

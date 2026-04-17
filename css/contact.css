@@ -1,0 +1,217 @@
+/* =========================================
+   CONTACT PAGE CSS – REFINED & BOUTIQUE
+   ========================================= */
+
+@import url("global.css");
+
+.contact-hero {
+  padding: clamp(100px, 15vw, 180px) 24px clamp(60px, 10vw, 100px);
+  text-align: center;
+  background: var(--c-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: 24px;
+}
+
+.contact-hero .hero-sub {
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  color: var(--c-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.contact-main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-1);
+  transition: all 0.5s var(--ease-out);
+}
+
+.contact-card:hover {
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-2);
+  transform: translateY(-8px);
+}
+
+.contact-item {
+  margin-bottom: 32px;
+}
+
+.contact-item-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.contact-item-value {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--c-text);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-item-value a {
+  color: var(--c-text);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-out);
+}
+
+.contact-item-value a:hover {
+  color: var(--c-accent);
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  color: var(--c-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+}
+
+.copy-btn:hover {
+  background: rgba(124, 58, 237, 0.14);
+  transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.preferred-method {
+  margin-top: 40px;
+  padding: 32px;
+  background: var(--c-surface);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid var(--c-border);
+}
+
+.pm-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--c-accent);
+  color: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.preferred-method p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-social-icons a {
+  padding: 12px 24px;
+  border-radius: 99px;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  color: var(--c-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s var(--ease-out);
+}
+
+.contact-social-icons a:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-1);
+}
+
+.office-photo-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid var(--c-border);
+}
+
+.photo-caption {
+  padding: 24px;
+  background: var(--c-surface);
+  font-size: 0.9rem;
+}
+
+.photo-caption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.map-section {
+  margin-top: 80px;
+}
+
+.map-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-2);
+  height: 450px;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: 32px;
+  }
+}

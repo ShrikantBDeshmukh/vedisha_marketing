@@ -6,9 +6,9 @@
   <title>Blog – Vedisha Marketing</title>
   <meta name="description" content="Marketing and PR insights written for founders and marketing leaders—practical, honest, and built to help you execute.">
 
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/insights.css">
 
   <link rel="canonical" href="https://vedishamarketing.com/blog.html">
@@ -38,48 +38,123 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 </head>
-<body>
+<body class="insights-page">
+
+    <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
   <section class="insights-hero">
-    <h1>Practical marketing and PR insights.</h1>
-    <p>Clear strategy, execution frameworks, and decision-making guidance—no fluff.</p>
+    <div class="status-badge" style="margin-bottom: 24px;">Growth Library</div>
+    <h1>Practical marketing and <span class="gradient-text">PR insights</span>.</h1>
+    <p>Clear strategy, execution frameworks, and decision-making guidance—written for founders who build for the long term.</p>
   </section>
 
   <main class="insights-grid" id="main">
+    <!-- NEW: Post 1 -->
     <article class="article-card">
-      <img src="images/insight-1.jpg" alt="Team planning strategy" class="article-card-image" loading="lazy">
+      <div class="article-card-image-wrap">
+        <div style="width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #0f172a, #1e293b); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-size:4rem; font-weight:800;">✓</div>
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Strategy</span>
+        <h2>How to Evaluate a Digital Marketing Agency in India: A 15-Point Checklist</h2>
+        <p class="article-excerpt">A transparent audit framework to help B2B founders cut through the fluff and hire for outcomes.</p>
+        <a href="insights/agency-evaluation-checklist.html" class="read-more">
+          Read checklist
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- NEW: Post 2 -->
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <img src="images/saas-audit-hero.png" alt="SaaS Audit" class="article-card-image" loading="lazy">
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Research</span>
+        <h2>We Audited 20 Indian SaaS Landing Pages — The Audit Results</h2>
+        <p class="article-excerpt">Discover the messaging patterns and conversion architectures used by India’s top SaaS performers.</p>
+        <a href="insights/saas-landing-page-audit.html" class="read-more">
+          View audit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- NEW: Post 3 -->
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <div style="width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #4338ca, #7c3aed); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-size:4rem; font-weight:800;">⚡</div>
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Product</span>
+        <h2>Brand Positioning Sprint: What We Deliver in 2 Weeks</h2>
+        <p class="article-excerpt">Move from vague to unignorable with our 14-day Positioning Kit artifact.</p>
+        <a href="insights/brand-positioning-sprint.html" class="read-more">
+          See the kit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <img src="images/insight-1.jpg" alt="Team planning strategy" class="article-card-image" loading="lazy">
+      </div>
       <div class="article-card-content">
         <span class="article-category">Strategy</span>
         <h2>Why 2026 Belongs to Brands That Master AI + Human Storytelling</h2>
         <p class="article-excerpt">How to use AI for scale while protecting the one thing that converts: human narrative.</p>
         <a href="insights/ai-human-marketing-revolution.html" class="read-more">
           Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </article>
 
     <article class="article-card">
-      <img src="images/insight-2.jpg" alt="Campaign planning notes" class="article-card-image" loading="lazy">
+      <div class="article-card-image-wrap">
+        <img src="images/insight-2.jpg" alt="Campaign planning notes" class="article-card-image" loading="lazy">
+      </div>
       <div class="article-card-content">
         <span class="article-category">Efficiency</span>
-        <h2>How AI Cut Our Campaign Planning from 6 Weeks to 6 Days (Without Losing Soul)</h2>
+        <h2>How AI Cut Our Campaign Planning from 6 Weeks to 6 Days</h2>
         <p class="article-excerpt">A repeatable workflow that compresses research and increases creative output—without sounding robotic.</p>
         <a href="insights/campaign-planning-ai.html" class="read-more">
           Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </article>
 
     <article class="article-card">
-      <img src="images/insight-3.jpg" alt="PR and reputation planning" class="article-card-image" loading="lazy">
+      <div class="article-card-image-wrap">
+        <img src="images/insight-3.jpg" alt="PR and reputation planning" class="article-card-image" loading="lazy">
+      </div>
       <div class="article-card-content">
         <span class="article-category">Public Relations</span>
         <h2>The New PR Playbook: Reputation in the Age of Instant Scrutiny</h2>
         <p class="article-excerpt">How to build a narrative “bank” that protects your brand when the spotlight turns harsh.</p>
         <a href="insights/new-pr-playbook.html" class="read-more">
           Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </article>
@@ -105,7 +180,18 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="gmb.html">GMB Optimization</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
@@ -114,6 +200,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="faq.html">FAQ</a></li>
+              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
               <li><a href="careers.html">Careers</a></li>
             </ul>
           </div>
@@ -131,9 +218,9 @@
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
         <ul class="footer-legal" aria-label="Legal links">
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
         </ul>
         <div class="footer-social" aria-label="Social media links">
           <a href="https://facebook.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
@@ -149,7 +236,9 @@
 
   <script src="js/footer.js"></script>
   <script src="js/header.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
 </body>
 </html>
-

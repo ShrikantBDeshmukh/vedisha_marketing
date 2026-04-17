@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/insights.css">
 
   <link rel="canonical" href="https://vedishamarketing.com/case-studies.html">
   <meta property="og:type" content="website">
@@ -18,26 +19,21 @@
   <meta property="og:site_name" content="Vedisha Marketing">
   <meta name="twitter:card" content="summary_large_image">
 
-  <style>
-    body { background: #ffffff; color: #0f172a; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 72px 24px 80px; }
-    .hero { display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; align-items:center; margin-bottom: 34px; }
-    h1 { font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--c-text); letter-spacing:-0.03em; font-size: clamp(34px, 4.8vw, 54px); margin: 0 0 12px; line-height: 1.06; }
-    .sub { color: var(--c-muted); max-width: 66ch; line-height: 1.7; margin: 0 0 16px; }
-    .hero-media { border-radius: 22px; overflow:hidden; border: 1px solid var(--c-border); background: var(--c-surface); box-shadow: var(--shadow-2); margin: 0; }
-    .hero-media img { width:100%; height:100%; display:block; object-fit: cover; aspect-ratio: 16 / 10; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
-    .card { background: #fff; border: 1px solid var(--c-border); border-radius: 18px; overflow:hidden; box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06); }
-    .card img { width:100%; height: 180px; object-fit: cover; display:block; }
-    .card .body { padding: 18px 18px 20px; }
-    .kicker { font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; color: var(--c-accent-2); }
-    .card h2 { font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--c-text); font-size: 20px; margin: 10px 0 10px; }
-    .card p { margin: 0 0 14px; color: var(--c-muted); line-height: 1.65; font-size: 14.5px; }
-    .card a { color: var(--c-link); text-decoration:none; font-weight:700; }
-    .cta { margin-top: 26px; padding: 18px 18px; border-radius: 18px; border: 1px solid rgba(108, 99, 255, 0.22); background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(0, 184, 148, 0.06)); }
-    .cta strong { color: var(--c-text); }
-    @media (max-width: 920px) { .hero { grid-template-columns: 1fr; } }
-  </style>
+  <!-- Icons & Brand -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta property="og:image" content="https://vedishamarketing.com/images/office-studio.png">
+
+  <!-- Shared Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <script type="application/ld+json">
   {
@@ -66,74 +62,88 @@
     ]
   }
   </script>
-
-  <!-- New Global SEO & Analytics injected -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <meta property="og:image" content="https://vedishamarketing.com/images/office-studio.png">
-  <meta name="twitter:image" content="https://vedishamarketing.com/images/office-studio.png">
-  
-  <!-- Google tag (gtag.js) - Placeholder -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
-<body>
-  <main class="page-wrap" id="main">
-    <section class="hero" aria-label="Case studies hero">
-      <div>
-        <h1>Case studies built for business outcomes.</h1>
-        <p class="sub">Clear positioning, fast execution, measurable lift—without generic creative.</p>
-        <p class="sub" style="margin-bottom:0;">Browse a few examples below, or see the full list on <a href="work.html">Work</a>.</p>
-      </div>
-      <figure class="hero-media">
-        <img src="images/clients-hero.jpg" alt="Business partners shaking hands in agreement" loading="lazy" width="1600" height="900">
-      </figure>
-    </section>
+<body class="insights-page">
 
-    <section class="grid" aria-label="Case study list">
-      <article class="card">
-        <img src="images/work-sample-1.jpg" alt="Sample case study cover: messaging sprint" loading="lazy">
-        <div class="body">
-          <div class="kicker">Branding</div>
-          <h2>Positioning + Messaging Sprint</h2>
-          <p>A sample sprint format: ICP clarity, value props, proof points, and a homepage narrative your team can ship.</p>
-          <a href="work.html">View in Work →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/work-sample-2.jpg" alt="Sample case study cover: PR response kit" loading="lazy">
-        <div class="body">
-          <div class="kicker">PR &amp; Crisis</div>
-          <h2>Reputation Response Kit</h2>
-          <p>A ready-to-use response kit with holding statements, FAQs, escalation paths, and channel guidance.</p>
-          <a href="work.html">View in Work →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/work-sample-3.jpg" alt="Sample case study cover: creative testing system" loading="lazy">
-        <div class="body">
-          <div class="kicker">Performance Growth</div>
-          <h2>Creative Testing System</h2>
-          <p>A repeatable weekly testing loop for angles, hooks, and landing page variants—built to learn fast.</p>
-          <a href="work.html">View in Work →</a>
-        </div>
-      </article>
-    </section>
-
-    <div class="cta">
-      <strong>Want a similar outcome?</strong> Start with a quick brief and we’ll respond with a recommended plan and timeline.
-      <a href="contact.html" style="margin-left: 8px;">Contact us →</a>
+    <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
     </div>
+  </header>
+
+  <section class="insights-hero">
+    <div class="status-badge" style="margin-bottom: 24px;">Results</div>
+    <h1>Case studies built for <span class="gradient-text">outcomes</span>.</h1>
+    <p>Clear positioning, fast execution, and measurable lift—designed for ambitious brands moving at the speed of AI.</p>
+  </section>
+
+  <main class="insights-grid" id="main">
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <img src="images/work-sample-1.jpg" alt="Messaging Sprint" class="article-card-image" loading="lazy">
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Branding</span>
+        <h2>The Messaging Sprint Outcome</h2>
+        <p class="article-excerpt">How we clarified positioning and shipped a homepage narrative for a B2B SaaS startup in 7 business days.</p>
+        <a href="work.html" class="read-more">
+          View execution details
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <img src="images/work-sample-2.jpg" alt="PR Response Kit" class="article-card-image" loading="lazy">
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Public Relations</span>
+        <h2>The Reputation Response Framework</h2>
+        <p class="article-excerpt">A case study on developing a ready-to-use response kit for a high-growth brand during sudden scrutiny.</p>
+        <a href="work.html" class="read-more">
+          View execution details
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-card-image-wrap">
+        <img src="images/work-sample-3.jpg" alt="Testing System" class="article-card-image" loading="lazy">
+      </div>
+      <div class="article-card-content">
+        <span class="article-category">Performance</span>
+        <h2>The Creative Testing Engine</h2>
+        <p class="article-excerpt">A look at how we built a repeatable testing loop for angles and hooks that reduced acquisition costs by 30%.</p>
+        <a href="work.html" class="read-more">
+          View execution details
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
   </main>
+
+  <div class="page-wrap" style="padding-top: 0;">
+    <div class="glass-card page-section" style="padding: 48px; text-align: center; border-radius: var(--radius-lg);">
+      <h3 style="margin-bottom: 16px;">Want a similar outcome?</h3>
+      <p style="margin-bottom: 24px; color: var(--c-muted);">Start with a quick brief and we’ll respond with a recommended plan and timeline.</p>
+      <a href="contact.html" class="site-nav__cta" style="padding: 14px 32px;">Talk to us →</a>
+    </div>
+  </div>
 
   <footer class="site-footer" id="site-footer">
     <div class="footer-container">
@@ -143,10 +153,10 @@
             <span class="logo-icon">V</span>
             <span class="logo-text">Vedisha Marketing</span>
           </a>
-        <p class="footer-tagline">
-          Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> —
-          built with care for clarity, speed, and trust.
-        </p>
+          <p class="footer-tagline">
+            Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> —
+            built with care for clarity, speed, and trust.
+          </p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <div class="footer-nav-group">
@@ -155,7 +165,18 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="gmb.html">GMB Optimization</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
@@ -164,6 +185,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="faq.html">FAQ</a></li>
+              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
               <li><a href="careers.html">Careers</a></li>
             </ul>
           </div>
@@ -172,7 +194,7 @@
             <ul class="footer-nav-list">
               <li><a href="contact.html">Contact Us</a></li>
               <li><a href="mailto:hello@vedishamarketing.com">Email Us</a></li>
-            <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
+              <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
             </ul>
           </div>
         </nav>
@@ -181,9 +203,9 @@
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
         <ul class="footer-legal" aria-label="Legal links">
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
         </ul>
         <div class="footer-social" aria-label="Social media links">
           <a href="https://facebook.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
@@ -199,7 +221,9 @@
 
   <script src="js/footer.js"></script>
   <script src="js/header.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
 </body>
 </html>
-

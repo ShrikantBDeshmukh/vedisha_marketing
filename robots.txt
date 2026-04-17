@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
 
-Sitemap: https://vedishamarketing.com/sitemap.xml
+Sitemap: https://vedishamarketing.in/sitemap.xml

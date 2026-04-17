@@ -3,497 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Vedisha Marketing</title>
-  <meta name="description" content="Get in touch with Vedisha Marketing. Email us directly – no forms, no friction. We work with brands worldwide from our AI-augmented studio in India.">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    /* ═══════════════════════════════════════
-       Contact Page – Vedisha Marketing
-       ═══════════════════════════════════════ */
+  <title>Get Your Free Strategy Audit – Vedisha Marketing</title>
+  <meta name="description" content="Reach out to Vedisha Marketing for a free revenue or strategy audit. Direct access to senior strategists—no forms, no friction.">
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #ffffff;
-      color: #0f172a;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    /* ── Hero Section ── */
-    .contact-hero {
-      position: relative;
-      min-height: 52vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 100px 24px 60px;
-      overflow: hidden;
-    }
-
-    .contact-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 600px 400px at 30% 40%, rgba(108, 99, 255, 0.14) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 350px at 70% 60%, rgba(0, 184, 148, 0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .contact-hero h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(32px, 5.5vw, 58px);
-      font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.03em;
-      line-height: 1.12;
-      max-width: 720px;
-      position: relative;
-    }
-
-    .contact-hero h1 .accent {
-      background: linear-gradient(135deg, #6c63ff 20%, #00d4aa 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .contact-hero .hero-sub {
-      margin-top: 18px;
-      font-size: 17px;
-      color: #475569;
-      max-width: 480px;
-      position: relative;
-    }
-
-    /* ── Main Content ── */
-    .contact-main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-
-    /* ── Contact Grid ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 64px;
-    }
-
-    /* Bring the routing chips above into the visual system */
-    .copy-btn {
-      text-decoration: none;
-    }
-
-    /* ── Card Style ── */
-    .contact-card {
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      border-radius: 20px;
-      padding: 40px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .contact-card:hover {
-      border-color: rgba(108, 99, 255, 0.22);
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
-    }
-
-    /* ── Section Labels ── */
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #6c63ff;
-      margin-bottom: 24px;
-    }
-
-    .section-label .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #6c63ff;
-    }
-
-    /* ── Contact Info Items ── */
-    .contact-item {
-      margin-bottom: 28px;
-    }
-
-    .contact-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .contact-item-label {
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #64748b;
-      margin-bottom: 6px;
-    }
-
-    .contact-item-value {
-      font-family: 'Outfit', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .contact-item-value a {
-      color: #0f172a;
-      text-decoration: none;
-      transition: color 0.25s ease;
-    }
-
-    .contact-item-value a:hover {
-      color: #4f46e5;
-    }
-
-    /* ── Copy Button ── */
-    .copy-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 6px 14px;
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      color: #4f46e5;
-      background: rgba(108, 99, 255, 0.10);
-      border: 1px solid rgba(108, 99, 255, 0.22);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .copy-btn:hover {
-      background: rgba(108, 99, 255, 0.14);
-      border-color: rgba(108, 99, 255, 0.30);
-      transform: translateY(-1px);
-    }
-
-    .copy-btn.copied {
-      color: #00b894;
-      background: rgba(0, 184, 148, 0.10);
-      border-color: rgba(0, 184, 148, 0.28);
-    }
-
-    .copy-btn svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* ── Preferred Method Banner ── */
-    .preferred-method {
-      margin-top: 32px;
-      padding: 18px 24px;
-      background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(0, 184, 148, 0.06));
-      border: 1px solid rgba(108, 99, 255, 0.16);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .preferred-method .pm-icon {
-      flex-shrink: 0;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #6c63ff, #00d4aa);
-      border-radius: 10px;
-      color: #fff;
-      font-size: 16px;
-    }
-
-    .preferred-method p {
-      font-size: 14px;
-      color: #475569;
-      line-height: 1.5;
-    }
-
-    .preferred-method strong {
-      color: #0f172a;
-    }
-
-    /* ── Global Reach Note ── */
-    .global-reach {
-      margin-top: 28px;
-      padding: 16px 20px;
-      background: rgba(0, 184, 148, 0.06);
-      border-left: 3px solid rgba(0, 184, 148, 0.34);
-      border-radius: 0 12px 12px 0;
-    }
-
-    .global-reach p {
-      font-size: 14px;
-      color: #475569;
-      font-style: italic;
-    }
-
-    .global-reach p strong {
-      color: #00b894;
-      font-style: normal;
-    }
-
-    /* ── Social Links in Contact ── */
-    .contact-social {
-      margin-top: 32px;
-    }
-
-    .contact-social-label {
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #64748b;
-      margin-bottom: 12px;
-    }
-
-    .contact-social-icons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .contact-social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.03);
-      border: 1px solid rgba(15, 23, 42, 0.10);
-      color: #334155;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .contact-social-icons a svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    .contact-social-icons a:hover {
-      border-color: rgba(108, 99, 255, 0.22);
-      color: #0f172a;
-      background: rgba(108, 99, 255, 0.08);
-      transform: translateY(-2px);
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
-    }
-
-    /* ── Office Photo Card ── */
-    .office-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .office-photo-wrap {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      aspect-ratio: 16 / 10;
-    }
-
-    .office-photo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .office-card:hover .office-photo-wrap img {
-      transform: scale(1.03);
-    }
-
-    .office-photo-wrap .photo-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 24px 20px 16px;
-      background: linear-gradient(transparent, rgba(15, 23, 42, 0.82));
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    .office-photo-wrap .photo-caption strong {
-      color: #fff;
-      display: block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-
-    /* ── Map Section ── */
-    .map-section {
-      margin-bottom: 64px;
-    }
-
-    .map-section .section-label {
-      margin-bottom: 20px;
-    }
-
-    .map-wrap {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      aspect-ratio: 21 / 7;
-      min-height: 300px;
-    }
-
-    .map-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      filter: grayscale(0.15) contrast(1) brightness(1);
-    }
-
-    .map-overlay {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      padding: 14px 20px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .map-overlay .pin-icon {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #6c63ff, #00b894);
-      border-radius: 8px;
-      color: #fff;
-      flex-shrink: 0;
-    }
-
-    .map-overlay .pin-text {
-      font-size: 13px;
-      color: #334155;
-    }
-
-    .map-overlay .pin-text strong {
-      color: #0f172a;
-      display: block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .contact-card {
-        padding: 28px;
-      }
-
-      .contact-item-value {
-        font-size: 17px;
-        flex-wrap: wrap;
-      }
-
-      .contact-social-icons {
-        flex-wrap: wrap;
-      }
-
-      .map-wrap {
-        aspect-ratio: 16 / 10;
-      }
-
-      .map-overlay {
-        bottom: 12px;
-        left: 12px;
-        right: 12px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .contact-hero {
-        min-height: 40vh;
-        padding: 80px 20px 40px;
-      }
-
-      .contact-card {
-        padding: 22px;
-      }
-
-      .contact-social-icons a {
-        padding: 10px 14px;
-        font-size: 12px;
-      }
-    }
-  </style>
-
-  <!-- Global Technical SEO -->
+  <!-- Core Styles -->
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contact.css">
+
   <link rel="canonical" href="https://vedishamarketing.com/contact.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact – Vedisha Marketing">
-  <meta property="og:description" content="Email Vedisha Marketing for strategy, creative, PR, or performance support. No forms—just a direct line to our team.">
+  <meta property="og:title" content="Get Your Free Strategy Audit – Vedisha Marketing">
+  <meta property="og:description" content="Direct line to Vedisha Marketing. Book a discovery call or email us for a free revenue audit.">
   <meta property="og:url" content="https://vedishamarketing.com/contact.html">
   <meta property="og:site_name" content="Vedisha Marketing">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact – Vedisha Marketing">
-  <meta name="twitter:description" content="Email Vedisha Marketing for strategy, creative, PR, or performance support. No forms—just a direct line to our team.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Vedisha Marketing",
-    "url": "https://vedishamarketing.com",
-    "logo": "https://vedishamarketing.com/images/office-studio.png"
-  }
-  </script>
 
-  <!-- New Global SEO & Analytics injected -->
+  <!-- Icons & Brand -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <meta property="og:image" content="https://vedishamarketing.com/images/office-studio.png">
-  <meta name="twitter:image" content="https://vedishamarketing.com/images/office-studio.png">
-  
-  <!-- Google tag (gtag.js) - Placeholder -->
+
+  <!-- Shared Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -502,275 +34,200 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 </head>
-<body>
+<body class="contact-page">
 
-<!-- ═══════════════════════════════════════
-     HERO
-     ═══════════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
 <section class="contact-hero">
   <div>
-    <h1>Let’s build something <span class="accent">great</span> together.</h1>
-    <p class="hero-sub">Choose your reason for reaching out—so we can respond faster.</p>
+    <div class="status-badge" style="margin-bottom: 24px;">Let's Talk</div>
+    <h1>Ready to build something <span class="gradient-text">great together?</span></h1>
+    <p class="hero-sub">Let's grab a virtual coffee and uncover your best growth levers—zero pressure, zero obligations.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     MAIN CONTENT
-     ═══════════════════════════════════════ -->
 <main class="contact-main" id="main">
 
-  <!-- Quick routing (inspired by modern B2B contact pages: pre-sort by intent) -->
-  <section style="margin: -18px 0 34px;">
-    <div class="section-label"><span class="dot"></span> Route your message</div>
-    <div style="display:flex; flex-wrap:wrap; gap:10px;">
-      <a class="copy-btn" href="https://calendly.com/YOUR-CALENDLY-LINK" target="_blank" rel="noopener noreferrer" style="text-decoration:none; background: rgba(0, 184, 148, 0.10); border-color: rgba(0, 184, 148, 0.28); color: #00b894;">Book a Discovery Call</a>
-      <a class="copy-btn" href="mailto:hello@vedishamarketing.com?subject=New%20project%20inquiry%20-%20Vedisha%20Marketing" style="text-decoration:none;">Start a project</a>
-      <a class="copy-btn" href="mailto:hello@vedishamarketing.com?subject=Partnership%20-%20Vedisha%20Marketing" style="text-decoration:none;">Partnership</a>
-      <a class="copy-btn" href="mailto:hello@vedishamarketing.com?subject=Careers%20-%20Vedisha%20Marketing" style="text-decoration:none;">Careers</a>
-      <a class="copy-btn" href="mailto:hello@vedishamarketing.com?subject=General%20question%20-%20Vedisha%20Marketing" style="text-decoration:none;">General question</a>
+  <!-- Quick routing -->
+  <section style="margin: -24px 0 48px;">
+    <div class="section-label"><span class="dot"></span> How would you like to start?</div>
+    <div class="contact-social-icons" style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 16px;">
+      <a href="https://calendly.com/vedishamarketing/discovery" target="_blank" rel="noopener noreferrer" style="background: var(--c-accent); color: #fff; border-color: var(--c-accent); padding: 16px 32px; border-radius: 12px; font-weight: 700;">Book Discovery Call</a>
+      <a href="mailto:hello@vedishamarketing.com" style="background: var(--c-surface); color: var(--c-text); border-color: var(--c-border); padding: 16px 32px; border-radius: 12px; font-weight: 700;">Email for Audit</a>
     </div>
-    <div style="margin-top:12px; color:#64748b; font-size:13px; line-height:1.6;">
-      Typical response time: <strong style="color:#0f172a;">within 24–48 hours</strong> on business days.
+    <div style="margin-top:20px; color:var(--c-muted); font-size:14px; font-weight: 500;">
+      Typical response: <strong style="color:var(--c-text);">Strategic feedback within 24 hours</strong>.
     </div>
   </section>
 
   <!-- Contact Grid -->
-  <div class="contact-grid">
+  <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
 
     <!-- Left Column: Contact Details -->
     <div class="contact-card">
       <div class="section-label"><span class="dot"></span> Direct Contact</div>
 
       <!-- Email -->
-      <div class="contact-item">
+      <div class="contact-item" style="margin-top: 32px;">
         <div class="contact-item-label">Email</div>
-        <div class="contact-item-value">
-          <a href="mailto:hello@vedishamarketing.com" id="emailLink">hello@vedishamarketing.com</a>
-          <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address" data-copy="hello@vedishamarketing.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-            </svg>
-            <span>Copy</span>
+        <div class="contact-item-value" style="display: flex; align-items: center; gap: 16px;">
+          <a href="mailto:hello@vedishamarketing.com" id="emailLink" style="font-size: 1.25rem; font-weight: 700; color: var(--c-text);">hello@vedishamarketing.com</a>
+          <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address" data-copy="hello@vedishamarketing.com" style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--c-border); background: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <span style="font-size: 0.8rem; font-weight: 700;">Copy</span>
           </button>
         </div>
       </div>
 
-      <!-- Phone -->
-      <div class="contact-item">
-        <div class="contact-item-label">Phone</div>
-        <div class="contact-item-value">
-          <span style="color:#64748b;">Available on request. Email is the fastest way to reach us.</span>
-        </div>
-      </div>
-
-      <!-- Office -->
-      <div class="contact-item">
-        <div class="contact-item-label">Office</div>
-        <div class="contact-item-value">
-          Aurangabad, Maharashtra, India
-        </div>
-      </div>
-
       <!-- Preferred Method -->
-      <div class="preferred-method">
-        <div class="pm-icon">✉</div>
-        <p><strong>Preferred method:</strong> Book a call directly or just email us. No forms. No friction.</p>
-      </div>
-
-      <!-- Global Reach -->
-      <div class="global-reach">
-        <p>We work with <strong>brands worldwide</strong> from our AI-augmented studio in India.</p>
+      <div class="preferred-method" style="margin-top: 40px; padding: 24px; background: var(--c-surface); border-radius: 20px;">
+        <p style="margin: 0; line-height: 1.6;"><strong>Skip the forms.</strong> We value direct human logic. Send us your URL and your biggest marketing bottleneck, and we'll reply with an actionable plan.</p>
       </div>
 
       <!-- Social -->
-      <div class="contact-social">
-        <div class="contact-social-label">Follow Us</div>
+      <div class="contact-social" style="margin-top: 40px;">
+        <div class="contact-social-label" style="font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--c-muted-2); margin-bottom: 16px;">Social Channels</div>
         <div class="contact-social-icons">
-          <a href="https://linkedin.com/company/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://instagram.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            Instagram
-          </a>
-          <a href="https://x.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            X / Twitter
-          </a>
+          <a href="https://linkedin.com/company/vedishamarketing" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://instagram.com/vedishamarketing" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
     </div>
 
-    <!-- Right Column: Office Photo -->
-    <div class="contact-card office-card">
-      <div class="section-label"><span class="dot"></span> Our Studio</div>
-      <div class="office-photo-wrap">
-        <img src="images/office-studio.png" alt="Vedisha Marketing AI-Augmented Studio in Aurangabad, India" loading="lazy" width="800" height="500">
-        <div class="photo-caption">
-          <strong>AI-Augmented Studio</strong>
-          Aurangabad, Maharashtra, India
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Map Section -->
-  <div class="map-section">
-    <div class="section-label"><span class="dot"></span> Find Us</div>
-    <div class="map-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120548.95803185089!2d75.25553366953127!3d19.87649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9815a369bc63%3A0x712d538b29a2a73e!2sAurangabad%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Vedisha Marketing Office Location – Aurangabad, Maharashtra">
-      </iframe>
-      <div class="map-overlay">
-        <div class="pin-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <div class="pin-text">
-          <strong>Vedisha Marketing</strong>
-          Aurangabad, Maharashtra, India
-        </div>
-      </div>
+    <!-- Right Column: Location -->
+    <div class="contact-card">
+       <div class="section-label"><span class="dot"></span> Our HQ</div>
+       <div class="contact-item" style="margin-top: 32px;">
+         <div class="contact-item-label">Address</div>
+         <div class="contact-item-value" style="font-size: 1.05rem; line-height: 1.7; color: var(--c-muted);">
+           Police Station, Shop No. 6, Malkhare Classic, 1st Floor Near Jawahar Nagar, Garkheda Area, Chhatrapati Sambhajinagar, MH 431009
+         </div>
+       </div>
+       <div class="map-wrap" style="margin-top: 24px; border-radius: 20px; overflow: hidden; height: 240px; border: 1px solid var(--c-border);">
+         <iframe
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7504.797657213864!2d75.33730577677487!3d19.865374176649702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba39e78d6d277%3A0xe9b2617683fa8dbd!2sOjas%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1775458556944!5m2!1sen!2sin"
+           width="100%" height="100%" loading="lazy" style="border:0;" title="Vedisha Marketing Location">
+         </iframe>
+       </div>
     </div>
   </div>
 
 </main>
 
-<!-- ═══════════════════════════════════════
-     GLOBAL FOOTER
-     ═══════════════════════════════════════ -->
-<footer class="site-footer" id="site-footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo" aria-label="Vedisha Marketing Home">
-          <span class="logo-icon">V</span>
-          <span class="logo-text">Vedisha Marketing</span>
-        </a>
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Vedisha Marketing Home">
+            <span class="logo-icon">V</span>
+            <span class="logo-text">Vedisha Marketing</span>
+          </a>
           <p class="footer-tagline">
             Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> —
             built with care for clarity, speed, and trust.
           </p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Company</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="gmb.html">GMB Optimization</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Resources</h4>
+            <ul class="footer-nav-list">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="case-studies.html">Case Studies</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Get in Touch</h4>
+            <ul class="footer-nav-list">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="mailto:hello@vedishamarketing.com">Email Us</a></li>
+              <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <div class="footer-nav-group">
-          <h4 class="footer-nav-heading">Company</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
+        <ul class="footer-legal" aria-label="Legal links">
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://facebook.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+          <a href="https://instagram.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://x.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://linkedin.com/company/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://youtube.com/@vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
         </div>
-        <div class="footer-nav-group">
-          <h4 class="footer-nav-heading">Resources</h4>
-          <ul class="footer-nav-list">
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="careers.html">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-group">
-          <h4 class="footer-nav-heading">Get in Touch</h4>
-          <ul class="footer-nav-list">
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="mailto:hello@vedishamarketing.com">Email Us</a></li>
-            <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
-      <ul class="footer-legal" aria-label="Legal links">
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-      </ul>
-      <div class="footer-social" aria-label="Social media links">
-        <a href="https://facebook.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
-        <a href="https://instagram.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-        <a href="https://x.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="https://linkedin.com/company/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="https://youtube.com/@vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       </div>
     </div>
-  </div>
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button>
-</footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button>
+  </footer>
 
-<!-- ═══════════════════════════════════════
-     SCRIPTS
-     ═══════════════════════════════════════ -->
 <script src="js/footer.js"></script>
 <script src="js/header.js"></script>
 <script>
 (function () {
   'use strict';
-
-  /* ── Copy-to-Clipboard ── */
-  var copyBtn = document.getElementById('copyEmailBtn');
-
+  const copyBtn = document.getElementById('copyEmailBtn');
   if (copyBtn) {
     copyBtn.addEventListener('click', function () {
-      var email = copyBtn.getAttribute('data-copy');
-      var label = copyBtn.querySelector('span');
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(function () {
-          showCopied(copyBtn, label);
-        }).catch(function () {
-          fallbackCopy(email, copyBtn, label);
+      const email = this.getAttribute('data-copy');
+      const label = this.querySelector('span');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+          label.textContent = 'Copied!';
+          setTimeout(() => { label.textContent = 'Copy'; }, 2000);
         });
-      } else {
-        fallbackCopy(email, copyBtn, label);
       }
     });
   }
-
-  function showCopied(btn, label) {
-    btn.classList.add('copied');
-    label.textContent = 'Copied!';
-    btn.querySelector('svg').innerHTML =
-      '<polyline points="20 6 9 17 4 12" />';
-    setTimeout(function () {
-      btn.classList.remove('copied');
-      label.textContent = 'Copy';
-      btn.querySelector('svg').innerHTML =
-        '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>' +
-        '<path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>';
-    }, 2000);
-  }
-
-  function fallbackCopy(text, btn, label) {
-    var textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.style.position = 'fixed';
-    textarea.style.opacity = '0';
-    document.body.appendChild(textarea);
-    textarea.select();
-    try {
-      document.execCommand('copy');
-      showCopied(btn, label);
-    } catch (e) {
-      label.textContent = 'Failed';
-    }
-    document.body.removeChild(textarea);
-  }
 })();
 </script>
-
+<script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
 </body>
 </html>

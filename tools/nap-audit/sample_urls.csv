@@ -1,0 +1,2 @@
+url,expected_name,expected_address,expected_phone
+https://example.com/directory/your-business,{{BUSINESS_NAME}},"{{ADDRESS_STREET}}, {{ADDRESS_CITY}}, {{ADDRESS_STATE_OR_REGION}} {{ADDRESS_POSTAL_CODE}}",{{PHONE_DISPLAY}}

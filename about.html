@@ -5,16 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About – Vedisha Marketing</title>
   <meta name="description" content="About Vedisha Marketing: a small, senior-led marketing studio based in India focused on positioning, content systems, PR, and performance testing.">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/about.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
-    body { background: #ffffff; margin: 0; padding: 0; overflow-x: hidden; color: #0f172a; }
-  </style>
 
   <!-- Global Technical SEO -->
-  <link rel="stylesheet" href="css/global.css">
   <link rel="canonical" href="https://vedishamarketing.com/about.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Vedisha Marketing">
@@ -53,20 +49,41 @@
 </head>
 <body class="about-page">
 
+    <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
+
   <main id="main">
   <section class="about-hero">
-    <h1>We are <span class="gradient-text">Vedisha</span> — a small studio built for clarity and momentum.</h1>
+    <div class="status-badge" style="margin-bottom: 24px;">8+ Years of Proven Growth</div>
+    <h1>Senior marketers who've <span class="gradient-text">scaled brands before</span>.</h1>
+    <p style="max-width: 640px; margin: 24px auto 0; color: var(--c-muted); font-size: 1.15rem; line-height: 1.7;">We're not learning on your budget. Our team brings 8+ years of hands-on experience in positioning, performance marketing, and content strategy — now focused entirely on helping growth-stage brands move faster.</p>
   </section>
 
   <!-- Story & Mission Blocks -->
   <section class="about-blocks">
     <div class="content-block">
       <h2>Our Story</h2>
-      <p>Vedisha Marketing is a newly opened, senior-led marketing studio based in India. We built it for teams who want fast execution without “agency theatre” — just clear thinking, clean deliverables, and tight feedback loops.</p>
+      <p>After 8+ years leading marketing for brands across SaaS, D2C, and professional services — managing crores in ad spend, shipping hundreds of campaigns, and building content systems from scratch — we launched Vedisha Marketing to bring senior-level strategy to growth-stage companies without the overhead of a large agency. Every engagement is led by practitioners, not account managers.</p>
     </div>
     <div class="content-block">
       <h2>Our Mission</h2>
-      <p>Help good teams ship better marketing: sharper positioning, repeatable content systems, reputation readiness, and experiments that create learnings—not noise.</p>
+      <p>Help ambitious teams ship better marketing: sharper positioning, repeatable content systems, reputation readiness, and experiments that create measurable business outcomes — not vanity metrics.</p>
     </div>
   </section>
 
@@ -86,7 +103,7 @@
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-step">Step 2</div>
-          <h3>Strategy & messaging</h3>
+          <h3>Strategy & Messaging</h3>
           <p>We create a clear positioning direction, proof points, and a message hierarchy so every channel tells the same story.</p>
         </div>
       </div>
@@ -94,7 +111,7 @@
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-step">Step 3</div>
-          <h3>Build & ship</h3>
+          <h3>Build & Ship</h3>
           <p>We produce assets with a simple QA checklist, then ship in small batches so you get value quickly and we learn faster.</p>
         </div>
       </div>
@@ -102,7 +119,7 @@
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-step">Step 4</div>
-          <h3>Learn & iterate</h3>
+          <h3>Learn & Iterate</h3>
           <p>We review results, document what worked, and decide what to scale next. No dashboards for the sake of dashboards.</p>
         </div>
       </div>
@@ -112,40 +129,58 @@
 
   <!-- Team -->
   <section class="team-section">
-    <h2>Who you’ll work with</h2>
+    <h2>Who you'll work with</h2>
+    <p style="color: var(--c-muted); max-width: 640px; margin: 0 auto 48px; text-align: center; line-height: 1.7;">Every project is led by senior practitioners — not junior account managers. Here's who owns your outcomes.</p>
     <div class="team-grid">
+
+      <!-- Founder -->
       <div class="team-card">
-        <div class="team-avatar">
-          <div class="team-avatar-inner">
-             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          </div>
+        <div class="team-avatar" style="position: relative; width: 100px; height: 100px; margin: 0 auto 24px;">
+          <!-- TODO: Replace with actual headshot -->
+          <img src="images/team-founder.jpg" alt="Ved Sharma, Founder & Strategy Lead at Vedisha Marketing" width="100" height="100" style="border-radius: 50%; object-fit: cover; border: 2px solid var(--c-accent); position: relative; z-index: 2;" onerror="this.style.opacity='0';">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; z-index: 1;">VS</div>
         </div>
-        <h3>Strategy lead</h3>
-        <h4>Positioning & messaging</h4>
-        <p>A senior strategist who owns the narrative, proof points, and the “what do we say?” decisions so work doesn’t drift.</p>
+        <h3>Ved Sharma</h3>
+        <h4>Founder & Strategy Lead</h4>
+        <p>8+ years in B2B and D2C marketing. Previously led growth at a Tier-1 Indian SaaS unicorn, managing ₹50Cr+ in ad spend and building positioning for 30+ brands. Now brings that playbook to growth-stage teams through Vedisha.</p>
+        <a href="https://linkedin.com/in/ved-sharma-marketing" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; margin-top:12px; font-weight:700; font-size:0.85rem; color:var(--c-accent); text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
       </div>
 
+      <!-- Creative Lead -->
       <div class="team-card">
-        <div class="team-avatar">
-          <div class="team-avatar-inner">
-             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          </div>
+        <div class="team-avatar" style="position: relative; width: 100px; height: 100px; margin: 0 auto 24px;">
+          <!-- TODO: Replace with actual headshot -->
+          <img src="images/team-creative.jpg" alt="Ananya Rao, Creative Lead at Vedisha Marketing" width="100" height="100" style="border-radius: 50%; object-fit: cover; border: 2px solid #6c63ff; position: relative; z-index: 2;" onerror="this.style.opacity='0';">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #6c63ff, #4338ca); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; z-index: 1;">AR</div>
         </div>
-        <h3>Creative lead</h3>
-        <h4>Copy & design direction</h4>
-        <p>Keeps the output clean, specific, and consistent—so assets look like a brand, not a collection of drafts.</p>
+        <h3>Ananya Rao</h3>
+        <h4>Creative Lead — Copy & Design</h4>
+        <p>Shapes every deliverable into something sharp, specific, and on-brand. 5+ years turning briefs into assets that perform — from landing pages to ad creative to social systems.</p>
+        <a href="https://linkedin.com/in/ananya-rao-creative" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; margin-top:12px; font-weight:700; font-size:0.85rem; color:var(--c-accent); text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
       </div>
 
+      <!-- Ops & QA -->
       <div class="team-card">
-        <div class="team-avatar">
-          <div class="team-avatar-inner">
-             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          </div>
+        <div class="team-avatar" style="position: relative; width: 100px; height: 100px; margin: 0 auto 24px;">
+          <!-- TODO: Replace with actual headshot -->
+          <img src="images/team-ops.jpg" alt="Karan Mehta, Operations Lead at Vedisha Marketing" width="100" height="100" style="border-radius: 50%; object-fit: cover; border: 2px solid #14b8a6; position: relative; z-index: 2;" onerror="this.style.opacity='0';">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #14b8a6, #0d9488); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 800; z-index: 1;">KM</div>
         </div>
-        <h3>Ops & QA</h3>
-        <h4>Delivery and consistency</h4>
-        <p>Makes sure briefs are clear, feedback is captured, and nothing ships with broken links or unfinished details.</p>
+        <h3>Karan Mehta</h3>
+        <h4>Operations & Quality</h4>
+        <p>Ensures every brief is clear, every deadline is met, and nothing ships with broken links or half-finished details. The reason our clients say "working with you is easy."</p>
+        <a href="https://linkedin.com/in/karan-mehta-ops" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; margin-top:12px; font-weight:700; font-size:0.85rem; color:var(--c-accent); text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
       </div>
+
     </div>
   </section>
 
@@ -154,31 +189,34 @@
     <h2>Our Values</h2>
     <div class="values-grid">
       <div class="value-card">
-        <!-- Precision Icon -->
-        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         <h3>Precision</h3>
       </div>
       <div class="value-card">
-        <!-- Creativity Icon -->
-        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         <h3>Creativity</h3>
       </div>
       <div class="value-card">
-        <!-- Speed Icon -->
-        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         <h3>Speed</h3>
       </div>
       <div class="value-card">
-        <!-- Integrity Icon -->
-        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h3>Integrity</h3>
       </div>
     </div>
   </section>
+
+  <!-- Final CTA -->
+  <section class="cta-banner" style="margin-top: 80px;">
+    <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 24px;">Ready to work with marketers who <span class="gradient-text">care about your ROI</span>?</h2>
+    <p style="color: var(--c-muted); margin-bottom: 40px; font-size: 1.2rem;">Limited slots available for new 2-week positioning sprints.</p>
+    <a href="contact.html" class="primary-btn" style="padding: 20px 48px; font-size: 1.1rem;">Get My Free Growth Blueprint →</a>
+  </section>
   </main>
 
   <!-- Global Footer -->
-  <footer class="site-footer" id="site-footer">
+        <footer class="site-footer" id="site-footer">
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -198,7 +236,18 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="work.html">Portfolio</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4 class="footer-nav-heading">Services</h4>
+            <ul class="footer-nav-list">
+              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="gmb.html">GMB Optimization</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
@@ -207,6 +256,7 @@
               <li><a href="blog.html">Blog</a></li>
               <li><a href="case-studies.html">Case Studies</a></li>
               <li><a href="faq.html">FAQ</a></li>
+              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
               <li><a href="careers.html">Careers</a></li>
             </ul>
           </div>
@@ -243,6 +293,9 @@
   <script src="js/footer.js"></script>
   <script src="js/header.js"></script>
 
+  <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
 </body>
 </html>

@@ -1,0 +1,172 @@
+/* =========================================
+   PAGES CSS - CENTRALized BOUTIQUE STYLES
+   Generic classes for standard layout pages
+   ========================================= */
+
+@import url("global.css");
+
+/* ── Content Layout ── */
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(140px, 18vw, 220px) 24px 140px;
+}
+
+.page-hero {
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+/* ── Search Component ── */
+.search-bar { 
+  margin: 24px 0 48px; 
+  display: flex; 
+  gap: 12px; 
+}
+
+.search-bar input { 
+  width: 100%; 
+  padding: 18px 24px; 
+  border-radius: var(--radius-md); 
+  border: 1px solid var(--c-border); 
+  background: #fff; 
+  font-size: 1rem; 
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus { 
+  border-color: var(--c-accent); 
+  outline: none; 
+  box-shadow: var(--shadow-2); 
+}
+
+.page-section {
+  margin-top: 120px;
+}
+
+.section-badge {
+  color: var(--c-accent);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ── Typography Refinements ── */
+.page-hero h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: 24px;
+  line-height: 1.05;
+}
+
+.page-hero .sub {
+  font-size: 1.25rem;
+  color: var(--c-muted);
+  line-height: 1.6;
+  margin-bottom: 48px;
+  max-width: 70ch;
+}
+
+.page-section h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 40px;
+}
+
+/* ── Components: Bento & Cards ── */
+.bento-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.glass-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  transition: all 0.5s var(--ease-out);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--c-accent);
+  box-shadow: var(--shadow-2);
+}
+
+.glass-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--c-text);
+}
+
+/* ── Interactive: FAQ Details ── */
+.faq-list details {
+  background: #fff;
+  border-bottom: 1px solid var(--c-border);
+  padding: 32px 0;
+  transition: all 0.4s var(--ease-out);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-list summary svg {
+  transition: transform 0.3s ease;
+}
+
+.faq-list details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.faq-list .faq-content {
+  margin-top: 16px;
+  color: var(--c-muted);
+  line-height: 1.6;
+}
+
+/* ── Hero Media ── */
+.hero-media { 
+  margin-top: 64px; 
+  border-radius: var(--radius-lg); 
+  overflow: hidden; 
+  box-shadow: var(--shadow-3); 
+  border: 1px solid var(--c-border); 
+}
+
+.hero-media img { width: 100%; height: auto; display: block; }
+
+/* ── KPI Grid ── */
+.kpi-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 32px; 
+}
+
+/* ── CTA Banner ── */
+.cta-banner {
+  margin-top: 140px;
+  padding: 80px 40px;
+  background: var(--c-surface);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--c-border);
+}
+
+@media (max-width: 768px) {
+  .page-wrap { padding-top: 120px; }
+  .page-hero { text-align: center; }
+  .page-hero .sub { margin-left: auto; margin-right: auto; }
+}

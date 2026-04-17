@@ -1,20 +1,12 @@
-/* Real Estate Lead Domination Landing Page Styles */
+/* =========================================
+   REAL ESTATE MARKETING – BOUTIQUE UPGRADE
+   ========================================= */
 
 .re-hero {
-  padding: 120px 24px 70px;
-  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+  padding: clamp(120px, 15vw, 200px) 24px clamp(60px, 10vw, 100px);
+  background: var(--c-bg);
   position: relative;
   overflow: hidden;
-}
-
-.re-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%; right: -20%;
-  width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(108, 99, 255, 0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: 0;
 }
 
 .re-hero-inner {
@@ -22,252 +14,157 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 64px;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 
 .re-hero-content h1 {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(38px, 5vw, 64px);
-  color: #0f172a;
-  letter-spacing: -0.03em;
+  font-size: var(--fs-h1);
+  margin-bottom: 24px;
   line-height: 1.05;
-  margin: 0 0 16px;
-}
-
-.re-hero-content h1 .highlight {
-  color: var(--c-accent);
 }
 
 .re-hero-content p {
-  font-size: 18px;
+  font-size: 1.25rem;
   color: var(--c-muted);
-  line-height: 1.7;
-  margin: 0 0 24px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
 }
 
 .re-benefits-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
+  display: grid;
+  gap: 16px;
+  margin-bottom: 48px;
 }
 
 .re-benefit-item {
   display: flex;
-  align-items: center;
   gap: 12px;
-  font-weight: 500;
-  color: #334155;
-  font-size: 16px;
+  align-items: flex-start;
+  color: var(--c-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .re-benefit-item svg {
-  color: #00b894;
+  color: var(--c-accent);
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .re-hero-media {
-  position: relative;
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.1);
-  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-3);
+  border: 1px solid var(--c-border);
 }
 
-.re-hero-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+.re-hero-media img { width: 100%; display: block; }
 
 .re-metrics-bar {
-  background: #0f172a;
+  background: var(--c-text);
   color: #fff;
-  padding: 40px 24px;
-  margin-top: -20px;
-  position: relative;
-  z-index: 2;
+  padding: 80px 24px;
 }
 
 .re-metrics-inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 48px;
 }
 
 .re-metric-item h4 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 32px;
-  margin: 0 0 4px;
-  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--c-accent-2);
+  letter-spacing: -0.04em;
 }
 
 .re-metric-item p {
-  margin: 0;
-  color: #94a3b8;
-  font-size: 14px;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
 }
 
 .re-section {
-  padding: 80px 24px;
+  padding: 120px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .re-section-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 50px;
+  margin-bottom: 80px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .re-section-header h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(28px, 4vw, 42px);
-  margin: 0 0 16px;
-  color: #0f172a;
-  letter-spacing: -0.02em;
-}
-
-.re-section-header p {
-  font-size: 18px;
-  color: var(--c-muted);
-  line-height: 1.6;
-  margin: 0;
+  font-size: var(--fs-h2);
+  margin-bottom: 16px;
 }
 
 .re-features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
 }
 
 .re-feature-card {
   background: #fff;
   border: 1px solid var(--c-border);
-  border-radius: 20px;
-  padding: 32px 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  transition: all 0.4s var(--ease-out);
 }
 
-.re-feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+.re-feature-card:hover { 
+  border-color: var(--c-accent); 
+  transform: translateY(-8px); 
+  box-shadow: var(--shadow-2); 
 }
 
 .re-feature-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(108, 99, 255, 0.1);
+  width: 56px;
+  height: 56px;
+  background: var(--c-surface);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   color: var(--c-accent);
-}
-
-.re-feature-card h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 20px;
-  margin: 0 0 12px;
-  color: #0f172a;
-}
-
-.re-feature-card p {
-  margin: 0;
-  color: var(--c-muted);
-  line-height: 1.6;
 }
 
 .re-social-proof {
+  padding: 100px 24px;
   background: var(--c-surface);
-  padding: 80px 24px;
-  border-radius: 24px;
-  margin: 40px auto;
-  max-width: 1200px;
   text-align: center;
-}
-
-.re-social-proof h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 24px;
-  margin: 0 0 30px;
 }
 
 .re-cta-section {
-  background: linear-gradient(135deg, var(--c-accent), #4f46e5);
-  border-radius: 24px;
-  padding: 60px 40px;
+  padding: 140px 24px;
   text-align: center;
-  color: #fff;
-  max-width: 1000px;
-  margin: 80px auto;
-}
-
-.re-cta-section h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(32px, 4vw, 48px);
-  margin: 0 0 16px;
-  color: #fff;
-}
-
-.re-cta-section p {
-  font-size: 18px;
-  color: rgba(255,255,255,0.9);
-  margin: 0 0 32px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.re-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  color: var(--c-accent);
-  padding: 16px 32px;
-  font-size: 18px;
-  font-weight: 800;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.re-cta-btn:hover {
-  transform: translateY(-2px);
+  background: var(--c-bg);
 }
 
 @media (max-width: 992px) {
-  .re-hero-inner {
-    grid-template-columns: 1fr;
-  }
-  .re-hero-media {
-    order: -1;
-  }
-  .re-metrics-inner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  .re-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .re-hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .re-hero-content p { margin-left: auto; margin-right: auto; }
+  .re-benefits-list { justify-content: center; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto; }
 }
 
-@media (max-width: 600px) {
-  .re-features-grid {
-    grid-template-columns: 1fr;
-  }
-  .re-metrics-inner {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 768px) {
+  .re-metrics-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .re-metric-item h4 { font-size: 2.25rem; }
+}
+
+@media (max-width: 480px) {
+  .re-metrics-inner { grid-template-columns: 1fr; }
 }

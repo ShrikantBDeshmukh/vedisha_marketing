@@ -1,0 +1,3 @@
+# Netlify _redirects file
+# 301 permanent redirect: portfolio → work
+/portfolio.html  /work.html  301

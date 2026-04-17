@@ -1,0 +1,276 @@
+/* =========================================
+   LOCAL LEAD COMBO PACK - REFINED
+   ========================================= */
+
+@import url("global.css");
+
+:root {
+  --llc-bg: var(--c-bg); 
+  --llc-primary: var(--c-accent); 
+  --llc-secondary: var(--c-accent-2); 
+  --llc-accent: #f27121; 
+  --llc-text-bright: var(--c-text);
+  --llc-text-dim: var(--c-muted);
+  --llc-glass: rgba(255, 255, 255, 0.7);
+  --llc-glass-border: var(--c-border);
+  --llc-shadow: var(--shadow-1);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body.llc-page {
+  background: var(--llc-bg);
+  color: var(--llc-text-bright);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* Background Ambient Glows */
+.llc-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ... (glows remain same) ... */
+
+/* Hero Section */
+.llc-hero {
+  min-height: 85svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(80px, 12vw, 140px) 24px clamp(60px, 8vw, 100px);
+  text-align: center;
+}
+
+.llc-hero-content { max-width: 1000px; z-index: 10; }
+
+.llc-hero h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.llc-hero h1 span {
+  background: linear-gradient(135deg, var(--llc-primary) 0%, var(--llc-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.llc-hero p {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  color: var(--llc-text-dim);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--llc-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--llc-glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow-1);
+  transition: all 0.4s var(--ease-out);
+}
+
+.glass-card:hover {
+  border-color: var(--llc-primary);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-2);
+}
+
+/* Redesigned Features */
+.llc-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.llc-feature h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--llc-primary);
+}
+
+/* 🏆 Redesigned Comparison Table */
+.llc-table-container {
+  overflow-x: auto;
+  margin: 64px 0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow-2);
+}
+
+.llc-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+.llc-table th {
+  background: var(--c-surface);
+  color: var(--llc-text-bright);
+  padding: 24px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-align: left;
+}
+
+.llc-table th:nth-child(2) {
+  background: var(--llc-primary);
+  color: #fff;
+  text-align: center;
+}
+
+.llc-table td {
+  padding: 24px;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--llc-text-dim);
+}
+
+.llc-table td:nth-child(2) {
+  background: rgba(108, 99, 255, 0.03);
+  font-weight: 700;
+  color: var(--llc-primary);
+  text-align: center;
+}
+
+.llc-icon-yes { color: var(--c-accent-2); font-weight: bold; font-size: 1.2rem; }
+.llc-icon-no { color: #e94057; font-weight: bold; font-size: 1.2rem; }
+
+/* 💳 Pricing Plans - Horizontal Alignment */
+.llc-tiers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.llc-tier {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.llc-tier.featured {
+  border: 3px solid var(--llc-primary);
+  position: relative;
+  z-index: 2;
+}
+
+.llc-tier-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--llc-primary);
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.llc-tier-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  margin: 24px 0;
+}
+
+.llc-tier-price span { font-size: 1rem; color: var(--llc-text-dim); }
+
+.llc-tier-list { list-style: none; padding: 0; margin-bottom: 40px; flex-grow: 1; }
+.llc-tier-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.llc-tier-list li::before { content: "✓"; color: var(--c-accent-2); font-weight: bold; }
+
+/* 🌍 Redesigned Culture First Section */
+.llc-keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.llc-keyword-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s var(--ease-out);
+  cursor: default;
+}
+
+.llc-keyword-card:hover {
+  border-color: var(--llc-primary);
+  box-shadow: var(--shadow-1);
+  transform: scale(1.05);
+}
+
+.llc-keyword-card h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--llc-text-bright);
+}
+
+/* Final CTA Banner (Centralized) */
+.cta-banner {
+  padding: 120px 24px;
+  background: linear-gradient(135deg, #ffffff, #f6f7fb);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--c-border);
+}
+
+.cta-banner h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+
+/* Promo Bar Fixes */
+.llc-promo-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 16px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid var(--c-border);
+}
+
+/* Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s var(--ease-out);
+}
+
+.reveal-on-scroll.appeared { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  .llc-tiers { flex-direction: column; align-items: center; }
+  .llc-hero h1 { font-size: 2.5rem; }
+}

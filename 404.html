@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Vedisha Marketing</title>
+  <meta name="description" content="Oops! The page you're looking for doesn't exist. Let's get you back on track with our latest marketing insights or services.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 0 24px;
+      background: var(--c-bg);
+    }
+
+    .error-code {
+      font-size: clamp(6rem, 20vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+      letter-spacing: -0.05em;
+    }
+
+    .error-title {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 16px;
+      color: var(--c-text);
+    }
+
+    .error-message {
+      font-size: 1.1rem;
+      color: var(--c-muted);
+      max-width: 500px;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-btn {
+      padding: 16px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s var(--ease-out);
+    }
+
+    .error-btn.primary {
+      background: var(--c-text);
+      color: #fff;
+    }
+
+    .error-btn.secondary {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      color: var(--c-text);
+    }
+
+    .error-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-2);
+    }
+  </style>
+</head>
+<body class="error-page">
+
+  <div class="error-code">404</div>
+  <h1 class="error-title">This page moved fast. <br>Our agency moves faster.</h1>
+  <p class="error-message">We couldn't find the page you were looking for. It might have been relocated or renamed while we were busy scaling accounts.</p>
+
+  <div class="error-actions">
+    <a href="index.html" class="error-btn primary">Back to Home</a>
+    <a href="blog.html" class="error-btn secondary">Browse Insights</a>
+    <a href="services.html" class="error-btn secondary">Our Services</a>
+  </div>
+
+  <footer class="site-footer" id="site-footer" style="margin-top: 100px; width: 100%;">
+    <div class="footer-container">
+      <p class="footer-copyright" style="text-align: center;">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/header.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/global.js"></script>
+
+
+</body>
+</html>

@@ -6,16 +6,17 @@
   position: sticky;
   top: 0;
   z-index: 9997;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.72);
-  border-bottom: 1px solid var(--c-border);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  background: rgba(255, 250, 247, 0.75);
+  border-bottom: 1px solid rgba(255, 153, 102, 0.1);
+  box-shadow: 0 4px 30px rgba(255, 94, 98, 0.04);
 }
 
 .site-header__inner {
-  max-width: 1200px;
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 18px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,110 +26,100 @@
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: var(--c-text);
 }
 
 .site-brand__mark {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 12px;
   display: grid;
   place-items: center;
-  font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-display);
   font-weight: 800;
-  background: linear-gradient(135deg, rgba(108, 99, 255, 1), rgba(0, 212, 170, 1));
-  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.18);
+  color: #fff;
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+  box-shadow: 0 8px 24px rgba(255, 94, 98, 0.25);
 }
 
 .site-brand__text {
-  font-family: Outfit, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .site-nav a {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: rgba(71, 85, 105, 0.92);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--c-muted);
   text-decoration: none;
-  padding: 10px 10px;
-  border-radius: 12px;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 14px;
+  transition: all 0.4s var(--ease-out);
 }
 
 .site-nav a:hover {
-  color: var(--c-text);
-  background: rgba(15, 23, 42, 0.05);
-  transform: translateY(-1px);
+  color: var(--c-accent);
+  background: rgba(255, 94, 98, 0.08); /* Warm accent glow */
+  transform: translateY(-2px);
 }
 
 .site-nav a[aria-current="page"] {
-  color: var(--c-text);
-  background: rgba(108, 99, 255, 0.10);
-  border: 1px solid rgba(108, 99, 255, 0.22);
-}
-
-.site-nav__cta {
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
-  border: 0;
+  color: var(--c-accent);
+  background: rgba(255, 94, 98, 0.12); /* Increased warmth */
   font-weight: 700;
 }
 
-.site-nav__cta:hover {
-  background: linear-gradient(135deg, #00d4aa, #6c63ff);
-  transform: translateY(-1px);
-}
-
-.nav-toggle {
-  display: none;
-  background: rgba(15, 23, 42, 0.04);
-  border: 1px solid var(--c-border);
-  color: var(--c-text);
-  border-radius: 12px;
-  padding: 10px 12px;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-weight: 600;
-}
-
-@media (max-width: 860px) {
+/* Responsive Overrides */
+@media (max-width: 900px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 14px;
+    font-size: 0.875rem;
+    border-radius: 10px;
   }
 
   .site-nav {
     position: fixed;
-    top: 64px;
-    left: 12px;
-    right: 12px;
+    top: 72px;
+    left: 20px;
+    right: 20px;
     display: none;
     flex-direction: column;
-    padding: 14px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.96);
+    padding: 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.98);
     border: 1px solid var(--c-border);
     box-shadow: var(--shadow-2);
+    z-index: 10000;
   }
 
   .site-nav.is-open {
     display: flex;
+    animation: slideIn 0.4s var(--ease-out);
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .site-nav a {
     width: 100%;
+    padding: 12px;
     justify-content: center;
     text-align: center;
   }
