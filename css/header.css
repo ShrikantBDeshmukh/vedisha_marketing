@@ -9,8 +9,8 @@
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
   background: rgba(255, 250, 247, 0.75);
-  border-bottom: 1px solid rgba(255, 153, 102, 0.1);
-  box-shadow: 0 4px 30px rgba(255, 94, 98, 0.04);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 30px rgba(14, 165, 233, 0.04);
 }
 
 .site-header__inner {
@@ -41,7 +41,7 @@
   font-weight: 800;
   color: #fff;
   background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
-  box-shadow: 0 8px 24px rgba(255, 94, 98, 0.25);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.25);
 }
 
 .site-brand__text {
@@ -71,13 +71,13 @@
 
 .site-nav a:hover {
   color: var(--c-accent);
-  background: rgba(255, 94, 98, 0.08); /* Warm accent glow */
+  background: rgba(14, 165, 233, 0.08); /* Warm accent glow */
   transform: translateY(-2px);
 }
 
 .site-nav a[aria-current="page"] {
   color: var(--c-accent);
-  background: rgba(255, 94, 98, 0.12); /* Increased warmth */
+  background: rgba(14, 165, 233, 0.12); /* Increased warmth */
   font-weight: 700;
 }
 
@@ -86,10 +86,13 @@
   .nav-toggle {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 8px 14px;
-    font-size: 0.875rem;
-    border-radius: 10px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 12px;
   }
 
   .site-nav {

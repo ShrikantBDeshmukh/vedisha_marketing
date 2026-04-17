@@ -8,7 +8,7 @@
   --llc-bg: var(--c-bg); 
   --llc-primary: var(--c-accent); 
   --llc-secondary: var(--c-accent-2); 
-  --llc-accent: #f27121; 
+  --llc-accent: #0284c7;
   --llc-text-bright: var(--c-text);
   --llc-text-dim: var(--c-muted);
   --llc-glass: rgba(255, 255, 255, 0.7);
