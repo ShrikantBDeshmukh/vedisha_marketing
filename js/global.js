@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.querySelector('.wa-float')) {
         const waLink = document.createElement('a');
         waLink.href = `https://wa.me/${config.WHATSAPP_NUMBER}`;
+        // Security: Use target="_blank" with rel="noopener noreferrer"
+        // to prevent tab-nabbing and performance issues.
         waLink.target = "_blank";
         waLink.rel = "noopener noreferrer";
         waLink.className = "wa-float";
