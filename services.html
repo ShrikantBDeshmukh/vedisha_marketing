@@ -29,48 +29,53 @@
     "@graph": [
       {
         "@type": "Service",
+        "@id": "https://vedishamarketing.in/services.html#positioning",
         "name": "Brand Positioning & Strategy",
         "description": "Positioning, ICP clarity, value props, and proof points — packaged into a usable messaging kit your team can ship across web, ads, and sales.",
-        "url": "https://vedishamarketing.in/services.html",
-        "provider": { "@type": "ProfessionalService", "name": "Vedisha Marketing", "url": "https://vedishamarketing.in" },
+        "url": "https://vedishamarketing.in/services.html#positioning",
+        "provider": { "@id": "https://vedishamarketing.in/#organization" },
         "serviceType": "Brand Strategy",
-        "areaServed": [ "Chhatrapati Sambhaji Nagar (formerly Aurangabad)", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
+        "areaServed": [ "Chhatrapati Sambhaji Nagar", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
       },
       {
         "@type": "Service",
+        "@id": "https://vedishamarketing.in/services.html#ads",
         "name": "Digital Marketing Campaigns",
         "description": "Campaign planning, creative angles, and testing systems that turn ad spend into learning — and learning into growth.",
-        "url": "https://vedishamarketing.in/services.html",
-        "provider": { "@type": "ProfessionalService", "name": "Vedisha Marketing", "url": "https://vedishamarketing.in" },
+        "url": "https://vedishamarketing.in/services.html#ads",
+        "provider": { "@id": "https://vedishamarketing.in/#organization" },
         "serviceType": "Performance Marketing",
-        "areaServed": [ "Chhatrapati Sambhaji Nagar (formerly Aurangabad)", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
+        "areaServed": [ "Chhatrapati Sambhaji Nagar", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
       },
       {
         "@type": "Service",
-        "name": "Content Strategy & Social Media",
-        "description": "A content system with editorial themes, repurposing workflows, voice guidelines, and a monthly content plan your team can execute.",
-        "url": "https://vedishamarketing.in/services.html",
-        "provider": { "@type": "ProfessionalService", "name": "Vedisha Marketing", "url": "https://vedishamarketing.in" },
-        "serviceType": "Content Marketing",
-        "areaServed": [ "Chhatrapati Sambhaji Nagar (formerly Aurangabad)", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
-      },
-      {
-        "@type": "Service",
-        "name": "SEO & Organic Growth",
+        "@id": "https://vedishamarketing.in/services.html#seo",
+        "name": "SEO & AI Visibility (AEO)",
         "description": "Technical SEO audits, structured data implementation, content-driven organic growth, and AI visibility optimisation (AEO).",
-        "url": "https://vedishamarketing.in/static-website-seo-launch.html",
-        "provider": { "@type": "ProfessionalService", "name": "Vedisha Marketing", "url": "https://vedishamarketing.in" },
+        "url": "https://vedishamarketing.in/services.html#seo",
+        "provider": { "@id": "https://vedishamarketing.in/#organization" },
         "serviceType": "Search Engine Optimization",
-        "areaServed": [ "Chhatrapati Sambhaji Nagar (formerly Aurangabad)", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
+        "areaServed": [ "Chhatrapati Sambhaji Nagar", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
       },
       {
         "@type": "Service",
-        "name": "PR & Reputation Management",
+        "@id": "https://vedishamarketing.in/services.html#content",
+        "name": "Content Strategy & Social Systems",
+        "description": "A content system with editorial themes, repurposing workflows, voice guidelines, and a monthly content plan your team can execute.",
+        "url": "https://vedishamarketing.in/services.html#content",
+        "provider": { "@id": "https://vedishamarketing.in/#organization" },
+        "serviceType": "Content Marketing",
+        "areaServed": [ "Chhatrapati Sambhaji Nagar", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://vedishamarketing.in/services.html#crisis",
+        "name": "PR & Crisis Response",
         "description": "Reputation monitoring, response kits, holding statements, FAQs, escalation maps, and narrative guidance for real-world pressure.",
-        "url": "https://vedishamarketing.in/services.html",
-        "provider": { "@type": "ProfessionalService", "name": "Vedisha Marketing", "url": "https://vedishamarketing.in" },
+        "url": "https://vedishamarketing.in/services.html#crisis",
+        "provider": { "@id": "https://vedishamarketing.in/#organization" },
         "serviceType": "Public Relations",
-        "areaServed": [ "Chhatrapati Sambhaji Nagar (formerly Aurangabad)", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
+        "areaServed": [ "Chhatrapati Sambhaji Nagar", "Waluj MIDC", "Shendra MIDC", "Pune", "India" ]
       }
     ]
   }
@@ -118,9 +123,16 @@
   </header>
 
 
+
+
+
+
+
+
+
   <section class="services-hero">
-    <h1>A <span class="gradient-text">Health Check</span> for your digital presence.</h1>
-    <p>We apply expert diagnostics to your marketing ecosystem. No more guesswork—just data-driven prescriptions for growth in Chhatrapati Sambhaji Nagar (formerly Aurangabad).</p>
+    <h1>Direct Answers for <span class="gradient-text">Growth.</span></h1>
+    <p>We provide diagnostic-led marketing services in Chhatrapati Sambhaji Nagar (formerly Aurangabad). No generic advice—only prescriptions that work.</p>
   </section>
 
   <!-- Quick Service Banners -->
@@ -146,120 +158,79 @@
         <h4>Paid Ads Management</h4>
         <p>Meta + Google Ads management fee ranges for SMEs across Maharashtra.</p>
       </div>
-      <a href="meta-google-ads-management.html" class="primary-btn" style="background: #fff; border-color: var(--c-border); color: var(--c-text);">Ads Guide →    <div class="services-grid">
+      <a href="meta-google-ads-management.html" class="primary-btn" style="background: #fff; border-color: var(--c-border); color: var(--c-text);">Ads Guide →</a>
+    </div>
+
+    <div class="services-grid">
       <!-- Service 1 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+      <article class="service-card direct-answer" id="positioning">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         </div>
         <h3 class="service-title">Brand Positioning & Strategy</h3>
-        <p class="service-summary">We clarify your positioning and messaging so your website, ads, and sales team tell the same story.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The Research:</strong> Competitors, category language, and customer objections to find the clearest hook.</li>
-            <li><strong>Outcome:</strong> A full messaging kit: ICP, value props, proof points, and homepage narrative.</li>
-            <li><a href="insights/brand-positioning-sprint.html" class="service-link">View 2-Week Sprint Deliverables →</a></li>
-          </ul>
+        <div class="diagnostic-block">
+          <div class="problem"><strong>Problem:</strong> Marketing feels disjointed; website, ads, and sales tell different stories.</div>
+          <div class="diagnosis"><strong>Diagnosis:</strong> Lack of a unified semantic core and messaging hierarchy.</div>
+          <div class="prescription"><strong>Prescription:</strong> A 2-week Positioning Sprint to define ICP, value props, and an unignorable narrative.</div>
         </div>
+        <a href="insights/brand-positioning-sprint.html" class="service-link">View 2-Week Sprint →</a>
       </article>
 
       <!-- Service 2 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+      <article class="service-card direct-answer" id="ads">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
         </div>
         <h3 class="service-title">Digital Marketing Campaigns</h3>
-        <p class="service-summary">Campaign planning and creative angles that turn spend into learning—and learning into ROI.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The System:</strong> A high-velocity testing plan with clear hypotheses and naming conventions.</li>
-            <li><strong>Outcome:</strong> Meta/Google ads creative briefs, hooks, and lander copy that convert.</li>
-            <li><a href="insights/agency-evaluation-checklist.html" class="service-link">Download 15-Point Evaluation Checklist →</a></li>
-          </ul>
+        <div class="diagnostic-block">
+          <div class="problem"><strong>Problem:</strong> High ad spend with low conversion or plateauing ROI.</div>
+          <div class="diagnosis"><strong>Diagnosis:</strong> Weak creative hooks and high-friction conversion paths.</div>
+          <div class="prescription"><strong>Prescription:</strong> High-velocity testing systems for Meta and Google Ads with clear ROI attribution.</div>
         </div>
+        <a href="insights/agency-evaluation-checklist.html" class="service-link">Download Checklist →</a>
       </article>
 
       <!-- Service 3 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+      <article class="service-card direct-answer" id="seo">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <h3 class="service-title">PR & Reputation</h3>
-        <p class="service-summary">Reputation monitoring and response kits—so your team has a plan before you need one.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The Kit:</strong> Holding statements, escalation maps, and narrative guidance for critical signals.</li>
-            <li><strong>Outcome:</strong> Faster response times and calmer decisions under high-pressure scenarios.</li>
-          </ul>
+        <h3 class="service-title">SEO & AI Visibility (AEO)</h3>
+        <div class="diagnostic-block">
+          <div class="problem"><strong>Problem:</strong> Business is invisible to AI search assistants (ChatGPT, Perplexity).</div>
+          <div class="diagnosis"><strong>Diagnosis:</strong> Non-semantic HTML and lack of structured data entities.</div>
+          <div class="prescription"><strong>Prescription:</strong> OmniSEO strategy—Answer Engine Optimization (AEO) to claim zero-click authority.</div>
         </div>
-      </article>
-    </div>
+        <a href="ai-visibility-boost.html" class="service-link">Learn about AEO →</a>
       </article>
 
       <!-- Service 4 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+      <article class="service-card direct-answer" id="content">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <h3 class="service-title">Content & Social</h3>
-        <p class="service-summary">Systems that keep quality high while reducing the weekly scramble and burn-out.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The Flow:</strong> Editorial themes and repurposing workflows that fit your team’s actual capacity.</li>
-            <li><strong>Outcome:</strong> Consistent publishing schedules without the "what do we post today?" panic.</li>
-            <li><a href="insights/ai-human-marketing-revolution.html" class="service-link">Learn about AI+Human Storytelling →</a></li>
-          </ul>
+        <h3 class="service-title">Content & Social Systems</h3>
+        <div class="diagnostic-block">
+          <div class="problem"><strong>Problem:</strong> Team is burnt out by the "what do we post today?" panic.</div>
+          <div class="diagnosis"><strong>Diagnosis:</strong> Missing editorial themes and repurposing workflows.</div>
+          <div class="prescription"><strong>Prescription:</strong> A content engine that fits your capacity and prioritizes depth over noise.</div>
         </div>
+        <a href="insights/ai-human-marketing-revolution.html" class="service-link">AI+Human Workflow →</a>
       </article>
 
       <!-- Service 5 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3 class="service-title">Influencer & Partnerships</h3>
-        <p class="service-summary">Creator programs that match your brand voice and drive meaningful partnership results.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The Reach:</strong> Vetted shortlist of creators based on audience fit, safety, and engagement depth.</li>
-            <li><strong>Outcome:</strong> Partnership campaigns that feel personal and organic, not just transactional.</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Service 6 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
-        <div class="expand-indicator">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
+      <article class="service-card direct-answer" id="crisis">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <h3 class="service-title">Crisis Communication</h3>
-        <p class="service-summary">Practical response kits and escalation paths for when attention spikes unexpectedly.</p>
-        <div class="service-details">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-            <li><strong>The Plan:</strong> Holding statements, stakeholder maps, and channel guidance for likely scenarios.</li>
-            <li><strong>Outcome:</strong> Faster response times and reduced risk during moments of critical brand pressure.</li>
-          </ul>
+        <h3 class="service-title">PR & Crisis Response</h3>
+        <div class="diagnostic-block">
+          <div class="problem"><strong>Problem:</strong> Vulnerability to sudden reputation spikes or negative narratives.</div>
+          <div class="diagnosis"><strong>Diagnosis:</strong> No pre-approved holding statements or escalation maps.</div>
+          <div class="prescription"><strong>Prescription:</strong> Practical response kits and narrative guidance for real-world pressure.</div>
         </div>
+        <a href="contact.html" class="service-link">Get a Crisis Kit →</a>
       </article>
-
     </div>
 
     <!-- Marathi Multilingual Section -->
@@ -383,6 +354,20 @@
 
   <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

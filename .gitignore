@@ -1,0 +1,9 @@
+node_modules/
+.pnpm-debug.log
+test_output.log
+test_results.txt
+verification/*.png
+verification/*.py
+verification/*.js
+.DS_Store
+*.log

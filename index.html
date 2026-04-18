@@ -31,75 +31,67 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "additionalType": "https://schema.org/MarketingAgency",
-    "name": "Vedisha Marketing",
-    "url": "https://vedishamarketing.in",
-    "logo": "https://vedishamarketing.in/images/office-studio.png",
-    "image": "https://vedishamarketing.in/images/office-studio.png",
-    "description": "A senior-led digital marketing studio specialising in brand positioning, content strategy, performance marketing, SEO, PR, and reputation management — powered by AI, refined by humans.",
-    "email": "hello@vedishamarketing.in",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Shop No. 6, Malkhare Classic, 1st Floor, Near Jawahar Nagar Police Station, Garkheda Area",
-      "addressLocality": "Chhatrapati Sambhaji Nagar",
-      "addressRegion": "Maharashtra",
-      "postalCode": "431009",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "19.8654",
-      "longitude": "75.3373"
-    },
-    "areaServed": [
+    "@graph": [
       {
-        "@type": "AdministrativeArea",
-        "name": "Chhatrapati Sambhaji Nagar"
+        "@type": "ProfessionalService",
+        "@id": "https://vedishamarketing.in/#organization",
+        "additionalType": "https://schema.org/MarketingAgency",
+        "name": "Vedisha Marketing",
+        "url": "https://vedishamarketing.in",
+        "logo": "https://vedishamarketing.in/images/office-studio.png",
+        "image": "https://vedishamarketing.in/images/office-studio.png",
+        "description": "A senior-led digital marketing studio in Chhatrapati Sambhaji Nagar specialising in AEO (Answer Engine Optimization), brand positioning, and ROI-driven performance marketing.",
+        "email": "hello@vedishamarketing.in",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. 6, Malkhare Classic, 1st Floor, Near Jawahar Nagar Police Station, Garkheda Area",
+          "addressLocality": "Chhatrapati Sambhaji Nagar",
+          "addressRegion": "Maharashtra",
+          "postalCode": "431009",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "19.8654",
+          "longitude": "75.3373"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Chhatrapati Sambhaji Nagar" },
+          { "@type": "AdministrativeArea", "name": "Waluj MIDC" },
+          { "@type": "AdministrativeArea", "name": "Shendra MIDC" },
+          { "@type": "AdministrativeArea", "name": "Pune" },
+          { "@type": "Country", "name": "India" }
+        ],
+        "foundingDate": "2026",
+        "priceRange": "$$",
+        "sameAs": [
+          "https://linkedin.com/company/vedishamarketing",
+          "https://instagram.com/vedishamarketing",
+          "https://x.com/vedishamarketing",
+          "https://facebook.com/vedishamarketing",
+          "https://youtube.com/@vedishamarketing"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Digital Marketing Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Answer Engine Optimization (AEO)" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Positioning & Strategy" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta & Google Ads Management" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multilingual Content Marketing" } }
+          ]
+        }
       },
       {
-        "@type": "AdministrativeArea",
-        "name": "Waluj MIDC"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Shendra MIDC"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Pune"
-      },
-      {
-        "@type": "Country",
-        "name": "India"
+        "@type": "WebSite",
+        "@id": "https://vedishamarketing.in/#website",
+        "url": "https://vedishamarketing.in",
+        "name": "Vedisha Marketing",
+        "publisher": { "@id": "https://vedishamarketing.in/#organization" },
+        "inLanguage": ["en", "mr"]
       }
-    ],
-    "foundingDate": "2026",
-    "priceRange": "$$",
-    "sameAs": [
-      "https://linkedin.com/company/vedishamarketing",
-      "https://instagram.com/vedishamarketing",
-      "https://x.com/vedishamarketing",
-      "https://facebook.com/vedishamarketing",
-      "https://youtube.com/@vedishamarketing"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "sales",
-      "email": "hello@vedishamarketing.in",
-      "availableLanguage": ["English", "Hindi"]
-    }],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Digital Marketing Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Positioning & Strategy" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Strategy & Social Media" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing & Paid Ads" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & Organic Growth" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PR & Reputation Management" } }
-      ]
-    }
+    ]
   }
   </script>
 
@@ -143,6 +135,13 @@
       </button>
     </div>
   </header>
+
+
+
+
+
+
+
 
 
   <main id="main">
@@ -342,6 +341,20 @@
 
   <script src="js/config.js"></script>
   <script src="js/global.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
