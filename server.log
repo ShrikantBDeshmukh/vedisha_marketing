@@ -1,0 +1,11 @@
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /services.html HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /css/global.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /css/footer.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /images/saas-audit-hero.png HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /js/services.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /css/header.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /css/services.css HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /js/footer.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /js/header.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /js/config.js HTTP/1.1" 200 -
+127.0.0.1 - - [18/Apr/2026 19:25:02] "GET /js/global.js HTTP/1.1" 200 -
