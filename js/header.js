@@ -1,8 +1,11 @@
 (() => {
   'use strict';
 
-  const existing = document.querySelector('.site-header');
-  if (existing) return;
+  let existingHeader = document.querySelector('.site-header');
+  if (existingHeader) {
+    setupEventListeners(existingHeader);
+    return;
+  }
 
   const path = (window.location.pathname || '').toLowerCase();
   const file = path.split('/').pop() || 'index.html';
@@ -32,9 +35,9 @@
     })
     .join('');
 
-  const header = document.createElement('header');
-  header.className = 'site-header';
-  header.innerHTML = `
+  const newHeader = document.createElement('header');
+  newHeader.className = 'site-header';
+  newHeader.innerHTML = `
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-header__inner">
       <a class="site-brand" href="${base}index.html" aria-label="Vedisha Marketing Home">
@@ -52,23 +55,37 @@
     </div>
   `;
 
-  document.body.insertAdjacentElement('afterbegin', header);
+  document.body.insertAdjacentElement('afterbegin', newHeader);
+  setupEventListeners(newHeader);
 
-  const toggle = header.querySelector('.nav-toggle');
-  const nav = header.querySelector('#site-nav');
+  function setupEventListeners(headerEl) {
+    const headerMenuToggle = headerEl.querySelector('.nav-toggle');
+    const headerSiteNav = headerEl.querySelector('#site-nav');
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+    if (headerMenuToggle && headerSiteNav) {
+      const closeMenu = () => {
+        headerSiteNav.classList.remove('is-open');
+        headerMenuToggle.setAttribute('aria-expanded', 'false');
+      };
 
-    document.addEventListener('click', (e) => {
-      if (!nav.classList.contains('is-open')) return;
-      if (header.contains(e.target)) return;
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
+      headerMenuToggle.addEventListener('click', () => {
+        const isOpen = headerSiteNav.classList.toggle('is-open');
+        headerMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!headerSiteNav.classList.contains('is-open')) return;
+        if (headerEl.contains(e.target)) return;
+        closeMenu();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && headerSiteNav.classList.contains('is-open')) {
+          closeMenu();
+          headerMenuToggle.focus();
+        }
+      });
+    }
   }
 })();
 
