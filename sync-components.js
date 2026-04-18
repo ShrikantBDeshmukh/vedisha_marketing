@@ -107,13 +107,25 @@ htmlFiles.forEach(file => {
     // 2. Sync Footer
     content = content.replace(/<footer[\s\S]*?<\/footer>/i, MASTER_FOOTER);
 
-    // 3. Ensure global.css is present in head
+    // 3. Ensure global.css and branding.css are present in head
+    if (!content.includes('branding.css')) {
+        const brandingCssLink = '  <link rel="stylesheet" href="css/branding.css">';
+        content = content.replace(/<\/head>/i, brandingCssLink + '\n</head>');
+    }
     if (!content.includes('global.css')) {
         const globalCssLink = '  <link rel="stylesheet" href="css/global.css">';
         content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
     }
 
-    // 4. Ensure global.js is present before body end
+    // 4. Ensure branding-system.js and global.js are present before body end
+    if (!content.includes('branding-system.js')) {
+        const brandingJsLink = '  <script src="js/branding-system.js"></script>';
+        if (content.includes('global.js')) {
+            content = content.replace(/<script src="js\/global.js"><\/script>/, brandingJsLink + '\n  <script src="js/global.js"></script>');
+        } else {
+            content = content.replace(/<\/body>/i, brandingJsLink + '\n</body>');
+        }
+    }
     if (!content.includes('global.js')) {
         const globalJsLink = '  <script src="js/global.js"></script>';
         content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
