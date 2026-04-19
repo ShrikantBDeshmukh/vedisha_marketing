@@ -377,3 +377,49 @@ a:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Floating WhatsApp Button */
+.wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Standard WhatsApp Green */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.25);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), background-color 0.3s ease;
+  animation: waEntrance 0.8s var(--ease-out) backwards;
+  will-change: transform;
+}
+
+.wa-float:hover {
+  transform: scale(1.1) translateY(-4px);
+  background-color: #22c35e;
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.35);
+}
+
+.wa-float:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 4px;
+}
+
+@keyframes waEntrance {
+  0% { opacity: 0; transform: scale(0.5) translateY(40px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 24px;
+    right: 24px;
+    width: 54px;
+    height: 54px;
+  }
+}

@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * Problem: Scroll events fire at a high frequency, causing jank if the handler is heavy.
      * Solution: Use requestAnimationFrame to batch updates to the display's refresh rate.
      * Added { passive: true } to prevent blocking the main thread during scrolling.
-     * Impact: Reduces main thread workload during scroll by ~80% and eliminates layout thrashing.
      */
     let scrollTicking = false;
     window.addEventListener('scroll', () => {
