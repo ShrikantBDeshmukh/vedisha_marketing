@@ -1,0 +1,81 @@
+/* ============================================================
+   PERFORMANCE BRANDING SYSTEM (60-30-10 Rule)
+   Vedisha Marketing - Senior UI Architect Implementation
+   ============================================================ */
+
+/*
+   HSL Color Definitions for Semantic Consistency
+   Digital Vanguard: Background: #FFFFFF | Primary: #39ACE7 | Accent: #63E6D4 | Text: #2F2F33
+   Premium Authority: Background: #FFFFFF | Primary: #87CEEB | Accent: #FFD700 | Support: #00296B
+   Dynamic Conversion: Background: #FFFFFF | Primary: #ADD8E6 | Accent: #FF5F73 | Support: #0F4C81
+*/
+
+:root {
+  /* Default/Digital Vanguard (Baseline) */
+  --theme-h-primary: 200; --theme-s-primary: 78%; --theme-l-primary: 56%;
+  --theme-h-accent: 172;  --theme-s-accent: 73%;  --theme-l-accent: 64%;
+  --theme-h-text: 240;    --theme-s-text: 4%;     --theme-l-text: 19%;
+  --theme-h-bg: 0;        --theme-s-bg: 0%;       --theme-l-bg: 100%;
+}
+
+.theme-vanguard {
+  --theme-h-primary: 200; --theme-s-primary: 78%; --theme-l-primary: 56%;
+  --theme-h-accent: 172;  --theme-s-accent: 73%;  --theme-l-accent: 64%;
+  --theme-h-text: 240;    --theme-s-text: 4%;     --theme-l-text: 19%;
+  --theme-h-bg: 0;        --theme-s-bg: 0%;       --theme-l-bg: 100%;
+}
+
+.theme-authority {
+  --theme-h-primary: 197; --theme-s-primary: 71%; --theme-l-primary: 73%;
+  --theme-h-accent: 51;   --theme-s-accent: 100%; --theme-l-accent: 50%;
+  --theme-h-text: 217;    --theme-s-text: 100%;   --theme-l-text: 21%; /* Support used as text */
+  --theme-h-bg: 0;        --theme-s-bg: 0%;       --theme-l-bg: 100%;
+}
+
+.theme-conversion {
+  --theme-h-primary: 195; --theme-s-primary: 53%; --theme-l-primary: 79%;
+  --theme-h-accent: 353;  --theme-s-accent: 100%; --theme-l-accent: 69%;
+  --theme-h-text: 208;    --theme-s-text: 79%;    --theme-l-text: 28%; /* Support used as text */
+  --theme-h-bg: 0;        --theme-s-bg: 0%;       --theme-l-bg: 100%;
+}
+
+/* Global Token Mapping */
+body.theme-vanguard,
+body.theme-authority,
+body.theme-conversion {
+  background-color: hsl(var(--theme-h-bg), var(--theme-s-bg), var(--theme-l-bg));
+  color: hsl(var(--theme-h-text), var(--theme-s-text), var(--theme-l-text));
+  --c-bg: hsl(var(--theme-h-bg), var(--theme-s-bg), var(--theme-l-bg));
+  --c-text: hsl(var(--theme-h-text), var(--theme-s-text), var(--theme-l-text));
+  --c-accent: hsl(var(--theme-h-accent), var(--theme-s-accent), var(--theme-l-accent));
+  --c-link: hsl(var(--theme-h-primary), var(--theme-s-primary), var(--theme-l-primary));
+
+  /* Derived secondary tokens for shadows and surfaces */
+  --c-surface: hsl(var(--theme-h-primary), 20%, 98%);
+  --c-surface-2: hsl(var(--theme-h-primary), 20%, 96%);
+  --c-muted: hsl(var(--theme-h-text), var(--theme-s-text), calc(var(--theme-l-text) + 30%));
+
+  /* Update gradients used in components */
+  --btn-gradient: linear-gradient(135deg, var(--c-link), var(--c-accent));
+}
+
+/* Override existing global.css specifics for consistency */
+body.theme-vanguard .btn--primary,
+body.theme-authority .btn--primary,
+body.theme-conversion .btn--primary {
+  background: var(--btn-gradient);
+}
+
+body.theme-vanguard .metric-value,
+body.theme-authority .metric-value,
+body.theme-conversion .metric-value {
+  background: var(--btn-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.theme-vanguard .reading-progress-bar,
+body.theme-authority .reading-progress-bar,
+body.theme-conversion .reading-progress-bar {
+  background: var(--btn-gradient);
+}
