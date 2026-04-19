@@ -39,6 +39,7 @@
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 24px 120px;
+  overflow: hidden;
 }
 
 /* Top Banner Links (Quick Services) */
@@ -79,7 +80,7 @@
 /* Services Grid Main */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
 }
 
@@ -148,9 +149,10 @@
 
 /* Comparison Table Adaptive Shell */
 .comparison-section {
-  max-width: 1200px;
+  max-width: var(--max-w);
   margin: 80px auto;
   padding: 0 24px;
+  overflow: hidden;
 }
 
 .expand-indicator {
@@ -165,13 +167,6 @@
   transform: rotate(180deg);
 }
 
-/* Comparison Table Adaptive Shell */
-.comparison-section {
-  max-width: var(--max-w);
-  margin: 120px auto;
-  padding: 0 24px;
-}
-
 .table-wrapper {
   background: #fff;
   border: 1px solid var(--c-border);
@@ -180,6 +175,7 @@
   display: block;
   box-shadow: var(--shadow-1);
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .comp-table {
@@ -189,9 +185,11 @@
 }
 
 .comp-table th, .comp-table td {
-  padding: 32px;
+  padding: 12px 8px;
   text-align: left;
   border-bottom: 1px solid var(--c-border);
+  word-wrap: break-word;
+  min-width: 0;
 }
 
 .comp-table th {

@@ -82,85 +82,77 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Marathi Pages -->
+  <!-- Local Landing Pages (Priority 0.7) -->
   <url>
-    <loc>https://vedishamarketing.in/mr/index.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.in/mr/services.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vedishamarketing.in/mr/about.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/digital-marketing-in-waluj-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/contact.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/web-development-in-waluj-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/work.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/seo-services-in-waluj-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/meta-google-ads-management.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/digital-marketing-in-shendra-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/static-website-seo-launch.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/web-development-in-shendra-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/local-lead-combo.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/seo-services-in-shendra-midc.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/gmb.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/digital-marketing-in-cidco.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/industrial-seo-waluj-midc.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/web-development-in-cidco.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/b2b-lead-gen-shendra-midc.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/seo-services-in-cidco.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vedishamarketing.in/mr/healthcare-marketing-csn.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <loc>https://vedishamarketing.in/digital-marketing-in-chikalthana.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Insights & Resources (Priority 0.6) -->
   <url>
-    <loc>https://vedishamarketing.in/blog.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://vedishamarketing.in/web-development-in-chikalthana.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vedishamarketing.in/seo-services-in-chikalthana.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
