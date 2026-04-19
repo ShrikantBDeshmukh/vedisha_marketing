@@ -92,6 +92,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+  <link rel="stylesheet" href="css/branding.css">
 </head>
 <body class="services-page">
 
@@ -123,16 +124,19 @@
         <h4>Paid Ads Management</h4>
         <p>Meta + Google Ads management fee ranges for SMEs across Maharashtra.</p>
       </div>
-      <a href="meta-google-ads-management.html" class="primary-btn" style="background: #fff; border-color: var(--c-border); color: var(--c-text);">Ads Guide →    <div class="services-grid">
+      <a href="meta-google-ads-management.html" class="primary-btn" style="background: #fff; border-color: var(--c-border); color: var(--c-text);">Ads Guide →</a>
+    </div>
+
+    <div class="services-grid">
       <!-- Service 1 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-1" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-1">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         </div>
-        <h3 class="service-title">Brand Positioning & Strategy</h3>
+        <h3 class="service-title" id="service-title-1">Brand Positioning & Strategy</h3>
         <p class="service-summary">We clarify your positioning and messaging so your website, ads, and sales team tell the same story.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -144,14 +148,14 @@
       </article>
 
       <!-- Service 2 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-2" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-2">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
         </div>
-        <h3 class="service-title">Digital Marketing Campaigns</h3>
+        <h3 class="service-title" id="service-title-2">Digital Marketing Campaigns</h3>
         <p class="service-summary">Campaign planning and creative angles that turn spend into learning—and learning into ROI.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -163,14 +167,14 @@
       </article>
 
       <!-- Service 3 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-3" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-3">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
-        <h3 class="service-title">PR & Reputation</h3>
+        <h3 class="service-title" id="service-title-3">PR & Reputation</h3>
         <p class="service-summary">Reputation monitoring and response kits—so your team has a plan before you need one.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -183,14 +187,14 @@
       </article>
 
       <!-- Service 4 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-4" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-4">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
-        <h3 class="service-title">Content & Social</h3>
+        <h3 class="service-title" id="service-title-4">Content & Social</h3>
         <p class="service-summary">Systems that keep quality high while reducing the weekly scramble and burn-out.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -202,14 +206,14 @@
       </article>
 
       <!-- Service 5 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-5" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-5">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3 class="service-title">Influencer & Partnerships</h3>
+        <h3 class="service-title" id="service-title-5">Influencer & Partnerships</h3>
         <p class="service-summary">Creator programs that match your brand voice and drive meaningful partnership results.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -220,14 +224,14 @@
       </article>
 
       <!-- Service 6 -->
-      <article class="service-card" onclick="this.classList.toggle('expanded')">
+      <article class="service-card" id="service-card-6" role="button" tabindex="0" aria-expanded="false" aria-labelledby="service-title-6">
         <div class="expand-indicator">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
-        <h3 class="service-title">Crisis Communication</h3>
+        <h3 class="service-title" id="service-title-6">Crisis Communication</h3>
         <p class="service-summary">Practical response kits and escalation paths for when attention spikes unexpectedly.</p>
         <div class="service-details">
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
@@ -411,5 +415,6 @@
   <script src="js/global.js"></script>
 
 
+  <script src="js/branding-system.js"></script>
 </body>
 </html>
