@@ -1,78 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service – Vedisha Marketing</title>
-  <meta name="description" content="Terms of Service for Vedisha Marketing. Read the terms governing your use of our website and services.">
+const fs = require('fs');
+const path = require('path');
 
-  <!-- Core Styles -->
-  <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/header.min.css">
-  <link rel="stylesheet" href="css/footer.min.css">
+const dir = process.cwd();
+const htmlFiles = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 
-  <style>
-    .legal-wrap {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: clamp(140px, 18vw, 220px) 24px 140px;
-    }
-    .legal-wrap h1 {
-      font-size: var(--fs-h1);
-      margin-bottom: 16px;
-      line-height: 1.1;
-    }
-    .last-updated {
-      color: var(--c-muted);
-      font-size: 0.9rem;
-      margin-bottom: 64px;
-      display: block;
-    }
-    .legal-wrap h2 {
-      font-size: 1.5rem;
-      margin: 48px 0 24px;
-      color: var(--c-text);
-    }
-    .legal-wrap p, .legal-wrap li {
-      color: var(--c-muted-2);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-    .legal-wrap ul {
-      padding-left: 20px;
-      margin-bottom: 24px;
-    }
-    .legal-wrap strong { color: var(--c-text); }
-  </style>
-
-  <link rel="canonical" href="https://vedishamarketing.in/terms-of-service.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Terms of Service – Vedisha Marketing">
-  <meta property="og:description" content="Read the terms governing your use of the Vedisha Marketing website and services.">
-  <meta property="og:url" content="https://vedishamarketing.in/terms-of-service.html">
-  <meta property="og:site_name" content="Vedisha Marketing">
-
-  <!-- Icons & Brand -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-  <!-- Shared Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-</head>
-<body class="page-legal">
-
-          <header class="site-header" id="site-header">
+const MASTER_HEADER = `  <header class="site-header" id="site-header">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-header__inner">
       <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
@@ -90,46 +22,9 @@
         <span>Menu</span>
       </button>
     </div>
-  </header>
+  </header>`;
 
-  <main class="legal-wrap" id="main">
-    <h1>Terms of Service</h1>
-    <span class="last-updated">Last updated: April 2, 2026</span>
-
-    <h2>Quick summary (plain language)</h2>
-    <ul>
-      <li><strong>Use the site lawfully</strong> and don’t abuse or attempt to disrupt it.</li>
-      <li><strong>Content ownership</strong> stays with Vedisha Marketing unless otherwise stated.</li>
-      <li><strong>Third‑party links</strong> may exist; their policies apply on their sites.</li>
-      <li><strong>Questions</strong>: email <a href="mailto:hello@vedishamarketing.in">hello@vedishamarketing.in</a>.</li>
-    </ul>
-
-    <h2>1. Acceptance of Terms</h2>
-    <p>By accessing and using the Vedisha Marketing website, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
-
-    <h2>2. Use of Services</h2>
-    <p>Our services are provided for business and marketing purposes. You agree to use them only for lawful purposes and in accordance with these terms.</p>
-
-    <h2>3. Intellectual Property</h2>
-    <p>All content on this website, including text, graphics, logos, and images, is the property of Vedisha Marketing and is protected by intellectual property laws.</p>
-
-    <h2>4. Limitation of Liability</h2>
-    <p>Vedisha Marketing shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services.</p>
-
-    <h2>5. Third-Party Links</h2>
-    <p>Our website may contain links to third-party sites. We are not responsible for the content or practices of those sites.</p>
-
-    <h2>6. Modifications</h2>
-    <p>We reserve the right to modify these terms at any time. Continued use of the website constitutes acceptance of updated terms.</p>
-
-    <h2>7. Governing Law</h2>
-    <p>These terms are governed by the laws of India. Any disputes shall be resolved in the courts of the applicable jurisdiction.</p>
-
-    <h2>8. Contact</h2>
-    <p>For questions, contact us at <a href="mailto:hello@vedishamarketing.in">hello@vedishamarketing.in</a>.</p>
-  </main>
-
-        <footer class="site-footer" id="site-footer">
+const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -177,8 +72,8 @@
             <h4 class="footer-nav-heading">Get in Touch</h4>
             <ul class="footer-nav-list">
               <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="mailto:hello@vedishamarketing.in">Email Us</a></li>
-              <li><a href="mailto:hello@vedishamarketing.in?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
+              <li><a href="mailto:hello@vedishamarketing.com">Email Us</a></li>
+              <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
             </ul>
           </div>
         </nav>
@@ -200,13 +95,31 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer>`;
 
-  <script src="js/footer.min.js"></script>
-  <script src="js/header.min.js"></script>
-  <script src="js/config.min.js"></script>
-  <script src="js/global.min.js"></script>
+htmlFiles.forEach(file => {
+    const filePath = path.join(dir, file);
+    let content = fs.readFileSync(filePath, 'utf-8');
 
+    // 1. Sync Header
+    content = content.replace(/<header[\s\S]*?<\/header>/i, MASTER_HEADER);
 
-</body>
-</html>
+    // 2. Sync Footer
+    content = content.replace(/<footer[\s\S]*?<\/footer>/i, MASTER_FOOTER);
+
+    // 3. Ensure global.css is present in head
+    if (!content.includes('global.css')) {
+        const globalCssLink = '  <link rel="stylesheet" href="css/global.css">';
+        content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
+    }
+
+    // 4. Ensure global.js is present before body end
+    if (!content.includes('global.js')) {
+        const globalJsLink = '  <script src="js/global.js"></script>';
+        content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
+    }
+
+    fs.writeFileSync(filePath, content, 'utf-8');
+});
+
+console.log(`Final component synchronization complete for ${htmlFiles.length} files.`);
