@@ -2,21 +2,38 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = process.cwd();
-const htmlFiles = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
+
+// Recursively find all HTML files
+function getHtmlFiles(dir, fileList = []) {
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            if (file !== 'node_modules' && file !== 'components') {
+                getHtmlFiles(filePath, fileList);
+            }
+        } else if (file.endsWith('.html')) {
+            fileList.push(filePath);
+        }
+    });
+    return fileList;
+}
+
+const htmlFiles = getHtmlFiles(dir);
 
 const MASTER_HEADER = `  <header class="site-header" id="site-header">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#BASE_PATH#main">Skip to content</a>
     <div class="site-header__inner">
-      <a href="index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+      <a href="#BASE_PATH#index.html" class="site-brand" aria-label="Vedisha Marketing Home">
          <div class="site-brand__mark">V</div>
          <span class="site-brand__text">Vedisha Marketing</span>
       </a>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html" class="site-nav__cta">Start a Plan</a>
+        <a href="#BASE_PATH#index.html">Home</a>
+        <a href="#BASE_PATH#about.html">About</a>
+        <a href="#BASE_PATH#services.html">Services</a>
+        <a href="#BASE_PATH#work.html">Work</a>
+        <a href="#BASE_PATH#contact.html" class="site-nav__cta">Start a Plan</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span>Menu</span>
@@ -28,7 +45,7 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo" aria-label="Vedisha Marketing Home">
+          <a href="#BASE_PATH#index.html" class="footer-logo" aria-label="Vedisha Marketing Home">
             <span class="logo-icon">V</span>
             <span class="logo-text">Vedisha Marketing</span>
           </a>
@@ -41,37 +58,37 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
           <div class="footer-nav-group">
             <h4 class="footer-nav-heading">Company</h4>
             <ul class="footer-nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="work.html">Work</a></li>
+              <li><a href="#BASE_PATH#index.html">Home</a></li>
+              <li><a href="#BASE_PATH#about.html">About Us</a></li>
+              <li><a href="#BASE_PATH#services.html">Services</a></li>
+              <li><a href="#BASE_PATH#work.html">Work</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
             <h4 class="footer-nav-heading">Services</h4>
             <ul class="footer-nav-list">
-              <li><a href="meta-google-ads-management.html">Paid Ads Management</a></li>
-              <li><a href="local-lead-combo.html">Local Lead Combo</a></li>
-              <li><a href="static-website-seo-launch.html">SEO Launch</a></li>
-              <li><a href="content-geo.html">Geo Content Hubs</a></li>
-              <li><a href="real-estate-marketing.html">Real Estate Marketing</a></li>
-              <li><a href="gmb.html">GMB Optimization</a></li>
+              <li><a href="#BASE_PATH#meta-google-ads-management.html">Paid Ads Management</a></li>
+              <li><a href="#BASE_PATH#local-lead-combo.html">Local Lead Combo</a></li>
+              <li><a href="#BASE_PATH#static-website-seo-launch.html">SEO Launch</a></li>
+              <li><a href="#BASE_PATH#content-geo.html">Geo Content Hubs</a></li>
+              <li><a href="#BASE_PATH#real-estate-marketing.html">Real Estate Marketing</a></li>
+              <li><a href="#BASE_PATH#gmb.html">GMB Optimization</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
             <h4 class="footer-nav-heading">Resources</h4>
             <ul class="footer-nav-list">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="case-studies.html">Case Studies</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="ai-visibility-boost.html">AI Visibility Boost</a></li>
-              <li><a href="careers.html">Careers</a></li>
+              <li><a href="#BASE_PATH#blog.html">Blog</a></li>
+              <li><a href="#BASE_PATH#case-studies.html">Case Studies</a></li>
+              <li><a href="#BASE_PATH#faq.html">FAQ</a></li>
+              <li><a href="#BASE_PATH#ai-visibility-boost.html">AI Visibility Boost</a></li>
+              <li><a href="#BASE_PATH#careers.html">Careers</a></li>
             </ul>
           </div>
           <div class="footer-nav-group">
             <h4 class="footer-nav-heading">Get in Touch</h4>
             <ul class="footer-nav-list">
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#BASE_PATH#contact.html">Contact Us</a></li>
               <li><a href="mailto:hello@vedishamarketing.com">Email Us</a></li>
               <li><a href="mailto:hello@vedishamarketing.com?subject=Quick%20question%20-%20Vedisha%20Marketing">Quick question</a></li>
             </ul>
@@ -82,9 +99,9 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
         <ul class="footer-legal" aria-label="Legal links">
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="#BASE_PATH#privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="#BASE_PATH#terms-of-service.html">Terms of Service</a></li>
+          <li><a href="#BASE_PATH#disclaimer.html">Disclaimer</a></li>
         </ul>
         <div class="footer-social" aria-label="Social media links">
           <a href="https://facebook.com/vedishamarketing" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
@@ -98,28 +115,36 @@ const MASTER_FOOTER = `  <footer class="site-footer" id="site-footer">
   </footer>`;
 
 htmlFiles.forEach(file => {
-    const filePath = path.join(dir, file);
-    let content = fs.readFileSync(filePath, 'utf-8');
+    let content = fs.readFileSync(file, 'utf-8');
+    const relativePath = path.relative(path.dirname(file), dir);
+    const basePath = relativePath ? relativePath + '/' : '';
 
-    // 1. Sync Header
-    content = content.replace(/<header[\s\S]*?<\/header>/i, MASTER_HEADER);
+    const headerWithPaths = MASTER_HEADER.replace(/#BASE_PATH#/g, basePath);
+    const footerWithPaths = MASTER_FOOTER.replace(/#BASE_PATH#/g, basePath);
 
-    // 2. Sync Footer
-    content = content.replace(/<footer[\s\S]*?<\/footer>/i, MASTER_FOOTER);
+    // 1. Sync Header (Target by ID)
+    if (content.includes('id="site-header"')) {
+        content = content.replace(/<header[^>]*id="site-header"[^>]*>[\s\S]*?<\/header>/i, headerWithPaths);
+    }
 
-    // 3. Ensure global.css is present in head
+    // 2. Sync Footer (Target by ID)
+    if (content.includes('id="site-footer"')) {
+        content = content.replace(/<footer[^>]*id="site-footer"[^>]*>[\s\S]*?<\/footer>/i, footerWithPaths);
+    }
+
+    // 3. Ensure global.css is present in head (Idempotent)
     if (!content.includes('global.css')) {
-        const globalCssLink = '  <link rel="stylesheet" href="css/global.css">';
+        const globalCssLink = `  <link rel="stylesheet" href="${basePath}css/global.css">`;
         content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
     }
 
-    // 4. Ensure global.js is present before body end
+    // 4. Ensure global.js is present before body end (Idempotent)
     if (!content.includes('global.js')) {
-        const globalJsLink = '  <script src="js/global.js"></script>';
+        const globalJsLink = `  <script src="${basePath}js/global.js"></script>`;
         content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
     }
 
-    fs.writeFileSync(filePath, content, 'utf-8');
+    fs.writeFileSync(file, content, 'utf-8');
 });
 
 console.log(`Final component synchronization complete for ${htmlFiles.length} files.`);

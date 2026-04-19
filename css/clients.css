@@ -2,7 +2,6 @@
    CLIENTS SECTION CSS – REFINED & ADAPTIVE
    ========================================= */
 
-@import url("global.css");
 
 .clients-hero {
   padding: clamp(80px, 12vw, 140px) 24px clamp(40px, 8vw, 80px);
