@@ -172,16 +172,19 @@
   padding: 0 24px;
 }
 
-.comparison-table-wrapper {
+.table-wrapper {
   background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-xl);
-  overflow: hidden;
+  overflow-x: auto !important;
+  display: block;
   box-shadow: var(--shadow-1);
+  -webkit-overflow-scrolling: touch;
 }
 
 .comp-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
 }
 

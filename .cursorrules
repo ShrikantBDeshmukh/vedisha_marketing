@@ -1,0 +1,22 @@
+# Vedisha Marketing Project Rules
+
+## Tech Stack
+- Static HTML/CSS/JS
+- Minified assets for production (.min.css, .min.js)
+- Images in WebP format
+- Shared Header/Footer injected via js/header.js and js/footer.js
+
+## SEO Standards
+- All pages must have unique <title> and <meta name="description">.
+- Keywords should focus on "Chhatrapati Sambhajinagar", "Aurangabad", and "Maharashtra".
+- Maintain JSON-LD schema on key pages.
+
+## Performance
+- Always use loading="lazy" for images.
+- Keep Interaction Latency low by minimizing heavy JS.
+- Convert all new images to WebP.
+
+## Branding
+- Primary Color Theme: Sky Blue (#0ea5e9) and Ocean Blue (#3b82f6).
+- Secondary: Light Sky Blue (#7dd3fc).
+- Font: Outfit (Display), Plus Jakarta Sans (Body).

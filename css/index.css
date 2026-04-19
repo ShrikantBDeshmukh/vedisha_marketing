@@ -21,9 +21,9 @@
   top: -50%; left: -50%;
   width: 200%; height: 200%;
   background:
-    radial-gradient(circle at center, rgba(255, 195, 113, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 75% 25%, rgba(255, 94, 98, 0.12) 0%, transparent 35%),
-    radial-gradient(circle at 25% 75%, rgba(255, 153, 102, 0.1) 0%, transparent 40%);
+    radial-gradient(circle at center, rgba(125, 211, 252, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 25% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
   z-index: 1;
   animation: bgRotate 40s linear infinite;
   pointer-events: none;
@@ -50,7 +50,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 4px 12px rgba(255, 94, 98, 0.2));
+  filter: drop-shadow(0 4px 12px rgba(14, 165, 233, 0.2));
 }
 
 .home-hero p {
@@ -76,13 +76,13 @@
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.5s var(--ease-out);
-  box-shadow: 0 15px 45px rgba(255, 94, 98, 0.3);
+  box-shadow: 0 15px 45px rgba(14, 165, 233, 0.3);
 }
 
 .primary-btn:hover {
   transform: translateY(-6px) scale(1.03);
   background-position: right center;
-  box-shadow: 0 25px 60px rgba(255, 153, 102, 0.4);
+  box-shadow: 0 25px 60px rgba(59, 130, 246, 0.4);
 }
 
 /* Our Edge (3 Cards) */
@@ -110,7 +110,7 @@
 
 .edge-card:hover { 
   transform: translateY(-16px); 
-  border-color: rgba(255, 153, 102, 0.3);
+  border-color: rgba(59, 130, 246, 0.3);
   box-shadow: var(--shadow-2);
 }
 

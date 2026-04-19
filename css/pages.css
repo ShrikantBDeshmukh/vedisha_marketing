@@ -154,6 +154,31 @@
   gap: 32px; 
 }
 
+/* ── Tables ── */
+.table-wrapper {
+  overflow-x: auto !important;
+  display: block;
+  margin: 24px 0;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.compare-table {
+  min-width: 600px;
+}
+
 /* ── CTA Banner ── */
 .cta-banner {
   margin-top: 140px;

@@ -10,9 +10,9 @@
   --footer-text: #52525b;
   --footer-heading: #18181b;
   --footer-link: #3f3f46;
-  --footer-link-hover: #ff5e62;
-  --footer-accent: #ff5e62;
-  --footer-accent-secondary: #ff9966;
+  --footer-link-hover: #0ea5e9;
+  --footer-accent: #0ea5e9;
+  --footer-accent-secondary: #3b82f6;
   --footer-divider: rgba(24, 24, 27, 0.06);
   --footer-glass: rgba(24, 24, 27, 0.03);
   --footer-glass-border: rgba(24, 24, 27, 0.08);
@@ -153,7 +153,7 @@
 .footer-divider {
   margin: 40px 0 24px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--footer-divider), rgba(255, 94, 98, 0.18), var(--footer-divider), transparent);
+  background: linear-gradient(90deg, transparent, var(--footer-divider), rgba(14, 165, 233, 0.18), var(--footer-divider), transparent);
 }
 
 /* ── Bottom Section ── */
@@ -204,8 +204,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   background: var(--footer-glass);
   border: 1px solid var(--footer-glass-border);
@@ -217,8 +217,8 @@
 }
 
 .social-icon:hover {
-  background: rgba(255, 94, 98, 0.10);
-  border-color: rgba(255, 94, 98, 0.22);
+  background: rgba(14, 165, 233, 0.10);
+  border-color: rgba(14, 165, 233, 0.22);
   color: var(--footer-accent);
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
@@ -237,7 +237,7 @@
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 94, 98, 0.22);
+  border: 1px solid rgba(14, 165, 233, 0.22);
   background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -265,7 +265,7 @@
   color: #fff;
   border-color: var(--footer-accent);
   transform: translateY(-3px);
-  box-shadow: 0 12px 34px rgba(255, 94, 98, 0.22);
+  box-shadow: 0 12px 34px rgba(14, 165, 233, 0.22);
 }
 
 /* ── Responsive ── */
@@ -312,8 +312,8 @@
   }
 
   .social-icon {
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
   }
 
   .back-to-top {

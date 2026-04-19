@@ -4,11 +4,13 @@
 
 
 .compare-wrap {
-  overflow: hidden;
+  overflow-x: auto !important;
+  display: block;
   border-radius: var(--radius-xl);
   border: 1px solid var(--c-border);
   background: #fff;
   box-shadow: var(--shadow-1);
+  -webkit-overflow-scrolling: touch;
 }
 
 .compare-table {
@@ -33,6 +35,12 @@
 
 .compare-table tr:last-child td {
   border-bottom: none;
+}
+
+.table-wrapper {
+  overflow-x: auto !important;
+  display: block;
+  -webkit-overflow-scrolling: touch;
 }
 
 .ads-small-note {
