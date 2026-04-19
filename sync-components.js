@@ -11,9 +11,9 @@ const SOCIAL_LINKS = {
     YOUTUBE: "https://youtube.com/@vedishamarketing"
 };
 
-function getHeader(lang, currentFile) {
+function getHeader(lang, basePath) {
   const isMr = lang === 'mr';
-  const prefix = isMr ? '/mr/' : '/';
+  const prefix = basePath;
   const home = isMr ? 'मुख्यपृष्ठ' : 'Home';
   const about = isMr ? 'आमच्याबद्दल' : 'About';
   const services = isMr ? 'सेवा' : 'Services';
@@ -23,26 +23,12 @@ function getHeader(lang, currentFile) {
   const skip = isMr ? 'मुख्य आशयाकडे जा' : 'Skip to content';
   const menu = isMr ? 'मेनू' : 'Menu';
 
-  const otherLangLabel = isMr ? 'EN' : 'मराठी';
-  const currentLangLabel = isMr ? 'मराठी' : 'EN';
-
-  // Logic for lang switcher to target current page in other language
-  let otherLangUrl;
-  if (isMr) {
-    otherLangUrl = '/' + currentFile;
-  } else {
-    otherLangUrl = '/mr/' + currentFile;
-  }
-
-  // Verify if target file exists, if not fallback to index
-  const targetPath = path.join(dir, otherLangUrl);
-  if (!fs.existsSync(targetPath)) {
-    otherLangUrl = isMr ? '/index.html' : '/mr/index.html';
-  }
-
+  // For the language switcher, we need to know the current file name to link to its counterpart.
+  // This is handled in the main loop per file.
+  // For now, we'll use a placeholder that the main loop will replace.
   const switcher = isMr
-    ? `<a href="${otherLangUrl}" style="text-decoration: none; color: inherit; opacity: 0.7;">EN</a> | <span style="color: var(--c-accent);">मराठी</span>`
-    : `<span style="color: var(--c-accent);">EN</span> | <a href="${otherLangUrl}" style="text-decoration: none; color: inherit; opacity: 0.7;">मराठी</a>`;
+    ? `<a href="#OTHER_LANG_URL#" style="text-decoration: none; color: inherit; opacity: 0.7;">EN</a> | <span style="color: var(--c-accent);">मराठी</span>`
+    : `<span style="color: var(--c-accent);">EN</span> | <a href="#OTHER_LANG_URL#" style="text-decoration: none; color: inherit; opacity: 0.7;">मराठी</a>`;
 
   return `  <header class="site-header" id="site-header">
     <a class="skip-link" href="#main">${skip}</a>
@@ -68,9 +54,9 @@ function getHeader(lang, currentFile) {
   </header>`;
 }
 
-function getFooter(lang) {
+function getFooter(lang, basePath) {
     const isMr = lang === 'mr';
-    const prefix = isMr ? '/mr/' : '/';
+    const prefix = basePath;
     const brand = isMr ? 'वेदिशा मार्केटिंग' : 'Vedisha Marketing';
     const tagline = isMr
         ? `<a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer">Codweb Solutions</a> द्वारे निर्मित — स्पष्टता, वेग आणि विश्वासासाठी काळजीपूर्वक तयार केलेले.`
@@ -131,74 +117,95 @@ function getFooter(lang) {
   </footer>`;
 }
 
-function processFiles(directory, lang = 'en') {
-    const files = fs.readdirSync(directory);
+function getHtmlFiles(dir, fileList = []) {
+    const files = fs.readdirSync(dir);
     files.forEach(file => {
-        const filePath = path.join(directory, file);
-        const stat = fs.statSync(filePath);
-
-        if (stat.isDirectory()) {
-            if (file !== 'node_modules' && file !== '.git' && file !== 'css' && file !== 'js' && file !== 'images' && file !== 'components') {
-                processFiles(filePath, file === 'mr' ? 'mr' : lang);
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            if (!['node_modules', '.git', 'css', 'js', 'images', 'components'].includes(file)) {
+                getHtmlFiles(filePath, fileList);
             }
         } else if (file.endsWith('.html')) {
-            let content = fs.readFileSync(filePath, 'utf-8');
-            const currentLang = lang;
-            const fileName = path.basename(filePath);
-
-            const header = getHeader(currentLang, fileName);
-            const footer = getFooter(currentLang);
-
-    // 3. Ensure global.css and branding.css are present in head
-    if (!content.includes('branding.css')) {
-        const brandingCssLink = '  <link rel="stylesheet" href="css/branding.css">';
-        content = content.replace(/<\/head>/i, brandingCssLink + '\n</head>');
-    }
-    if (!content.includes('global.css')) {
-        const globalCssLink = '  <link rel="stylesheet" href="css/global.css">';
-        content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
-    }
-
-    // 4. Ensure branding-system.js and global.js are present before body end
-    if (!content.includes('branding-system.js')) {
-        const brandingJsLink = '  <script src="js/branding-system.js"></script>';
-        if (content.includes('global.js')) {
-            content = content.replace(/<script src="js\/global.js"><\/script>/, brandingJsLink + '\n  <script src="js/global.js"></script>');
-        } else {
-            content = content.replace(/<\/body>/i, brandingJsLink + '\n</body>');
-        }
-    }
-    if (!content.includes('global.js')) {
-        const globalJsLink = '  <script src="js/global.js"></script>';
-        content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
-    }
-
-            // Standardize domain to .in
-            content = content.replace(/vedishamarketing\.com/gi, 'vedishamarketing.in');
-
-            // Insert Header at start of body
-            content = content.replace(/(<body[^>]*>)/i, `$1\n${header}`);
-
-            // Insert Footer before end of body
-            content = content.replace(/(<\/body>)/i, `\n${footer}\n$1`);
-
-            // 3. Ensure global.css is present in head
-            if (!content.includes('global.css')) {
-                const globalCssLink = '  <link rel="stylesheet" href="/css/global.css">';
-                content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
-            }
-
-            // 4. Ensure global.js is present before body end
-            if (!content.includes('global.js')) {
-                const globalJsLink = '  <script src="/js/global.js"></script>';
-                content = content.replace(/(<\/body>)/i, globalJsLink + '\n$1');
-            }
-
-            fs.writeFileSync(filePath, content, 'utf-8');
+            fileList.push(filePath);
         }
     });
+    return fileList;
 }
 
-processFiles(dir);
+const htmlFiles = getHtmlFiles(dir);
 
-console.log(`Multi-language component synchronization and cleanup complete.`);
+htmlFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf-8');
+    const relToRoot = path.relative(path.dirname(file), dir);
+    const basePath = relToRoot ? relToRoot + '/' : '';
+    
+    const isMr = file.includes(path.sep + 'mr' + path.sep) || file.endsWith(path.sep + 'mr') || file.includes('/mr/');
+    const lang = isMr ? 'mr' : 'en';
+    const fileName = path.basename(file);
+
+    // Lang Switcher Logic
+    let otherLangUrl;
+    if (isMr) {
+        // From mr/about.html -> ../about.html
+        otherLangUrl = basePath + fileName;
+    } else {
+        // From about.html -> mr/about.html
+        otherLangUrl = basePath + 'mr/' + fileName;
+    }
+
+    // Verify if target file exists, if not fallback to index
+    const targetPath = path.join(dir, isMr ? fileName : 'mr/' + fileName);
+    if (!fs.existsSync(targetPath)) {
+        otherLangUrl = isMr ? basePath + 'index.html' : basePath + 'mr/index.html';
+    }
+
+    const header = getHeader(lang, basePath).replace('#OTHER_LANG_URL#', otherLangUrl);
+    const footer = getFooter(lang, basePath);
+
+    // 1. CLEANUP: Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD|=======|>>>>>>> main/g, '');
+
+    // 2. CLEANUP: Remove duplicate headers and footers (Robustly)
+    // We replace the entire sequence from the FIRST site-header start to the LAST site-header end if possible,
+    // but safer is to replace all individual ones.
+    content = content.replace(/<header[^>]*id="site-header"[^>]*>[\s\S]*?<\/header>/gi, '');
+    content = content.replace(/<footer[^>]*id="site-footer"[^>]*>[\s\S]*?<\/footer>/gi, '');
+
+    // 3. INJECT: Header at start of body
+    if (content.match(/<body[^>]*>/i)) {
+        content = content.replace(/(<body[^>]*>)/i, `$1\n${header}`);
+    } else {
+        // Fallback if no body tag found (unlikely)
+        content = header + '\n' + content;
+    }
+
+    // 4. INJECT: Footer before end of body
+    if (content.match(/<\/body>/i)) {
+        content = content.replace(/(<\/body>)/i, `\n${footer}\n$1`);
+    } else {
+        content = content + '\n' + footer;
+    }
+
+    // 5. ENFORCE: Required CSS/JS (Idempotent cleanup)
+    // Remove any existing instances of these global assets to prevent duplicates
+    content = content.replace(/<link[^>]*href="[^"]*(global|branding)\.css"[^>]*>/gi, '');
+    content = content.replace(/<script[^>]*src="[^"]*global\.js"[^>]*><\/script>/gi, '');
+
+    const requiredCss = [
+        `  <link rel="stylesheet" href="${basePath}css/global.css">`,
+        `  <link rel="stylesheet" href="${basePath}css/branding.css">`
+    ];
+    requiredCss.forEach(cssLink => {
+        content = content.replace(/<\/head>/i, cssLink + '\n</head>');
+    });
+
+    const globalJsLink = `  <script src="${basePath}js/global.js"></script>`;
+    content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
+
+    // 6. DOMAIN FIX: Standardize to .in
+    content = content.replace(/vedishamarketing\.com/gi, 'vedishamarketing.in');
+
+    fs.writeFileSync(file, content, 'utf-8');
+});
+
+console.log(`Synchronization and cleanup complete for ${htmlFiles.length} files.`);
