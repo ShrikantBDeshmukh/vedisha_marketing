@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Prioritize Hyper-Local Routes
+Allow: /digital-marketing-in-*.html
+Allow: /web-development-in-*.html
+Allow: /seo-services-in-*.html
+
 Sitemap: https://vedishamarketing.in/sitemap.xml

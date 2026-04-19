@@ -59,7 +59,104 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // 4. Centralized WhatsApp Button Injection
+    // 4. Instant Local Quote Component (Glassmorphism + Multi-step logic)
+    const injectQuoteComponent = () => {
+        if (document.querySelector('.local-quote-toggle')) return;
+
+        const widget = document.createElement('div');
+        widget.className = 'local-quote-widget';
+        widget.innerHTML = `
+            <button class="local-quote-toggle high-tech-gradient" aria-label="Get Instant Local Quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Instant Quote</span>
+            </button>
+            <div class="local-quote-modal glass-morphism">
+                <div class="quote-step active" data-step="1">
+                    <h3>What do you need?</h3>
+                    <div class="quote-options">
+                        <button class="quote-opt" data-val="SEO">SEO</button>
+                        <button class="quote-opt" data-val="Ads">Ads</button>
+                        <button class="quote-opt" data-val="Web">Web</button>
+                    </div>
+                </div>
+                <div class="quote-step" data-step="2">
+                    <h3>Where are you?</h3>
+                    <div class="quote-options">
+                        <button class="quote-opt" data-val="Waluj">Waluj</button>
+                        <button class="quote-opt" data-val="Shendra">Shendra</button>
+                        <button class="quote-opt" data-val="Other">Other</button>
+                    </div>
+                </div>
+                <div class="quote-step" data-step="3">
+                    <h3>Almost there!</h3>
+                    <input type="email" placeholder="Your Email" class="quote-input">
+                    <button class="primary-btn quote-submit">Get My Quote</button>
+                </div>
+                <div class="quote-success" style="display:none; text-align:center; padding: 20px;">
+                    <h3>Analysis Started!</h3>
+                    <p>We'll reach out in 4 hours.</p>
+                </div>
+                <button class="modal-close">&times;</button>
+            </div>
+        `;
+        document.body.appendChild(widget);
+
+        const toggle = widget.querySelector('.local-quote-toggle');
+        const modal = widget.querySelector('.local-quote-modal');
+        const close = widget.querySelector('.modal-close');
+        const steps = widget.querySelectorAll('.quote-step');
+        let selections = {};
+
+        toggle.addEventListener('click', () => modal.classList.toggle('is-open'));
+        close.addEventListener('click', () => modal.classList.remove('is-open'));
+
+        widget.querySelectorAll('.quote-opt').forEach(opt => {
+            opt.addEventListener('click', (e) => {
+                const parentStep = e.target.closest('.quote-step');
+                const stepIdx = parseInt(parentStep.dataset.step);
+                selections[stepIdx] = e.target.dataset.val;
+
+                parentStep.classList.remove('active');
+                if (steps[stepIdx]) {
+                    steps[stepIdx].classList.add('active');
+                } else {
+                    modal.querySelector('.quote-success').style.display = 'block';
+                    setTimeout(() => modal.classList.remove('is-open'), 3000);
+                }
+            });
+        });
+
+        const submitBtn = widget.querySelector('.quote-submit');
+        if (submitBtn) {
+            submitBtn.addEventListener('click', () => {
+                const parentStep = submitBtn.closest('.quote-step');
+                parentStep.classList.remove('active');
+                modal.querySelector('.quote-success').style.display = 'block';
+                setTimeout(() => modal.classList.remove('is-open'), 3000);
+            });
+        }
+    };
+    injectQuoteComponent();
+
+    // Add necessary styles for the widget dynamically if not in CSS
+    const style = document.createElement('style');
+    style.textContent = `
+        .local-quote-widget { position: fixed; bottom: 100px; right: 30px; z-index: 10000; }
+        .local-quote-toggle { display: flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 99px; color: #fff; border: none; cursor: pointer; box-shadow: var(--shadow-2); font-weight: 700; transition: transform 0.3s var(--ease-out); }
+        .local-quote-toggle:hover { transform: scale(1.05); }
+        .local-quote-modal { position: absolute; bottom: 80px; right: 0; width: 320px; padding: 30px; display: none; flex-direction: column; gap: 20px; box-shadow: var(--shadow-lg); }
+        .local-quote-modal.is-open { display: flex; }
+        .quote-step { display: none; flex-direction: column; gap: 15px; }
+        .quote-step.active { display: flex; }
+        .quote-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .quote-opt { padding: 10px; border: 1px solid var(--c-border); border-radius: 12px; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.2s ease; font-weight: 600; }
+        .quote-opt:hover { background: var(--c-accent); color: #fff; }
+        .modal-close { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer; opacity: 0.5; }
+        .quote-input { padding: 12px; border-radius: 12px; border: 1px solid var(--c-border); background: rgba(255,255,255,0.8); }
+    `;
+    document.head.appendChild(style);
+
+    // 5. Centralized WhatsApp Button Injection
     // Checks config.js for number. Replace hardcoded HTML with this site-wide.
     const config = window.VEDISHA_CONFIG || { WHATSAPP_NUMBER: "91XXXXXXXXXX" };
     
