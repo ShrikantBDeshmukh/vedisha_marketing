@@ -149,16 +149,29 @@ function processFiles(directory, lang = 'en') {
             const header = getHeader(currentLang, fileName);
             const footer = getFooter(currentLang);
 
-            // Clean existing headers and footers
-            content = content.replace(/<header[\s\S]*?<\/header>/gi, '');
-            content = content.replace(/<footer[\s\S]*?<\/footer>/gi, '');
+    // 3. Ensure global.css and branding.css are present in head
+    if (!content.includes('branding.css')) {
+        const brandingCssLink = '  <link rel="stylesheet" href="css/branding.css">';
+        content = content.replace(/<\/head>/i, brandingCssLink + '\n</head>');
+    }
+    if (!content.includes('global.css')) {
+        const globalCssLink = '  <link rel="stylesheet" href="css/global.css">';
+        content = content.replace(/<\/head>/i, globalCssLink + '\n</head>');
+    }
 
-            // Standardize lang attribute
-            if (currentLang === 'mr') {
-              content = content.replace(/<html lang="en">/i, '<html lang="mr">');
-            } else {
-              content = content.replace(/<html lang="mr">/i, '<html lang="en">');
-            }
+    // 4. Ensure branding-system.js and global.js are present before body end
+    if (!content.includes('branding-system.js')) {
+        const brandingJsLink = '  <script src="js/branding-system.js"></script>';
+        if (content.includes('global.js')) {
+            content = content.replace(/<script src="js\/global.js"><\/script>/, brandingJsLink + '\n  <script src="js/global.js"></script>');
+        } else {
+            content = content.replace(/<\/body>/i, brandingJsLink + '\n</body>');
+        }
+    }
+    if (!content.includes('global.js')) {
+        const globalJsLink = '  <script src="js/global.js"></script>';
+        content = content.replace(/<\/body>/i, globalJsLink + '\n</body>');
+    }
 
             // Standardize domain to .in
             content = content.replace(/vedishamarketing\.com/gi, 'vedishamarketing.in');

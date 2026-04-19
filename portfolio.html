@@ -38,8 +38,31 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+  <link rel="stylesheet" href="css/branding.css">
 </head>
 <body style="background:#ffffff; color:#0f172a; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;">
+  <header class="site-header" id="site-header">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-header__inner">
+      <a href="/index.html" class="site-brand" aria-label="Vedisha Marketing Home">
+         <div class="site-brand__mark">V</div>
+         <span class="site-brand__text">Vedisha Marketing</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/services.html">Services</a>
+        <a href="/work.html">Work</a>
+        <div class="lang-switcher" style="display: inline-flex; gap: 8px; margin: 0 15px; font-weight: 600; font-size: 0.9rem;">
+          <span style="color: var(--c-accent);">EN</span> | <a href="/mr/index.html" style="text-decoration: none; color: inherit; opacity: 0.7;">मराठी</a>
+        </div>
+        <a href="/contact.html" class="site-nav__cta">Start a Plan</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span>Menu</span>
+      </button>
+    </div>
+  </header>
   <header class="site-header" id="site-header">
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-header__inner">
@@ -69,8 +92,6 @@
 
 
 
-
-
   <main id="main" style="max-width: 900px; margin: 0 auto; padding: 90px 24px 60px;">
     <h1 style="font-family: Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif; color:#fff; letter-spacing:-0.02em;">Redirecting to our work…</h1>
     <p style="margin-top: 14px; color:#a0a8bc; line-height:1.7;">
@@ -81,22 +102,7 @@
   <script src="js/header.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/global.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script src="js/branding-system.js"></script>
 
   <footer class="site-footer" id="site-footer">
     <div class="footer-container">

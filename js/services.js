@@ -3,20 +3,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const serviceCards = document.querySelectorAll('.service-card');
 
-    serviceCards.forEach(card => {
-        card.addEventListener('click', () => {
-            // Check if this card is currently expanded
-            const isExpanded = card.classList.contains('expanded');
+    const toggleCard = (card) => {
+        const isExpanded = card.classList.contains('expanded');
 
-            // Optional: Close all other cards before opening this one (accordion style)
-            // Remove the next 3 lines if you want cards to open independently without closing others
-            serviceCards.forEach(c => {
+        // Close all other cards (accordion style)
+        serviceCards.forEach(c => {
+            if (c !== card) {
                 c.classList.remove('expanded');
-            });
+                c.setAttribute('aria-expanded', 'false');
+            }
+        });
 
-            // Toggle logic
-            if (!isExpanded) {
-                card.classList.add('expanded');
+        // Toggle the clicked card
+        if (isExpanded) {
+            card.classList.remove('expanded');
+            card.setAttribute('aria-expanded', 'false');
+        } else {
+            card.classList.add('expanded');
+            card.setAttribute('aria-expanded', 'true');
+        }
+    };
+
+    serviceCards.forEach(card => {
+        card.addEventListener('click', () => toggleCard(card));
+
+        // Keyboard accessibility: handle Enter and Space keys
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault(); // Prevent page scroll on Space
+                toggleCard(card);
             }
         });
     });

@@ -15,7 +15,7 @@ htmlFiles.forEach(file => {
         return;
     }
 
-    const canonicalUrl = `https://vedishamarketing.in/${file === 'index.html' ? '' : file}`;
+    const canonicalUrl = `https://vedishamarketing.com/${file === 'index.html' ? '' : file}`;
 
     const headInjection = `
   <!-- Global Technical SEO -->
@@ -32,8 +32,8 @@ htmlFiles.forEach(file => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Vedisha Marketing",
-    "url": "https://vedishamarketing.in",
-    "logo": "https://vedishamarketing.in/images/office-studio.png"
+    "url": "https://vedishamarketing.com",
+    "logo": "https://vedishamarketing.com/images/office-studio.png"
   }
   </script>
 `;
