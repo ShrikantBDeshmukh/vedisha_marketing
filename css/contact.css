@@ -2,7 +2,6 @@
    CONTACT PAGE CSS – REFINED & BOUTIQUE
    ========================================= */
 
-@import url("global.css");
 
 .contact-hero {
   padding: clamp(100px, 15vw, 180px) 24px clamp(60px, 10vw, 100px);
