@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>Analysis Started!</h3>
                     <p>We'll reach out in 4 hours.</p>
                 </div>
-                <button class="modal-close">&times;</button>
+                <button class="modal-close" aria-label="Close quote modal">&times;</button>
             </div>
         `;
         document.body.appendChild(widget);
@@ -150,9 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .quote-step.active { display: flex; }
         .quote-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .quote-opt { padding: 10px; border: 1px solid var(--c-border); border-radius: 12px; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.2s ease; font-weight: 600; }
-        .quote-opt:hover { background: var(--c-accent); color: #fff; }
-        .modal-close { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer; opacity: 0.5; }
-        .quote-input { padding: 12px; border-radius: 12px; border: 1px solid var(--c-border); background: rgba(255,255,255,0.8); }
+        .quote-opt:hover, .quote-opt:focus-visible { background: var(--c-accent); color: #fff; transform: translateY(-2px); box-shadow: var(--shadow-1); }
+        .quote-opt:active { transform: translateY(0); }
+        .modal-close { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer; opacity: 0.5; transition: opacity 0.2s ease, transform 0.2s ease; }
+        .modal-close:hover, .modal-close:focus-visible { opacity: 1; transform: scale(1.1); color: var(--c-accent); }
+        .quote-input { padding: 12px; border-radius: 12px; border: 1px solid var(--c-border); background: rgba(255,255,255,0.8); transition: border-color 0.2s ease; }
+        .quote-input:focus { outline: none; border-color: var(--c-accent); }
     `;
     document.head.appendChild(style);
 
