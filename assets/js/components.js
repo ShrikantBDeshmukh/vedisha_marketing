@@ -26,7 +26,7 @@
 
   const linksHtml = navItems
     .map((item) => {
-      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
+      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold underline underline-offset-4"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
       return `<a href="${basePath}${item.href}"${current}>${item.label}</a>`;
     })
     .join('');
@@ -38,8 +38,8 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle" aria-label="Toggle navigation menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
         ${linksHtml}
@@ -48,7 +48,7 @@
     </div>
     <!-- Mobile Menu Overlay -->
     <div id="mobile-nav" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl flex-col p-4 shadow-lg slide-in">
-        ${navItems.map(item => `<a href="${basePath}${item.href}" class="block py-3 px-4 font-semibold ${isCurrent(item.match) ? 'text-blue-600 bg-blue-50 rounded-lg' : 'text-slate-600'}">${item.label}</a>`).join('')}
+        ${navItems.map(item => `<a href="${basePath}${item.href}" class="block py-3 px-4 font-semibold ${isCurrent(item.match) ? 'text-blue-600 bg-blue-50 rounded-lg border-l-4 border-blue-600 pl-3' : 'text-slate-600'}">${item.label}</a>`).join('')}
         <a class="block mt-4 text-center px-6 py-3 font-bold text-white bg-blue-600 rounded-xl" href="${basePath}contact.html">Get Free Audit</a>
     </div>
   `;
