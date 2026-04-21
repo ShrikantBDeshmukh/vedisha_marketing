@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights – Vedisha Marketing</title>
+  <title>Insights | Vedisha Marketing</title>
   <meta name="description" content="Growth frameworks and marketing playbooks from 8+ year senior practitioners. Strategies for B2B SaaS, content systems, and performance testing.">
   <link rel="canonical" href="https://vedishamarketing.in/insights.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,103 +11,76 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.webp">
-  <link rel="stylesheet" href="css/insights.min.css">
-  <link rel="stylesheet" href="css/insights.css">
-  
-  
-  <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="insights-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
-
-  
-
-
-
-
-  <section class="insights-hero">
-    <div class="status-badge" style="margin-bottom: 24px;">Playbooks</div>
-      <h1>Practical frameworks for teams that want <span class="gradient-text">speed & quality</span>.</h1>
-      <p>
-        We lead with 8+ years of senior-level expertise. We’re publishing the exact frameworks we use for messaging, content, performance testing, and PR—written for founders who value clarity and execution.
-      </p>
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 text-center">
+    <span class="inline-block bg-blue-100 text-blue-700 font-bold px-4 py-1.5 text-xs uppercase tracking-widest rounded-full mb-6">Playbooks</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Practical frameworks for teams that want <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">speed & quality</span></h1>
+    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+      We lead with 8+ years of senior-level expertise. We’re publishing the exact frameworks we use for messaging, content, performance testing, and PR—written for founders who value clarity and execution.
+    </p>
   </section>
 
-  <main class="insights-grid" id="main">
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-1.webp" alt="Team planning strategy" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Strategy</span>
-        <h2>AI + Human Marketing: what we automate (and what we never do)</h2>
-        <p class="article-excerpt">A clear framework for using AI to move faster without turning your brand voice into generic copy.</p>
-        <a href="insights/ai-human-marketing-revolution.html" class="read-more">
-          Read full framework
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+  <main id="main" class="pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-2.webp" alt="Campaign planning notes" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Efficiency</span>
-        <h2>The 6-day campaign plan: our sprint template you can copy</h2>
-        <p class="article-excerpt">A lightweight planning system that turns research into angles, creative briefs, and a launch-ready execution plan.</p>
-        <a href="insights/campaign-planning-ai.html" class="read-more">
-          Read full framework
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+        <!-- Insight 1 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-1.webp" alt="AI + Human Marketing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-teal-600 text-xs font-bold uppercase tracking-widest mb-3">Strategy</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">AI + Human Marketing: what we automate (and what we never do)</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A clear framework for using AI to move faster without turning your brand voice into generic copy.</p>
+            <a href="insights/ai-human-marketing-revolution.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full framework &rarr;</a>
+          </div>
+        </article>
 
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-3.webp" alt="PR and reputation planning" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Public Relations</span>
-        <h2>The modern PR response kit (what to prepare before you need it)</h2>
-        <p class="article-excerpt">A practical checklist: holding statements, FAQs, escalation paths, and a narrative reset plan for fast-moving situations.</p>
-        <a href="insights/new-pr-playbook.html" class="read-more">
-          Read full framework
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
-  </main>
+        <!-- Insight 2 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-2.webp" alt="The 6-day campaign plan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Efficiency</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">The 6-day campaign plan: our sprint template you can copy</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A lightweight planning system that turns research into angles, creative briefs, and a launch-ready execution plan.</p>
+            <a href="insights/campaign-planning-ai.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full framework &rarr;</a>
+          </div>
+        </article>
 
-  <div class="page-wrap" style="padding-top: 0;">
-    <div class="glass-card page-section" style="padding: 48px; text-align: center; border-radius: var(--radius-lg);">
-      <h3 style="margin-bottom: 16px;">Want a tailored plan instead?</h3>
-      <p style="margin-bottom: 24px; color: var(--c-muted);">Send a short brief and we’ll reply with recommended next steps and a timeline.</p>
-      <a href="contact.html" class="site-nav__cta" style="padding: 14px 32px;">Talk to us →</a>
+        <!-- Insight 3 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-3.webp" alt="The modern PR response kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-indigo-600 text-xs font-bold uppercase tracking-widest mb-3">Public Relations</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">The modern PR response kit (what to prepare before you need it)</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A practical checklist: holding statements, FAQs, escalation paths, and a narrative reset plan for fast-moving situations.</p>
+            <a href="insights/new-pr-playbook.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full framework &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Call to Action Card -->
+      <div class="mt-20 bg-slate-900 rounded-[2rem] p-10 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent pointer-events-none"></div>
+        <div class="relative z-10">
+          <h3 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Want a tailored plan instead?</h3>
+          <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10">Send a short brief and we’ll reply with recommended next steps and a timeline.</p>
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition shadow-sm text-lg hover:-translate-y-0.5">Talk to us &rarr;</a>
+        </div>
+      </div>
     </div>
-  </div>
-
-
-
-  
-  
-  
-
-
-  
-
-
-  
-  
-
-
-
+  </main>
 
   <script src="./js/global.min.js"></script>
 </body>

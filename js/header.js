@@ -30,28 +30,32 @@
 
   const linksHtml = navItems
     .map((item) => {
-      const current = isCurrent(item.match) ? ' aria-current="page"' : '';
+      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
       return `<a href="${item.href}"${current}>${item.label}</a>`;
     })
     .join('');
 
   const newHeader = document.createElement('header');
-  newHeader.className = 'site-header';
+  newHeader.className = 'fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200';
   newHeader.innerHTML = `
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="site-header__inner">
-      <a class="site-brand" href="${base}index.html" aria-label="Vedisha Marketing Home">
-        <span class="site-brand__mark" aria-hidden="true">V</span>
-        <span class="site-brand__text">Vedisha Marketing</span>
+    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 z-[100]" href="#main">Skip to content</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight" href="${base}index.html" aria-label="Vedisha Marketing Home">
+        <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
+        <span>Vedisha Marketing</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span aria-hidden="true">☰</span>
-        <span>Menu</span>
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
         ${linksHtml}
-        <a class="site-nav__cta" href="${base}contact.html">Get Free Audit</a>
+        <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition shadow-sm" href="${base}contact.html">Get Free Audit</a>
       </nav>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-nav" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl flex-col p-4 shadow-lg slide-in">
+        ${navItems.map(item => `<a href="${item.href}" class="block py-3 px-4 font-semibold ${isCurrent(item.match) ? 'text-blue-600 bg-blue-50 rounded-lg' : 'text-slate-600'}">${item.label}</a>`).join('')}
+        <a class="block mt-4 text-center px-6 py-3 font-bold text-white bg-blue-600 rounded-xl" href="${base}contact.html">Get Free Audit</a>
     </div>
   `;
 
@@ -59,28 +63,35 @@
   setupEventListeners(newHeader);
 
   function setupEventListeners(headerEl) {
-    const headerMenuToggle = headerEl.querySelector('.nav-toggle');
-    const headerSiteNav = headerEl.querySelector('#site-nav');
+    const headerMenuToggle = headerEl.querySelector('#nav-toggle');
+    const headerSiteNav = headerEl.querySelector('#mobile-nav');
 
     if (headerMenuToggle && headerSiteNav) {
       const closeMenu = () => {
-        headerSiteNav.classList.remove('is-open');
+        headerSiteNav.classList.add('hidden');
+        headerSiteNav.classList.remove('flex');
         headerMenuToggle.setAttribute('aria-expanded', 'false');
       };
 
       headerMenuToggle.addEventListener('click', () => {
-        const isOpen = headerSiteNav.classList.toggle('is-open');
-        headerMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        const isHidden = headerSiteNav.classList.contains('hidden');
+        if (!isHidden) {
+          closeMenu();
+        } else {
+          headerSiteNav.classList.remove('hidden');
+          headerSiteNav.classList.add('flex');
+          headerMenuToggle.setAttribute('aria-expanded', 'true');
+        }
       });
 
       document.addEventListener('click', (e) => {
-        if (!headerSiteNav.classList.contains('is-open')) return;
+        if (headerSiteNav.classList.contains('hidden')) return;
         if (headerEl.contains(e.target)) return;
         closeMenu();
       });
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && headerSiteNav.classList.contains('is-open')) {
+        if (e.key === 'Escape' && !headerSiteNav.classList.contains('hidden')) {
           closeMenu();
           headerMenuToggle.focus();
         }

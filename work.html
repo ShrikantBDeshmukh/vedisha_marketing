@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vedisha Marketing | Digital Marketing Agency in Chhatrapati Sambhaji Nagar</title>
+  <title>Our Work – Vedisha Marketing | Chhatrapati Sambhaji Nagar</title>
   <meta name="description" content="Senior-led digital marketing agency in Chhatrapati Sambhaji Nagar (formerly Aurangabad) specializing in SEO, Ads, and ROI-driven growth.">
   <link rel="canonical" href="https://vedishamarketing.in/work.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,152 +16,223 @@
     "@type": "Organization",
     "name": "Vedisha Marketing",
     "url": "https://vedishamarketing.in",
-
     "logo": "https://vedishamarketing.in/images/office-studio.webp"
-
-    "logo": "https://vedishamarketing.in/images/office-studio.webp"
-
   }</script>
-  
-  
+
   <link rel="stylesheet" href="css/global.min.css">
   <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="work-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
+  <main id="main" class="pt-12 pb-24">
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+      <span class="inline-block bg-blue-100 text-blue-700 font-bold px-4 py-1.5 text-xs uppercase tracking-widest rounded-full mb-6">Our Portfolio</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Sample work you can expect from a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">new</span> studio.</h1>
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We're focused on high-impact deliverables: sharp positioning, PR readiness, and performance growth. Early partners get senior attention and boutique speed. <a href="contact.html" class="text-blue-600 font-bold hover:text-blue-700 underline underline-offset-4 transition">Let's talk.</a></p>
+    </section>
 
-  
+    <!-- Category Filters -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex flex-wrap items-center justify-center gap-3" aria-label="Filter Work by Category">
+      <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition border border-slate-200 bg-slate-900 text-white shadow-sm" data-filter="all">All Projects</button>
+      <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition border border-slate-200 bg-white text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900" data-filter="branding">Positioning & Messaging</button>
+      <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition border border-slate-200 bg-white text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900" data-filter="pr">PR & Reputation</button>
+      <button class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition border border-slate-200 bg-white text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900" data-filter="growth">Performance & Growth</button>
+    </section>
 
+    <!-- Work Grid -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="workGrid">
 
-
-
-  <section class="work-hero">
-    <div class="status-badge">Our Portfolio</div>
-    <h1>Sample work you can expect from a <span class="gradient-text">new</span> studio.</h1>
-    <p>
-      We’re focused on high-impact deliverables: sharp positioning, PR readiness, and performance growth. 
-      Early partners get senior attention and boutique speed. <a href="contact.html">Let’s talk.</a>
-    </p>
-  </section>
-
-  <!-- Category Filters -->
-  <section class="work-filters" aria-label="Filter Work by Category">
-    <button class="filter-btn active" data-filter="all">All Projects</button>
-    <button class="filter-btn" data-filter="branding">Positioning & Messaging</button>
-    <button class="filter-btn" data-filter="pr">PR & Reputation</button>
-    <button class="filter-btn" data-filter="growth">Performance & Growth</button>
-  </section>
-
-  <!-- Grid Wrapper -->
-  <main class="masonry-wrapper" id="main">
-    <div class="masonry-grid">
-
-      <!-- Case 1: Branding -->
-      <article class="work-card" data-category="branding">
-        <div class="work-card-media">
-          <img src="images/work-sample-1.webp" alt="B2B SaaS Messaging Sprint" class="cover-img" loading="lazy">
-        </div>
-        <div class="work-card-content">
-          <span class="work-category">Branding & Messaging</span>
-          <h3>The Messaging Sprint</h3>
-          <p class="work-card-desc">A fast, structured sprint to clarify positioning and ship a messaging kit your team can execute immediately.</p>
-          <div class="work-results">
-            <ul>
-              <li>Deliverables: Positioning Statement, ICP, Value Props</li>
-              <li>Timeline: 5–7 business days</li>
-            </ul>
+        <!-- Case 1: Branding -->
+        <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="branding">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/work-sample-1.webp" alt="B2B SaaS Messaging Sprint" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
           </div>
-          <button class="view-case-btn" data-project="techgiant">View Approach</button>
-        </div>
-      </article>
-
-      <!-- Case 2: PR -->
-      <article class="work-card" data-category="pr">
-        <div class="work-card-media">
-          <img src="images/work-sample-2.webp" alt="Reputation Response Kit" class="cover-img" loading="lazy">
-        </div>
-        <div class="work-card-content">
-          <span class="work-category">PR & Reputation</span>
-          <h3>Reputation Ready</h3>
-          <p class="work-card-desc">A ready-to-use response kit for fast-moving situations: holding statements, FAQ, and a narrative reset plan.</p>
-          <div class="work-results">
-            <ul>
-              <li>Deliverables: Holding Statement, Q&A, Escalation Map</li>
-              <li>Timeline: 24–72 hours</li>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-teal-600 text-xs font-bold uppercase tracking-widest mb-3">Branding & Messaging</span>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">The Messaging Sprint</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-5">A fast, structured sprint to clarify positioning and ship a messaging kit your team can execute immediately.</p>
+            <ul class="space-y-2 mb-6 text-sm text-slate-500">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Deliverables: Positioning Statement, ICP, Value Props
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Timeline: 5–7 business days
+              </li>
             </ul>
+            <button class="view-case-btn mt-auto inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition gap-2 text-sm" data-project="techgiant">View Approach
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
-          <button class="view-case-btn" data-project="fashion">View Approach</button>
-        </div>
-      </article>
+        </article>
 
-      <!-- Case 3: Growth -->
-      <article class="work-card" data-category="growth">
-        <div class="work-card-media">
-          <img src="images/work-sample-3.webp" alt="Creative Testing System" class="cover-img" loading="lazy">
-        </div>
-        <div class="work-card-content">
-          <span class="work-category">Performance & Growth</span>
-          <h3>The Testing Engine</h3>
-          <p class="work-card-desc">A repeatable system for testing angles, hooks, and landing page variants—built to learn fast and scale what works.</p>
-          <div class="work-results">
-            <ul>
-              <li>Deliverables: Test Plan, Creative Briefs, 12 Ad Variants</li>
-              <li>Cadence: Weekly Iterations</li>
+        <!-- Case 2: PR -->
+        <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="pr">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/work-sample-2.webp" alt="Reputation Response Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">PR & Reputation</span>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">Reputation Ready</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-5">A ready-to-use response kit for fast-moving situations: holding statements, FAQ, and a narrative reset plan.</p>
+            <ul class="space-y-2 mb-6 text-sm text-slate-500">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Deliverables: Holding Statement, Q&A, Escalation Map
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Timeline: 24–72 hours
+              </li>
             </ul>
+            <button class="view-case-btn mt-auto inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition gap-2 text-sm" data-project="fashion">View Approach
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
-          <button class="view-case-btn" data-project="finance">View Approach</button>
-        </div>
-      </article>
+        </article>
 
+        <!-- Case 3: Growth -->
+        <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="growth">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="images/work-sample-3.webp" alt="Creative Testing System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-indigo-600 text-xs font-bold uppercase tracking-widest mb-3">Performance & Growth</span>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">The Testing Engine</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-5">A repeatable system for testing angles, hooks, and landing page variants—built to learn fast and scale what works.</p>
+            <ul class="space-y-2 mb-6 text-sm text-slate-500">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Deliverables: Test Plan, Creative Briefs, 12 Ad Variants
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Cadence: Weekly Iterations
+              </li>
+            </ul>
+            <button class="view-case-btn mt-auto inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition gap-2 text-sm" data-project="finance">View Approach
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <div class="bg-slate-900 text-white p-12 md:p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-sky-400/30 mix-blend-overlay"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to start your project?</h2>
+          <p class="text-lg text-slate-300 mb-10 max-w-lg mx-auto">Senior-led, boutique speed. Let's build something worth showcasing.</p>
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-white text-slate-900 rounded-xl hover:bg-slate-50 transition shadow-lg hover:-translate-y-1 text-lg">Get in Touch &rarr;</a>
+        </div>
+      </div>
     </div>
   </main>
 
   <!-- Case Study Modal -->
-  <div class="case-modal-overlay" id="caseModal">
-    <div class="case-modal-content">
-      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">×</button>
-      <div class="modal-body">
-        <h2 class="modal-title" id="mTitle">Project Title</h2>
-        <div class="modal-overview">
-          <div class="modal-text" id="mText">
-             <!-- Populated via JS -->
+  <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4" id="caseModal">
+    <div class="bg-white rounded-3xl max-w-2xl w-full shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
+      <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 transition flex items-center justify-center text-slate-500 text-xl font-bold z-10" id="modalClose" aria-label="Close modal">&times;</button>
+      <div class="p-8 md:p-12">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight" id="mTitle">Project Title</h2>
+        <div class="md:flex md:gap-8">
+          <div class="md:flex-1 text-slate-600 leading-relaxed text-base" id="mText">
+            <!-- Populated via JS -->
           </div>
-          <aside class="modal-sidebar">
-             <div class="modal-sidebar-block">
-               <div class="modal-sidebar-label" id="mMetric1Label">Focus</div>
-               <div class="metric-highlight" id="mMetric1Val">Speed</div>
-             </div>
-             <div class="modal-sidebar-block">
-               <div class="modal-sidebar-label" id="mMetric2Label">Impact</div>
-               <div class="metric-highlight" id="mMetric2Val">High</div>
-             </div>
+          <aside class="md:w-48 mt-8 md:mt-0 flex md:flex-col gap-6 flex-shrink-0">
+            <div class="bg-slate-50 rounded-2xl p-5 text-center flex-1">
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" id="mMetric1Label">Focus</div>
+              <div class="text-2xl font-extrabold text-blue-600" id="mMetric1Val">Speed</div>
+            </div>
+            <div class="bg-slate-50 rounded-2xl p-5 text-center flex-1">
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" id="mMetric2Label">Impact</div>
+              <div class="text-2xl font-extrabold text-teal-600" id="mMetric2Val">High</div>
+            </div>
           </aside>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Global Footer -->
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'text-slate-700');
+        });
+        btn.classList.remove('bg-white', 'text-slate-700');
+        btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
 
+        document.querySelectorAll('.work-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
 
+    // Modal data
+    const projects = {
+      techgiant: {
+        title: 'The Messaging Sprint',
+        text: '<p>We run a structured 5–7 day process to extract your core value proposition, define your ICP, and deliver a messaging kit that your sales and marketing teams can use immediately.</p><p class="mt-4">The output includes a positioning statement, 3 key value propositions with supporting proof points, and a competitive differentiation matrix.</p>',
+        m1l: 'Turnaround', m1v: '5–7 Days',
+        m2l: 'Deliverables', m2v: '6 Assets'
+      },
+      fashion: {
+        title: 'Reputation Ready',
+        text: '<p>When a crisis hits, you need a response in hours, not weeks. We deliver a pre-built reputation kit: approved holding statements, a stakeholder FAQ, and an escalation decision tree.</p><p class="mt-4">This is designed for brands that want to be proactive, not reactive, about their public narrative.</p>',
+        m1l: 'Response Time', m1v: '24–72h',
+        m2l: 'Coverage', m2v: '360°'
+      },
+      finance: {
+        title: 'The Testing Engine',
+        text: '<p>We build a repeatable creative testing framework: 12 ad variants across 3 angles, with weekly iteration cycles. The system is designed to learn fast and double down on what converts.</p><p class="mt-4">Includes test plans, creative briefs, and a performance dashboard for real-time optimization.</p>',
+        m1l: 'Cadence', m1v: 'Weekly',
+        m2l: 'Variants', m2v: '12+'
+      }
+    };
 
-  
-  
-  
-
-
-  
-
-
-  
-  
-
-
-
+    // Modal open/close
+    const modal = document.getElementById('caseModal');
+    document.querySelectorAll('.view-case-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const p = projects[btn.dataset.project];
+        if (!p) return;
+        document.getElementById('mTitle').textContent = p.title;
+        document.getElementById('mText').innerHTML = p.text;
+        document.getElementById('mMetric1Label').textContent = p.m1l;
+        document.getElementById('mMetric1Val').textContent = p.m1v;
+        document.getElementById('mMetric2Label').textContent = p.m2l;
+        document.getElementById('mMetric2Val').textContent = p.m2v;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
 
   <script src="./js/global.min.js"></script>
 </body>

@@ -36,12 +36,6 @@
       }
     ]
   }</script>
-  <link rel="stylesheet" href="css/content-geo.css">
-  
-  
-  <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/branding.min.css">
-
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Service",
@@ -57,14 +51,8 @@
     }
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Waluj MIDC"
-    },
-    {
-      "@type": "City",
-      "name": "Shendra MIDC"
-    }
+    { "@type": "City", "name": "Waluj MIDC" },
+    { "@type": "City", "name": "Shendra MIDC" }
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -81,101 +69,124 @@
     ]
   }
 }</script>
+
+  <link rel="stylesheet" href="css/global.min.css">
+  <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="geo-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
-
-
-
-
-
-
-  <main id="main">
-    <section class="geo-hero">
-      <div class="geo-hero-inner">
-        <div>
-          <div class="status-badge">Direct Answer Strategy</div>
-          <h1>Is your <span class="gradient-text">Shendra/AURIC City</span> firm missing from the global radar?</h1>
-          <p>The electronics and high-tech hub at Shendra demands a sophisticated digital presence. We solve the trust-gap for B2B enterprises in Chhatrapati Sambhaji Nagar.</p>
-          <div class="geo-actions">
-            <a href="contact.html" class="primary-btn">Request Discovery Audit</a>
-          </div>
+  <main id="main" class="pt-12 pb-24">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 lg:flex lg:items-center lg:gap-16">
+      <div class="lg:w-1/2 mb-12 lg:mb-0">
+        <span class="inline-block bg-blue-100 text-blue-700 font-bold px-3 py-1 text-xs uppercase tracking-widest rounded-full mb-6">Direct Answer Strategy</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Is your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">Shendra/AURIC City</span> firm missing from the global radar?</h1>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8">The electronics and high-tech hub at Shendra demands a sophisticated digital presence. We solve the trust-gap for B2B enterprises in Chhatrapati Sambhaji Nagar.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition shadow-sm text-lg hover:-translate-y-0.5 active:translate-y-0">Request Discovery Audit</a>
         </div>
-        <figure class="geo-media">
-          <img src="images/pr-bg.webp" alt="B2B Lead Gen Shendra MIDC" loading="lazy">
-        </figure>
+      </div>
+      <div class="lg:w-1/2">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+          <img src="images/pr-bg.webp" alt="B2B Lead Gen Shendra MIDC" loading="lazy" class="w-full h-auto object-cover">
+        </div>
       </div>
     </section>
 
-    <div class="geo-wrap">
-      <section class="geo-section">
-        <div class="diagnostic-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 80px;">
-          <div class="glass-card" style="padding: 40px; border-top: 4px solid #ef4444;">
-            <h3 style="color: #ef4444; margin-bottom: 16px;">The Problem</h3>
-            <p>B2B buyers in AURIC City are 70% through their decision before talking to sales. If your digital narrative is just a "brochure," you've already lost the lead.</p>
-          </div>
-          <div class="glass-card" style="padding: 40px; border-top: 4px solid var(--c-accent);">
-            <h3 style="color: var(--c-accent); margin-bottom: 16px;">The Prescription</h3>
-            <p>A "Digital First" lead engine that positions your Shendra facility as a thought leader. We build technical content that answers the *exact* procurement questions buyers are asking.</p>
-          </div>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-        <h2>Navigating the New B2B Buying Journey in Chhatrapati Sambhaji Nagar</h2>
-        <p class="lead">Today's B2B buyers in Shendra and AURIC City are 70% through their decision process before they ever speak to your sales team. Is your digital presence working for you?</p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>High-Intent Lead Capture</h3>
-            <p>Targeting decision-makers at the research phase with whitepapers, spec-sheets, and capability videos.</p>
+      <!-- Problem / Prescription -->
+      <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white border-t-4 border-t-red-500 border border-slate-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-red-500 mb-4">The Problem</h3>
+            <p class="text-slate-600 leading-relaxed">B2B buyers in AURIC City are 70% through their decision before talking to sales. If your digital narrative is just a "brochure," you've already lost the lead.</p>
           </div>
-          <div class="card">
-            <h3>Account-Based Marketing</h3>
-            <p>Precise targeting for large-scale enterprises entering the AURIC ecosystem.</p>
-          </div>
-          <div class="card">
-            <h3>Trust & Reputation</h3>
-            <p>Showcasing your facility's scale and certification through high-authority digital PR.</p>
+          <div class="bg-white border-t-4 border-t-blue-600 border border-slate-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-blue-600 mb-4">The Prescription</h3>
+            <p class="text-slate-600 leading-relaxed">A "Digital First" lead engine that positions your Shendra facility as a thought leader. We build technical content that answers the <em>exact</em> procurement questions buyers are asking.</p>
           </div>
         </div>
       </section>
 
-      <section class="geo-section">
-        <h2>Lead Gen Tailored for Shendra's High-Tech Focus</h2>
-        <ul class="feature-list">
-          <li><strong>LinkedIn Sales Funnels:</strong> Connecting with plant managers and procurement heads globally.</li>
-          <li><strong>Spec-Driven Content:</strong> SEO optimized for technical specifications, not just service names.</li>
-          <li><strong>Conversion Rate Optimization:</strong> Ensuring your industrial website actually turns visitors into RFP requests.</li>
-        </ul>
+      <!-- Buying Journey Section -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Navigating the New B2B Buying Journey in Chhatrapati Sambhaji Nagar</h2>
+        <p class="text-lg text-slate-600 mb-12 max-w-3xl leading-relaxed">Today's B2B buyers in Shendra and AURIC City are 70% through their decision process before they ever speak to your sales team. Is your digital presence working for you?</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition">High-Intent Lead Capture</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Targeting decision-makers at the research phase with whitepapers, spec-sheets, and capability videos.</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition">Account-Based Marketing</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Precise targeting for large-scale enterprises entering the AURIC ecosystem.</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition">Trust & Reputation</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Showcasing your facility's scale and certification through high-authority digital PR.</p>
+          </div>
+        </div>
       </section>
 
-      <section class="cta-banner" style="margin-top: 64px;">
-        <h2>Ready to fill your sales pipeline?</h2>
-        <a href="contact.html" class="primary-btn">Start My Plan →</a>
+      <!-- Feature List -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-10 tracking-tight">Lead Gen Tailored for Shendra's High-Tech Focus</h2>
+        <div class="space-y-5 max-w-3xl">
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">LinkedIn Sales Funnels</strong>
+              <p class="text-slate-600 text-base m-0">Connecting with plant managers and procurement heads globally.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">Spec-Driven Content</strong>
+              <p class="text-slate-600 text-base m-0">SEO optimized for technical specifications, not just service names.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">Conversion Rate Optimization</strong>
+              <p class="text-slate-600 text-base m-0">Ensuring your industrial website actually turns visitors into RFP requests.</p>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- Final CTA -->
+      <section class="max-w-4xl mx-auto bg-slate-900 text-white p-12 md:p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-sky-400/30 mix-blend-overlay"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to fill your sales pipeline?</h2>
+          <p class="text-lg text-slate-300 mb-10">Stop losing B2B leads to competitors with stronger digital presence in Shendra MIDC.</p>
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-white text-slate-900 rounded-xl hover:bg-slate-50 transition shadow-lg hover:-translate-y-1 text-lg">Start My Plan &rarr;</a>
+        </div>
+      </section>
+
     </div>
   </main>
-
-
-
-  
-  
-  
-
-
-
-  
-  
-
-  
-  
-
-
-
-
 
   <script src="./js/global.min.js"></script>
 </body>

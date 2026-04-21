@@ -22,69 +22,81 @@
 
   const currentFile = segments[segments.length - 1] || 'index.html';
 
+  const isCurrent = (matches) => matches.includes(currentFile);
+
+  const linksHtml = navItems
+    .map((item) => {
+      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
+      return `<a href="${basePath}${item.href}"${current}>${item.label}</a>`;
+    })
+    .join('');
+
   const headerHtml = `
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="site-header__inner">
-      <a href="${basePath}index.html" class="site-brand" aria-label="${brandName} Home">
-         <div class="site-brand__mark">V</div>
-         <span class="site-brand__text">${brandName}</span>
+    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 z-[100]" href="#main">Skip to content</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight" href="${basePath}index.html" aria-label="Vedisha Marketing Home">
+        <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
+        <span>Vedisha Marketing</span>
       </a>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        ${navItems.map(item => {
-            const active = item.match.includes(currentFile) ? ' aria-current="page"' : '';
-            return `<a href="${basePath}${item.href}"${active}>${item.label}</a>`;
-        }).join('')}
-        <a href="${basePath}contact.html" class="site-nav__cta">Start a Plan</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span>Menu</span>
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
+        ${linksHtml}
+        <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition shadow-sm" href="${basePath}contact.html">Get Free Audit</a>
+      </nav>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-nav" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl flex-col p-4 shadow-lg slide-in">
+        ${navItems.map(item => `<a href="${basePath}${item.href}" class="block py-3 px-4 font-semibold ${isCurrent(item.match) ? 'text-blue-600 bg-blue-50 rounded-lg' : 'text-slate-600'}">${item.label}</a>`).join('')}
+        <a class="block mt-4 text-center px-6 py-3 font-bold text-white bg-blue-600 rounded-xl" href="${basePath}contact.html">Get Free Audit</a>
     </div>
   `;
 
   const footerHtml = `
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="${basePath}index.html" class="footer-logo" aria-label="${brandName} Home">
-            <span class="logo-icon">V</span>
-            <span class="logo-text">${brandName}</span>
-          </a>
-          <p class="footer-tagline">Crafted with care for clarity, speed, and trust.</p>
+    <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
+          <div class="lg:col-span-2">
+            <a href="${basePath}index.html" class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight mb-4" aria-label="Vedisha Marketing Home">
+              <span class="bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
+              <span>Vedisha Marketing</span>
+            </a>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+              Crafted with care for clarity, speed, and trust in Chhatrapati Sambhajinagar.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h4>
+            <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
+              <li><a href="${basePath}index.html" class="hover:text-teal-600 transition">Home</a></li>
+              <li><a href="${basePath}about.html" class="hover:text-teal-600 transition">About Us</a></li>
+              <li><a href="${basePath}services.html" class="hover:text-teal-600 transition">Services</a></li>
+              <li><a href="${basePath}work.html" class="hover:text-teal-600 transition">Portfolio</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h4>
+            <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
+              <li><a href="${basePath}meta-google-ads-management.html" class="hover:text-teal-600 transition">Paid Ads</a></li>
+              <li><a href="${basePath}local-lead-combo.html" class="hover:text-teal-600 transition">Local Lead Pack</a></li>
+              <li><a href="${basePath}static-website-seo-launch.html" class="hover:text-teal-600 transition">SEO Launch</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h4>
+            <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
+              <li><a href="${basePath}contact.html" class="hover:text-teal-600 transition">Contact Us</a></li>
+              <li><a href="mailto:hello@vedishamarketing.in" class="hover:text-teal-600 transition">Email Us</a></li>
+            </ul>
+          </div>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-nav-group">
-            <h4 class="footer-nav-heading">Company</h4>
-            <ul class="footer-nav-list">
-              <li><a href="${basePath}index.html">Home</a></li>
-              <li><a href="${basePath}about.html">About Us</a></li>
-              <li><a href="${basePath}services.html">Services</a></li>
-              <li><a href="${basePath}work.html">Work</a></li>
-            </ul>
-          </div>
-          <div class="footer-nav-group">
-            <h4 class="footer-nav-heading">Services</h4>
-            <ul class="footer-nav-list">
-              <li><a href="${basePath}meta-google-ads-management.html">Ads Management</a></li>
-              <li><a href="${basePath}local-lead-combo.html">Local SEO Pack</a></li>
-              <li><a href="${basePath}industrial-seo-waluj-midc.html">Industrial SEO</a></li>
-            </ul>
-          </div>
-          <div class="footer-nav-group">
-            <h4 class="footer-nav-heading">Get in Touch</h4>
-            <ul class="footer-nav-list">
-              <li><a href="${basePath}contact.html">Contact Us</a></li>
-              <li><a href="mailto:hello@vedishamarketing.in">Email Us</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 ${brandName}. All rights reserved.</p>
-        <div class="footer-legal">
-           <a href="${basePath}privacy-policy.html">Privacy</a>
-           <a href="${basePath}terms-of-service.html">Terms</a>
+        <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-slate-500 m-0">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
+          <ul class="flex flex-wrap items-center gap-6 text-sm text-slate-500 font-medium list-none p-0 m-0" aria-label="Legal links">
+            <li><a href="${basePath}privacy-policy.html" class="hover:text-slate-900">Privacy Policy</a></li>
+            <li><a href="${basePath}terms-of-service.html" class="hover:text-slate-900">Terms of Service</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -96,7 +108,8 @@
     if (!header) {
         header = document.createElement('header');
         header.id = 'site-header';
-        header.className = 'site-header';
+        // Add absolute positioning for the header component container natively
+        header.className = 'fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200';
         document.body.insertAdjacentElement('afterbegin', header);
     }
     header.innerHTML = headerHtml;
@@ -106,7 +119,7 @@
     if (!footer) {
         footer = document.createElement('footer');
         footer.id = 'site-footer';
-        footer.className = 'site-footer';
+        footer.className = 'w-full block';
         document.body.insertAdjacentElement('beforeend', footer);
     }
     footer.innerHTML = footerHtml;
@@ -116,18 +129,26 @@
 
   const setupNavToggle = () => {
     const navToggle = document.getElementById('navToggle');
-    const siteNav = document.getElementById('site-nav');
-    if (navToggle && siteNav) {
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    if (navToggle && mobileNav) {
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', !expanded);
-        siteNav.classList.toggle('is-open');
+        if (!expanded) {
+          mobileNav.classList.remove('hidden');
+          mobileNav.classList.add('flex');
+        } else {
+          mobileNav.classList.add('hidden');
+          mobileNav.classList.remove('flex');
+        }
       });
 
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
+        if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
           navToggle.setAttribute('aria-expanded', 'false');
-          siteNav.classList.remove('is-open');
+          mobileNav.classList.add('hidden');
+          mobileNav.classList.remove('flex');
           navToggle.focus();
         }
       });

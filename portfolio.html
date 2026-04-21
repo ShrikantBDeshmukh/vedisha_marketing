@@ -3,28 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Vedisha Marketing</title>
-  <meta name="description" content="Explore case studies and results from Vedisha Marketing across branding, PR, and performance growth.">
+  <title>Portfolio | Vedisha Marketing</title>
+  <meta http-equiv="refresh" content="3;url=work.html">
+  <meta name="description" content="Explore case studies and results from Vedisha Marketing across branding, PR, and performance growth. Redirecting to our work page.">
   <link rel="canonical" href="https://vedishamarketing.in/portfolio.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.webp">
-  
-  <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background:#ffffff; color:#0f172a; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;">
-  
-  <main id="main" style="max-width: 900px; margin: 0 auto; padding: 90px 24px 60px;">
-    <h1 style="font-family: Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif; color:#fff; letter-spacing:-0.02em;">Redirecting to our work…</h1>
-    <p style="margin-top: 14px; color:#a0a8bc; line-height:1.7;">
-      If you’re not redirected automatically, open <a href="work.html" style="color:#6c63ff; text-decoration:none;">Work</a>.
-    </p>
-  </main>
-  
+<body class="bg-slate-900 text-white font-sans antialiased h-screen flex flex-col items-center justify-center text-center p-6">
+
+  <div class="max-w-md w-full space-y-8">
+    <!-- Visual Element -->
+    <div class="relative w-20 h-20 mx-auto">
+      <div class="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-25"></div>
+      <div class="relative w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="space-y-4">
+      <h1 class="text-3xl font-extrabold tracking-tighter sm:text-4xl">Redirecting to our work...</h1>
+      <p class="text-slate-400 text-lg font-medium leading-relaxed italic">
+        We've consolidated our portfolio items into a single <span class="text-blue-400 font-bold">Work</span> page for better navigation.
+      </p>
+    </div>
+
+    <!-- Fallback -->
+    <div class="pt-6">
+      <a href="work.html" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-500 hover:text-white transition group">
+        Click here if not redirected 
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="fixed bottom-0 left-0 h-1 bg-blue-600 transition-all duration-3000 ease-linear w-0" style="animation: progress 3s linear forwards;"></div>
+
+  <style>
+    @keyframes progress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+  </style>
+
   <script src="./js/global.min.js"></script>
 </body>
 </html>

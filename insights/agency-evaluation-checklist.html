@@ -9,134 +9,159 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.webp">
-  
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.webp">
   
   <link rel="stylesheet" href="../css/global.min.css">
   <link rel="stylesheet" href="../css/branding.min.css">
   <script src="../assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="article-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
-
-
-
-
-
-
-  <div class="article-content" id="main">
-    <div class="hero-gradient">
-        <div class="hero-badge">Audit Framework</div>
-        <h2 style="color: #fff; font-size: 2.5rem; max-width: 600px; position: relative;">The 15-Point Agency Audit</h2>
-        <p style="color: rgba(255,255,255,0.6); position: relative; margin-top: 20px;">Cut through the noise and hire for outcomes.</p>
-    </div>
-
-    <p>Choosing a digital marketing agency in India often feels like a gamble. You’re met with smooth-talking account managers, flashy "vanity metric" dashboards, and the constant promise of "going viral." But for a B2B SaaS founder with a ₹2–5L monthly budget, "viral" doesn't pay the bills—pipeline does. The industry is currently plagued by "Black Box" agencies that hide their process behind jargon and junior-level execution. You aren't just hiring a vendor; you are hiring a temporary extension of your growth team. If they can’t show you exactly how the sausage is made, who is actually doing the work, and how they link their activities to your bottom-line revenue, you aren't buying a service—you're buying a liability. This 15-point checklist is designed to cut through the fluff, helping you identify agencies that lead with senior-level practitioners, verifiable social proof, and a roadmap built on business outcomes, not just clicks.</p>
-
-    <h2>The Trust Deficit: Why Most Agency Relationships Fail</h2>
-    <p>The core problem isn't a lack of talent; it's a lack of transparency. Many agencies in India operate on a high-volume, low-touch model where the senior expert who sold you the contract disappears on day one, replaced by a junior account manager with zero strategic context.</p>
-
-    <div class="modern-card" style="margin-bottom: 40px;">
-        <h3 style="margin-top: 0;">Did you know?</h3>
-        <p>A recent study showed that 60% of B2B clients felt "ghosted" by their agency once the contract was signed. This is the "Service Gap" that destroys ROI.</p>
-    </div>
-
-    <h2>The 15-Point Evaluation Framework</h2>
-
-    <div class="checklist-item">
-        <div class="checklist-number">1</div>
-        <div>
-            <strong>Senior Practitioner Access:</strong> Will you have direct access to the strategy lead, or just an account manager? At Vedisha, practitioners lead every call.
+  <main id="main" class="pt-12 pb-24">
+    <!-- Article Header / Hero -->
+    <header class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div class="bg-gradient-to-br from-blue-900 to-slate-900 rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('../images/noise.png')] opacity-10 mix-blend-overlay"></div>
+            <div class="absolute -top-32 -right-32 w-64 h-64 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 pointer-events-none"></div>
+            <div class="relative z-10 text-center md:text-left">
+                <span class="inline-block bg-blue-500/20 text-blue-200 font-bold px-4 py-1.5 text-xs uppercase tracking-widest rounded-full mb-6 border border-blue-500/30">Audit Framework</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight max-w-3xl">The 15-Point Agency Audit</h1>
+                <p class="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed">Cut through the noise and hire for outcomes.</p>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="checklist-item">
-        <div class="checklist-number">2</div>
-        <div>
-            <strong>Verifiable Social Proof:</strong> Can they provide LinkedIn profiles of the team actually doing the work? Anonymous "Creative Lead" roles are a major red flag.
+    <!-- Main Content -->
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-lg text-slate-700 leading-relaxed">
+        <p class="first-letter:text-5xl first-letter:font-black first-letter:text-slate-900 first-letter:float-left first-letter:mr-2">Choosing a digital marketing agency in India often feels like a gamble. You’re met with smooth-talking account managers, flashy "vanity metric" dashboards, and the constant promise of "going viral." But for a B2B SaaS founder with a ₹2–5L monthly budget, "viral" doesn't pay the bills—pipeline does. The industry is currently plagued by "Black Box" agencies that hide their process behind jargon and junior-level execution. You aren't just hiring a vendor; you are hiring a temporary extension of your growth team. If they can’t show you exactly how the sausage is made, who is actually doing the work, and how they link their activities to your bottom-line revenue, you aren't buying a service—you're buying a liability. This 15-point checklist is designed to cut through the fluff, helping you identify agencies that lead with senior-level practitioners, verifiable social proof, and a roadmap built on business outcomes, not just clicks.</p>
+
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mt-12 mb-6">The Trust Deficit: Why Most Agency Relationships Fail</h2>
+        <p>The core problem isn't a lack of talent; it's a lack of transparency. Many agencies in India operate on a high-volume, low-touch model where the senior expert who sold you the contract disappears on day one, replaced by a junior account manager with zero strategic context.</p>
+
+        <!-- Did you know card -->
+        <div class="bg-white border-l-4 border-l-blue-600 rounded-r-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200 border-l-0 my-10">
+            <h3 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" class="text-blue-600"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="16" y2="12"/><line x1="12" x2="12.01" y1="8" y2="8"/></svg>
+                Did you know?
+            </h3>
+            <p class="text-slate-600 text-base leading-relaxed mb-0">A recent study showed that 60% of B2B clients felt "ghosted" by their agency once the contract was signed. This is the "Service Gap" that destroys ROI.</p>
         </div>
-    </div>
 
-    <div class="checklist-item">
-        <div class="checklist-number">3</div>
-        <div>
-            <strong>Real-Time Transparency:</strong> Do you get a 24/7 dashboard or just a PDF report at the end of the month? If it's the latter, they are hiding the data.
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight mt-12 mb-8 border-b border-slate-200 pb-4">The 15-Point Evaluation Framework</h2>
+
+        <!-- Checklist Layout -->
+        <div class="space-y-6 my-8">
+            <div class="flex flex-col sm:flex-row gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm focus-within:ring-2 focus-within:ring-blue-500 hover:shadow-md transition">
+                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-black text-xl border border-blue-100">1</div>
+                <div>
+                    <strong class="block text-slate-900 text-lg mb-2">Senior Practitioner Access</strong>
+                    <p class="text-slate-600 text-base m-0">Will you have direct access to the strategy lead, or just an account manager? At Vedisha, practitioners lead every call.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-black text-xl border border-blue-100">2</div>
+                <div>
+                    <strong class="block text-slate-900 text-lg mb-2">Verifiable Social Proof</strong>
+                    <p class="text-slate-600 text-base m-0">Can they provide LinkedIn profiles of the team actually doing the work? Anonymous "Creative Lead" roles are a major red flag.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-black text-xl border border-blue-100">3</div>
+                <div>
+                    <strong class="block text-slate-900 text-lg mb-2">Real-Time Transparency</strong>
+                    <p class="text-slate-600 text-base m-0">Do you get a 24/7 dashboard or just a PDF report at the end of the month? If it's the latter, they are hiding the data.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                <div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 font-black text-xl border border-blue-100">4</div>
+                <div>
+                    <strong class="block text-slate-900 text-lg mb-2">ICP Clarity</strong>
+                    <p class="text-slate-600 text-base m-0">Can they define your Ideal Customer Profile within 48 hours? If they can't, they'll default to low-intent, generic traffic.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex-wrap hover:shadow-md transition relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-transparent"></div>
+                <div class="relative z-10 flex flex-col sm:flex-row gap-6 w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center w-auto px-4 h-12 rounded-xl bg-blue-600 text-white font-black text-lg shadow-sm">5-15</div>
+                    <div>
+                        <strong class="block text-slate-900 text-lg mb-2">Rigor & Results</strong>
+                        <p class="text-slate-600 text-base m-0">From technical SEO health to creative quality assurance, ensure every step is documented and linked to your bottom line.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="checklist-item">
-        <div class="checklist-number">4</div>
-        <div>
-            <strong>ICP Clarity:</strong> Can they define your Ideal Customer Profile within 48 hours? If they can't, they'll default to low-intent, generic traffic.
+        <blockquote class="my-12 px-8 border-l-4 border-blue-600 bg-white py-8 rounded-r-3xl italic text-slate-700 text-xl leading-relaxed shadow-sm relative">
+            <svg class="absolute top-4 left-4 text-blue-100 w-16 h-16 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <span class="relative z-10">Agencies that can't define your ICP within the first 48 hours usually default to generic, low-intent traffic. Data shows that 90% of "guaranteed ranking" schemes use risky PBNs that result in long-term domain penalties.</span>
+        </blockquote>
+
+        <!-- Inline CTA -->
+        <div class="bg-slate-900 text-center text-white rounded-3xl p-10 md:p-14 shadow-2xl my-16 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/30 to-sky-400/10 mix-blend-overlay"></div>
+            <div class="relative z-10">
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">Ready for true transparency?</h3>
+                <p class="text-slate-300 text-lg mb-8 max-w-lg mx-auto">Stop gambling with your growth. Let's build a roadmap based on real outcomes, not vanity metrics.</p>
+                <a href="../contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-white text-slate-900 rounded-xl hover:bg-slate-50 transition shadow-lg hover:-translate-y-1 text-lg">Book a Discovery Call &rarr;</a>
+            </div>
         </div>
-    </div>
 
-    <div class="checklist-item">
-      <div class="checklist-number">5-15</div>
-      <div>
-          <strong>Rigor & Results:</strong> From technical SEO health to creative quality assurance, ensure every step is documented and linked to your bottom line.
-      </div>
-    </div>
-
-    <blockquote>
-        Agencies that can't define your ICP within the first 48 hours usually default to generic, low-intent traffic. Data shows that 90% of "guaranteed ranking" schemes use risky PBNs that result in long-term domain penalties.
-    </blockquote>
-
-    <div class="cta-box">
-        <h3>Ready for true transparency?</h3>
-        <p>Stop gambling with your growth. Let's build a roadmap based on real outcomes, not vanity metrics.</p>
-        <a href="../contact.html" class="site-nav__cta" style="background: var(--c-accent); color: #fff; padding: 16px 40px; border-radius: 100px; display: inline-block; text-decoration: none; font-weight: 800;">Book a Discovery Call →</a>
-    </div>
-
-    <div class="author-box" style="margin-top: 60px; padding: 40px; background: var(--c-surface); border-radius: var(--radius-lg); display: flex; gap: 24px; align-items: center; border: 1px solid var(--c-border);">
-        <img src="../images/office-studio.webp" alt="Vedisha Marketing Team" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;" loading="lazy">
-        <div>
-            <strong style="display: block; font-size: 1.1rem; margin-bottom: 4px;">Written by the Vedisha Strategy Team</strong>
-            <p style="color: var(--c-muted); font-size: 0.95rem; line-height: 1.5; margin: 0;">Senior-led insights from practitioners who have scaled brands across India. No junior account managers, just real business outcomes.</p>
+        <!-- Author Box -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 pt-10 border-t border-slate-200">
+            <img src="../images/office-studio.webp" alt="Vedisha Marketing Team" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-white shadow-md flex-shrink-0" loading="lazy">
+            <div class="text-center sm:text-left">
+                <strong class="block text-slate-900 font-bold text-lg mb-1">Written by the Vedisha Strategy Team</strong>
+                <p class="text-slate-500 text-sm leading-relaxed">Senior-led insights from practitioners who have scaled brands across India. No junior account managers, just real business outcomes.</p>
+            </div>
         </div>
-    </div>
+    </article>
+
+    <!-- Related Insights -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div class="flex items-center justify-between mb-10">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Related Insights</h3>
+            <a href="index.html" class="hidden sm:inline-flex text-blue-600 font-bold hover:text-blue-700 items-center transition">View all insights &rarr;</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 group flex flex-col">
+                <div class="aspect-[16/9] overflow-hidden">
+                    <img src="../images/insight-1.webp" alt="Team planning strategy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" onerror="this.src='../images/office-studio.webp'">
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Strategy</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-snug group-hover:text-blue-600 transition">Why 2026 Belongs to Brands That Master AI + Human Storytelling</h4>
+                    <a href="ai-human-marketing-revolution.html" class="mt-auto inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition gap-2">Read full insight 
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 group flex flex-col">
+                <div class="aspect-[16/9] overflow-hidden">
+                    <img src="../images/insight-2.webp" alt="Campaign planning notes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" onerror="this.src='../images/office-studio.webp'">
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <span class="text-teal-600 text-xs font-bold uppercase tracking-widest mb-3">Efficiency</span>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-snug group-hover:text-blue-600 transition">How AI Cut Our Campaign Planning from 6 Weeks to 6 Days</h4>
+                    <a href="campaign-planning-ai.html" class="mt-auto inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition gap-2">Read full insight 
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+        <div class="mt-10 text-center sm:hidden">
+            <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 font-bold bg-white text-slate-900 border border-slate-200 rounded-xl hover:bg-slate-50 transition shadow-sm w-full">View all insights &rarr;</a>
+        </div>
+    </section>
 
   </main>
-
-  <section class="related-insights">
-    <h3>Related Insights</h3>
-    <div class="insights-grid" style="padding-bottom: 0;">
-      <article class="article-card">
-        <img src="../images/insight-1.webp" alt="Team planning strategy" class="article-card-image" loading="lazy">
-        <div class="article-card-content">
-          <span class="article-category">Strategy</span>
-          <h2>Why 2026 Belongs to Brands That Master AI + Human Storytelling</h2>
-          <a href="ai-human-marketing-revolution.html" class="read-more">Read full insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </article>
-      <article class="article-card">
-        <img src="../images/insight-2.webp" alt="Campaign planning notes" class="article-card-image" loading="lazy">
-        <div class="article-card-content">
-          <span class="article-category">Efficiency</span>
-          <h2>How AI Cut Our Campaign Planning from 6 Weeks to 6 Days</h2>
-          <a href="campaign-planning-ai.html" class="read-more">Read full insight <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-  
-  
-  
-  
-  
-
-  
-  
-  
-
-
-
 
   <script src="../js/global.min.js"></script>
 </body>

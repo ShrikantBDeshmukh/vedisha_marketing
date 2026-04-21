@@ -36,106 +36,120 @@
       }
     ]
   }</script>
-  <link rel="stylesheet" href="css/content-geo.css">
-  
-  
+
   <link rel="stylesheet" href="css/global.min.css">
   <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="geo-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
-
-
-
-
-
-
-  <main id="main">
-    <section class="geo-hero">
-      <div class="geo-hero-inner">
-        <div>
-          <div class="status-badge">Diagnostic Marketing</div>
-          <h1>Why is your <span class="gradient-text">medical expertise</span> invisible to local patients?</h1>
-          <p>Clinical excellence in Chhatrapati Sambhaji Nagar is often obscured by poor digital discovery. We solve the trust-gap for healthcare providers.</p>
-          <div class="geo-actions">
-            <a href="contact.html" class="primary-btn">Request Practice Audit</a>
-          </div>
+  <main id="main" class="pt-12 pb-24">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 lg:flex lg:items-center lg:gap-16">
+      <div class="lg:w-1/2 mb-12 lg:mb-0">
+        <span class="inline-block bg-teal-100 text-teal-700 font-bold px-3 py-1 text-xs uppercase tracking-widest rounded-full mb-6">Diagnostic Marketing</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Why is your <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600">medical expertise</span> invisible to local patients?</h1>
+        <p class="text-lg text-slate-600 leading-relaxed mb-8">Clinical excellence in Chhatrapati Sambhaji Nagar is often obscured by poor digital discovery. We solve the trust-gap for healthcare providers.</p>
+        <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition shadow-sm text-lg hover:-translate-y-0.5">Request Practice Audit</a>
+      </div>
+      <div class="lg:w-1/2">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+          <img src="images/saas-audit-hero.webp" alt="Healthcare Marketing CSN" loading="lazy" class="w-full h-auto object-cover">
         </div>
-        <figure class="geo-media">
-          <img src="images/saas-audit-hero.webp" alt="Healthcare Marketing CSN" loading="lazy">
-        </figure>
       </div>
     </section>
 
-    <div class="geo-wrap">
-      <section class="geo-section">
-        <div class="diagnostic-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 80px;">
-          <div class="glass-card" style="padding: 40px; border-top: 4px solid #ef4444;">
-            <h3 style="color: #ef4444; margin-bottom: 16px;">The Problem</h3>
-            <p>Patients search for "Best cardiologist near me" in Chhatrapati Sambhaji Nagar, but find aggregator sites or competitors because your practice lacks local entity authority.</p>
-          </div>
-          <div class="glass-card" style="padding: 40px; border-top: 4px solid var(--c-accent);">
-            <h3 style="color: var(--c-accent); margin-bottom: 16px;">The Prescription</h3>
-            <p>A "Patient-First" AEO strategy. We optimize your GMB and website to answer specific medical queries directly, positioning you as the immediate local authority.</p>
-          </div>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-        <h2>Why Local SEO is Critical for Healthcare Providers</h2>
-        <p class="lead">Patients in Chhatrapati Sambhaji Nagar (formerly Aurangabad) are searching for specialized care "near me". If you aren't in the top 3 results, you're losing patients to competitors.</p>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Local Pack Dominance</h3>
-            <p>Optimizing your GMB profile to appear for critical searches like "Best cardiologist in Chhatrapati Sambhaji Nagar (formerly Aurangabad)".</p>
+      <!-- Problem / Prescription -->
+      <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white border-t-4 border-t-red-500 border border-slate-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-red-500 mb-4">The Problem</h3>
+            <p class="text-slate-600 leading-relaxed">Patients search for "Best cardiologist near me" in Chhatrapati Sambhaji Nagar, but find aggregator sites or competitors because your practice lacks local entity authority.</p>
           </div>
-          <div class="card">
-            <h3>Reputation Management</h3>
-            <p>Systems to ethically gather patient reviews and manage your online reputation on platforms like Practo and Google.</p>
-          </div>
-          <div class="card">
-            <h3>Educational Content</h3>
-            <p>Building authority through medical blogs and videos that answer local patients' most pressing health questions.</p>
+          <div class="bg-white border-t-4 border-t-teal-500 border border-slate-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-teal-600 mb-4">The Prescription</h3>
+            <p class="text-slate-600 leading-relaxed">A "Patient-First" AEO strategy. We optimize your GMB and website to answer specific medical queries directly, positioning you as the immediate local authority.</p>
           </div>
         </div>
       </section>
 
-      <section class="geo-section">
-        <h2>Our Ethical Healthcare Growth Plan</h2>
-        <ul class="feature-list">
-          <li><strong>GMB for Clinics:</strong> Complete setup and monthly optimization for local visibility.</li>
-          <li><strong>Patient-Centric SEO:</strong> Targeting symptoms and conditions patients actually search for.</li>
-          <li><strong>Community Engagement:</strong> Social media strategies that position you as a community health leader.</li>
-        </ul>
+      <!-- Why Local SEO -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Why Local SEO is Critical for Healthcare Providers</h2>
+        <p class="text-lg text-slate-600 mb-12 max-w-3xl leading-relaxed">Patients in Chhatrapati Sambhaji Nagar (formerly Aurangabad) are searching for specialized care "near me". If you aren't in the top 3 results, you're losing patients to competitors.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition">Local Pack Dominance</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Optimizing your GMB profile to appear for critical searches like "Best cardiologist in Chhatrapati Sambhaji Nagar".</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition">Reputation Management</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Systems to ethically gather patient reviews and manage your online reputation on platforms like Practo and Google.</p>
+          </div>
+          <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-md transition group">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition">Educational Content</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">Building authority through medical blogs and videos that answer local patients' most pressing health questions.</p>
+          </div>
+        </div>
       </section>
 
-      <section class="cta-banner" style="margin-top: 64px;">
-        <h2>Ready to grow your practice?</h2>
-        <a href="contact.html" class="primary-btn">Start My Plan →</a>
+      <!-- Growth Plan Checklist -->
+      <section>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-10 tracking-tight">Our Ethical Healthcare Growth Plan</h2>
+        <div class="space-y-5 max-w-3xl">
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">GMB for Clinics</strong>
+              <p class="text-slate-600 text-base m-0">Complete setup and monthly optimization for local visibility.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">Patient-Centric SEO</strong>
+              <p class="text-slate-600 text-base m-0">Targeting symptoms and conditions patients actually search for.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mt-0.5">
+              <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong class="block text-slate-900 text-lg mb-1">Community Engagement</strong>
+              <p class="text-slate-600 text-base m-0">Social media strategies that position you as a community health leader.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="max-w-4xl mx-auto bg-slate-900 text-white p-12 md:p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-blue-600/20 mix-blend-overlay"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to grow your practice?</h2>
+          <p class="text-lg text-slate-300 mb-10">Ethical patient acquisition for healthcare providers in Chhatrapati Sambhaji Nagar.</p>
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 font-bold bg-white text-slate-900 rounded-xl hover:bg-slate-50 transition shadow-lg hover:-translate-y-1 text-lg">Start My Plan &rarr;</a>
+        </div>
       </section>
     </div>
   </main>
-
-
-
-  
-  
-  
-
-
-
-  
-  
-
-  
-  
-
-
-
-
 
   <script src="./js/global.min.js"></script>
 </body>

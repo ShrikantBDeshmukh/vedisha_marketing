@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – Vedisha Marketing</title>
+  <title>Blog | Vedisha Marketing</title>
   <meta name="description" content="Marketing and PR insights written for founders and marketing leaders—practical, honest, and built to help you execute.">
   <link rel="canonical" href="https://vedishamarketing.in/blog.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,140 +11,101 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.webp">
-  <link rel="stylesheet" href="css/insights.min.css">
-  <link rel="stylesheet" href="css/insights.css">
-  
-  
-  <link rel="stylesheet" href="css/global.min.css">
-  <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="insights-page">
+<body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20">
 
-  
-  
-  
-
-  
-
-
-
-
-  <section class="insights-hero">
-    <div class="status-badge" style="margin-bottom: 24px;">Growth Library</div>
-    <h1>Practical marketing and <span class="gradient-text">PR insights</span>.</h1>
-    <p>Clear strategy, execution frameworks, and decision-making guidance—written for founders who build for the long term.</p>
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 text-center">
+    <span class="inline-block bg-blue-100 text-blue-700 font-bold px-4 py-1.5 text-xs uppercase tracking-widest rounded-full mb-6">Growth Library</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Practical marketing and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">PR insights</span></h1>
+    <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+      Clear strategy, execution frameworks, and decision-making guidance—written for founders who build for the long term.
+    </p>
   </section>
 
-  <main class="insights-grid" id="main">
-    <!-- NEW: Post 1 -->
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <div style="width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #0f172a, #1e293b); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-size:4rem; font-weight:800;">✓</div>
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Strategy</span>
-        <h2>How to Evaluate a Digital Marketing Agency in India: A 15-Point Checklist</h2>
-        <p class="article-excerpt">A transparent audit framework to help B2B founders cut through the fluff and hire for outcomes.</p>
-        <a href="insights/agency-evaluation-checklist.html" class="read-more">
-          Read checklist
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+  <main id="main" class="pb-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- NEW: Post 2 -->
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/saas-audit-hero.webp" alt="SaaS Audit" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Research</span>
-        <h2>We Audited 20 Indian SaaS Landing Pages — The Audit Results</h2>
-        <p class="article-excerpt">Discover the messaging patterns and conversion architectures used by India’s top SaaS performers.</p>
-        <a href="insights/saas-landing-page-audit.html" class="read-more">
-          View audit
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+        <!-- Post 1 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-white/20 text-6xl font-extrabold group-hover:scale-105 transition duration-500">✓</div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-teal-600 text-xs font-bold uppercase tracking-widest mb-3">Strategy</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">How to Evaluate a Digital Marketing Agency in India</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A transparent audit framework with a 15-point checklist to help B2B founders cut through the fluff and hire for outcomes.</p>
+            <a href="insights/agency-evaluation-checklist.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read checklist &rarr;</a>
+          </div>
+        </article>
 
-    <!-- NEW: Post 3 -->
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <div style="width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, #4338ca, #7c3aed); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-size:4rem; font-weight:800;">⚡</div>
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Product</span>
-        <h2>Brand Positioning Sprint: What We Deliver in 2 Weeks</h2>
-        <p class="article-excerpt">Move from vague to unignorable with our 14-day Positioning Kit artifact.</p>
-        <a href="insights/brand-positioning-sprint.html" class="read-more">
-          See the kit
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+        <!-- Post 2 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/saas-audit-hero.webp" alt="SaaS Audit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Research</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">We Audited 20 Indian SaaS Landing Pages</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Discover the messaging patterns and conversion architectures used by India’s top SaaS performers. Detailed audit results.</p>
+            <a href="insights/saas-landing-page-audit.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">View audit &rarr;</a>
+          </div>
+        </article>
 
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-1.webp" alt="Team planning strategy" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Strategy</span>
-        <h2>Why 2026 Belongs to Brands That Master AI + Human Storytelling</h2>
-        <p class="article-excerpt">How to use AI for scale while protecting the one thing that converts: human narrative.</p>
-        <a href="insights/ai-human-marketing-revolution.html" class="read-more">
-          Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+        <!-- Post 3 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white/20 text-6xl font-extrabold group-hover:scale-105 transition duration-500">⚡</div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-indigo-600 text-xs font-bold uppercase tracking-widest mb-3">Product</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">Brand Positioning Sprint: Delivering in 2 Weeks</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">Move from vague to unignorable with our 14-day Positioning Kit artifact. See what's inside.</p>
+            <a href="insights/brand-positioning-sprint.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">See the kit &rarr;</a>
+          </div>
+        </article>
 
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-2.webp" alt="Campaign planning notes" class="article-card-image" loading="lazy">
-      </div>
-      <div class="article-card-content">
-        <span class="article-category">Efficiency</span>
-        <h2>How AI Cut Our Campaign Planning from 6 Weeks to 6 Days</h2>
-        <p class="article-excerpt">A repeatable workflow that compresses research and increases creative output—without sounding robotic.</p>
-        <a href="insights/campaign-planning-ai.html" class="read-more">
-          Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+        <!-- Post 4 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-1.webp" alt="AI Mastery" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-slate-600 text-xs font-bold uppercase tracking-widest mb-3">Strategy</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">Why 2026 Belongs to Brands That Master AI + Human Storytelling</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">How to use AI for scale while protecting the one thing that converts: human narrative.</p>
+            <a href="insights/ai-human-marketing-revolution.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full post &rarr;</a>
+          </div>
+        </article>
 
-    <article class="article-card">
-      <div class="article-card-image-wrap">
-        <img src="images/insight-3.webp" alt="PR and reputation planning" class="article-card-image" loading="lazy">
+        <!-- Post 5 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-2.webp" alt="Efficiency Workflow" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-slate-600 text-xs font-bold uppercase tracking-widest mb-3">Efficiency</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">How AI Cut Our Campaign Planning from 6 Weeks to 6 Days</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">A repeatable workflow that compresses research and increases creative output—without sounding robotic.</p>
+            <a href="insights/campaign-planning-ai.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full post &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition group flex flex-col">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img src="images/insight-3.webp" alt="PR Reputation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-slate-600 text-xs font-bold uppercase tracking-widest mb-3">Public Relations</span>
+            <h2 class="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">The New PR Playbook: Reputation in the Age of Instant Scrutiny</h2>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">How to build a narrative “bank” that protects your brand when the spotlight turns harsh.</p>
+            <a href="insights/new-pr-playbook.html" class="mt-auto inline-flex items-center text-slate-900 font-bold hover:text-blue-600 transition gap-2 text-sm">Read full post &rarr;</a>
+          </div>
+        </article>
+
       </div>
-      <div class="article-card-content">
-        <span class="article-category">Public Relations</span>
-        <h2>The New PR Playbook: Reputation in the Age of Instant Scrutiny</h2>
-        <p class="article-excerpt">How to build a narrative “bank” that protects your brand when the spotlight turns harsh.</p>
-        <a href="insights/new-pr-playbook.html" class="read-more">
-          Read full post
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </article>
+    </div>
   </main>
-
-
-
-  
-  
-  
-
-
-  
-
-
-  
-  
-
-
 
   <script src="./js/global.min.js"></script>
 </body>

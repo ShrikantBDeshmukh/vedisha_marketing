@@ -93,12 +93,12 @@
     ]
   }</script>
   
-  
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/global.min.css">
   <link rel="stylesheet" href="css/branding.min.css">
   <script src="./assets/js/components.min.js" defer></script>
 </head>
-<body class="home-page">
+<body class="home-page bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden">
 
   
   
@@ -112,254 +112,248 @@
   <main id="main">
 
   <!-- Hero Section -->
-  <section class="home-hero">
-    <div class="hero-bg-anim"></div>
-    <div class="home-hero-content">
-      <div class="kicker" style="font-weight: 700; color: var(--c-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px;">📈 ROI-Driven Growth Partner</div>
-      <h1>How to Scale Your Business in <span class="gradient-text">Chhatrapati Sambhajinagar</span>?</h1>
-      <p>Vedisha Marketing is the digital growth agency that combines relentless Lead Generation with a genuinely human approach. We handle the SEO, Content, and Paid Ads, so you can focus on scaling.</p>
-      <a href="contact.html" class="primary-btn">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center mt-20">
+    <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+      <div class="font-bold text-teal-600 uppercase tracking-widest mb-6">📈 ROI-Driven Growth Partner</div>
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">How to Scale Your Business in <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600">Chhatrapati Sambhajinagar</span>?</h1>
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed">Vedisha Marketing is the digital growth agency that combines relentless Lead Generation with a genuinely human approach. We handle the SEO, Content, and Paid Ads, so you can focus on scaling.</p>
+      <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition">
         Get My Free Growth Blueprint
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
-      <p style="font-size: var(--fs-sm); margin-top: 16px; color: var(--c-muted); font-weight: 500;">No commitment. Just 30 minutes of free, actionable strategy.</p>
+      <p class="text-sm mt-6 text-slate-500 font-medium">No commitment. Just 30 minutes of free, actionable strategy.</p>
     </div>
   </section>
 
   <!-- About Us Section -->
-  <section class="about-section container" style="padding: 120px 24px 40px; text-align: center; max-width: 900px; margin: 0 auto;">
-    <h2 style="margin-bottom: 32px;">We're not just an agency.<br><span class="gradient-text">We're your outsourced growth engine.</span></h2>
-    <p style="font-size: var(--fs-body); color: var(--c-muted); margin-bottom: 24px; line-height: 1.6;">Let’s be honest: marketing shouldn't feel like a black box. At Vedisha Marketing, we believe the best results happen when data-driven precision meets transparent, human partnership. We don’t hide behind vanity metrics or confusing jargon.</p>
-    <p style="font-size: var(--fs-body); color: var(--c-muted); line-height: 1.6;">Whether we are scaling your SEO traffic or engineering profitable ad campaigns, we act as an extension of your team. Because when your business wins, we win—and frankly, we prefer to celebrate together.</p>
+  <section class="max-w-4xl mx-auto px-4 py-24 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">We're not just an agency.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600">We're your outsourced growth engine.</span></h2>
+    <p class="text-lg text-slate-600 mb-6 leading-relaxed">Let’s be honest: marketing shouldn't feel like a black box. At Vedisha Marketing, we believe the best results happen when data-driven precision meets transparent, human partnership. We don’t hide behind vanity metrics or confusing jargon.</p>
+    <p class="text-lg text-slate-600 leading-relaxed">Whether we are scaling your SEO traffic or engineering profitable ad campaigns, we act as an extension of your team. Because when your business wins, we win—and frankly, we prefer to celebrate together.</p>
   </section>
 
   <!-- Our Edge -->
-  <section class="edge-section">
-    <div class="edge-grid">
-      <div class="edge-card" style="transition-delay: 0s;">
-        <svg class="edge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        <h3>Strategy you can execute</h3>
-        <p>Clear positioning, concrete proof points, and a message hierarchy your team can actually ship across web, ads, and sales.</p>
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start">
+        <svg class="w-16 h-16 text-teal-500 mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Strategy you can execute</h3>
+        <p class="text-slate-600 leading-relaxed">Clear positioning, concrete proof points, and a message hierarchy your team can actually ship across web, ads, and sales.</p>
       </div>
-      <div class="edge-card" style="transition-delay: 0.15s;">
-        <svg class="edge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <h3>Creative with taste</h3>
-        <p>Sharp copy, clean design choices, and restraint. We’d rather be specific than loud.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start">
+        <svg class="w-16 h-16 text-teal-500 mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Creative with taste</h3>
+        <p class="text-slate-600 leading-relaxed">Sharp copy, clean design choices, and restraint. We’d rather be specific than loud.</p>
       </div>
-      <div class="edge-card" style="transition-delay: 0.3s;">
-        <svg class="edge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <h3>Reputation-ready</h3>
-        <p>Simple systems for monitoring, response kits, and narrative clarity—so you don’t scramble when attention spikes.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center md:items-start">
+        <svg class="w-16 h-16 text-teal-500 mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Reputation-ready</h3>
+        <p class="text-slate-600 leading-relaxed">Simple systems for monitoring, response kits, and narrative clarity—so you don’t scramble when attention spikes.</p>
       </div>
     </div>
   </section>
 
   <!-- Featured Services (Bento Grid) -->
-  <section class="services-section">
-    <div class="section-header">
-      <h2>Sector-Specific Growth Solutions</h2>
-      <p>Customized Lead Generation and ROI-driven strategies for high-value industries in Chhatrapati Sambhajinagar.</p>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="text-center md:text-left mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Sector-Specific Growth Solutions</h2>
+      <p class="text-lg text-slate-600 max-w-2xl">Customized Lead Generation and ROI-driven strategies for high-value industries in Chhatrapati Sambhajinagar.</p>
     </div>
-    <div class="bento-grid">
-      <div class="service-item large">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="md:col-span-2 lg:col-span-2 p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-md flex flex-col justify-between">
         <div>
-          <h3>Real Estate Lead Gen</h3>
-          <p>Dominating high-intent property searches in CSN and Maharashtra with automated Lead Generation and ROI-driven ad funnels.</p>
+          <h3 class="text-2xl font-bold mb-3">Real Estate Lead Gen</h3>
+          <p class="text-slate-300">Dominating high-intent property searches in CSN and Maharashtra with automated Lead Generation and ROI-driven ad funnels.</p>
         </div>
-        <div class="service-meta">Industry Specialized</div>
+        <div class="mt-6 text-sm font-semibold tracking-wide uppercase text-teal-400">Industry Specialized</div>
       </div>
-      <div class="service-item">
-        <div>
-          <h3>Healthcare Marketing</h3>
-          <p>Patient acquisition systems for clinics and hospitals in Marathwada.</p>
-        </div>
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Healthcare Marketing</h3>
+        <p class="text-slate-600">Patient acquisition systems for clinics and hospitals in Marathwada.</p>
       </div>
-      <div class="service-item">
-        <div>
-          <h3>Education & Coaching</h3>
-          <p>Scaling student enrollments through targeted social proof and SEO.</p>
-        </div>
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Education & Coaching</h3>
+        <p class="text-slate-600">Scaling student enrollments through targeted social proof and SEO.</p>
       </div>
-      <div class="service-item medium">
+      <div class="md:col-span-2 p-8 rounded-2xl bg-teal-50 border border-teal-100 shadow-sm flex flex-col justify-between">
         <div>
-          <h3>AI Visibility Boost (AEO)</h3>
-          <p>Structured data + AEO FAQs + crawler directives so AI assistants and SGE index your business accurately.</p>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">AI Visibility Boost (AEO)</h3>
+          <p class="text-slate-700">Structured data + AEO FAQs + crawler directives so AI assistants and SGE index your business accurately.</p>
         </div>
-        <p style="margin: 20px 0 0;"><a href="ai-visibility-boost.html" style="font-weight: 800; text-decoration: none; color: var(--c-accent); border-bottom: 2px solid var(--c-accent);">Explore AEO →</a></p>
+        <a href="ai-visibility-boost.html" class="inline-block mt-6 font-bold text-teal-700 border-b-2 border-teal-500 pb-1 w-max hover:text-teal-900">Explore AEO →</a>
       </div>
-      <div class="service-item">
-        <div>
-          <h3>Culture & Social</h3>
-          <p>Editorial direction for repeatable results.</p>
-        </div>
+      <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-slate-900 mb-3">Culture & Social</h3>
+        <p class="text-slate-600">Editorial direction for repeatable results.</p>
+      </div>
     </div>
   </section>
 
   <!-- Impact in Numbers (Results Engine) -->
-  <section class="section container">
-    <div class="section-header" style="text-align: center;">
-      <span class="status-badge" style="margin-bottom: 16px;">Verified Performance</span>
-      <h2>Impact in Numbers</h2>
-      <p>We don't just ship creative; we drive measurable business outcomes.</p>
+  <section class="max-w-7xl mx-auto px-4 py-24">
+    <div class="text-center mb-16">
+      <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full mb-4">Verified Performance</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Impact in Numbers</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">We don't just ship creative; we drive measurable business outcomes.</p>
     </div>
-    <div class="results-grid">
-      <div class="metric-card">
-        <span class="metric-value">₹50Cr+</span>
-        <span class="metric-label">Ad Spend Managed</span>
-        <p class="metric-desc">Strategic oversight across Meta, Google, and LinkedIn ad ecosystems.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
+        <div class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">₹50Cr+</div>
+        <div class="text-lg font-bold text-slate-900 mb-3">Ad Spend Managed</div>
+        <p class="text-slate-600">Strategic oversight across Meta, Google, and LinkedIn ad ecosystems.</p>
       </div>
-      <div class="metric-card">
-        <span class="metric-value">85%</span>
-        <span class="metric-label">Retention Rate</span>
-        <p class="metric-desc">Clients who start with a 48h sprint stay for the long-term growth engine.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
+        <div class="text-4xl md:text-5xl font-extrabold text-teal-500 mb-2">85%</div>
+        <div class="text-lg font-bold text-slate-900 mb-3">Retention Rate</div>
+        <p class="text-slate-600">Clients who start with a 48h sprint stay for the long-term growth engine.</p>
       </div>
-      <div class="metric-card">
-        <span class="metric-value">312%</span>
-        <span class="metric-label">Avg. ROAS</span>
-        <p class="metric-desc">Average increase in return on ad spend across performance accounts.</p>
+      <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition">
+        <div class="text-4xl md:text-5xl font-extrabold text-indigo-600 mb-2">312%</div>
+        <div class="text-lg font-bold text-slate-900 mb-3">Avg. ROAS</div>
+        <p class="text-slate-600">Average increase in return on ad spend across performance accounts.</p>
       </div>
     </div>
   </section>
   <!-- Selected Work -->
-  <section class="work-section">
-    <div class="section-header">
-      <h2>Selected Work</h2>
+  <section class="max-w-7xl mx-auto px-4 py-24">
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Selected Work</h2>
     </div>
-    <div class="work-grid">
-      <div class="work-item">
-        <img src="images/branding-bg.webp" alt="High-end branding & messaging sprint" loading="lazy">
-        <div class="work-overlay">
-          <span>Branding & Messaging</span>
-          <h3>Positioning + messaging kit</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <div class="h-80 bg-slate-200">
+          <img src="images/branding-bg.webp" alt="High-end branding" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-8">
+          <span class="text-teal-400 font-semibold mb-2">Branding & Messaging</span>
+          <h3 class="text-white text-2xl font-bold">Positioning + messaging kit</h3>
         </div>
       </div>
-      <div class="work-item">
-        <img src="images/pr-bg.webp" alt="Strategic PR & Reputation management" loading="lazy">
-        <div class="work-overlay">
-          <span>PR & Reputation</span>
-          <h3>Response kit + narrative reset</h3>
+      <div class="relative group rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <div class="h-80 bg-slate-200">
+          <img src="images/pr-bg.webp" alt="Strategic PR" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-end p-8">
+          <span class="text-pink-400 font-semibold mb-2">PR & Reputation</span>
+          <h3 class="text-white text-2xl font-bold">Response kit + narrative reset</h3>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Social Proof & Trust Engine -->
-  <section class="trusted-section container">
-    <div class="logo-cluster-group">
-      <span class="logo-cluster-label">Industry Partners</span>
-      <div class="logo-wall">
-        <div class="trusted-logo" title="Google Premier Partner"><svg height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-2.2 5.4-7.84 5.4-4.8 0-8.72-3.96-8.72-8.6a8.6 8.6 0 0 1 8.72-8.6c2.72 0 4.56 1.16 5.6 2.16l2.56-2.48c-1.64-1.56-4.2-2.48-8.16-2.48-5.52 0-10 4.48-10 10s4.48 10 10 10c5.76 0 9.6-4.04 9.6-9.76 0-.64-.08-1.12-.16-1.6h-9.44z"/></svg></div>
-        <div class="trusted-logo" title="Meta Business Partner"><svg height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
-        <div class="trusted-logo" title="HubSpot Partner"><svg height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M21.24 12.12a2.38 2.38 0 0 0-3.37.01l-1.42 1.42-2.12-2.12c2.08-3.09 1.09-7.24-2.13-9.04-3.23-1.81-7.39-.73-9.2 2.47-1.81 3.21-.71 7.28 2.47 9.1 1.25.72 2.66.96 4.02.76l2.12 2.12-1.42 1.42c-.93.93-.93 2.44 0 3.37.93.93 2.44.93 3.37 0l1.42-1.42 1.42 1.42a2.38 2.38 0 0 0 3.37-3.36l-1.42-1.42 1.42-1.42c.45-.45.71-1.06.71-1.69a2.38 2.38 0 0 0-.71-1.64zm-14.28.1a4.76 4.76 0 1 1 0-9.52 4.76 4.76 0 0 1 0 9.52zm8.33 8.34c-.4.4-.93.6-1.47.6s-1.07-.2-1.47-.6l-1.42-1.42 2.89-2.89 1.47 1.47c.81.81.81 2.13 0 2.94v-.1z"/></svg></div>
+  <!-- Social Proof & Trust Engine -->
+  <section class="max-w-5xl mx-auto px-4 py-16 flex flex-col items-center gap-12 text-slate-500">
+    <div class="flex flex-col items-center">
+      <span class="uppercase tracking-widest text-xs font-semibold mb-6">Industry Partners</span>
+      <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+        <div title="Google Premier Partner" class="text-teal-600"><svg height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-2.2 5.4-7.84 5.4-4.8 0-8.72-3.96-8.72-8.6a8.6 8.6 0 0 1 8.72-8.6c2.72 0 4.56 1.16 5.6 2.16l2.56-2.48c-1.64-1.56-4.2-2.48-8.16-2.48-5.52 0-10 4.48-10 10s4.48 10 10 10c5.76 0 9.6-4.04 9.6-9.76 0-.64-.08-1.12-.16-1.6h-9.44z"/></svg></div>
+        <div title="Meta Business Partner" class="text-teal-600"><svg height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+        <div title="HubSpot Partner" class="text-teal-600"><svg height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M21.24 12.12a2.38 2.38 0 0 0-3.37.01l-1.42 1.42-2.12-2.12c2.08-3.09 1.09-7.24-2.13-9.04-3.23-1.81-7.39-.73-9.2 2.47-1.81 3.21-.71 7.28 2.47 9.1 1.25.72 2.66.96 4.02.76l2.12 2.12-1.42 1.42c-.93.93-.93 2.44 0 3.37.93.93 2.44.93 3.37 0l1.42-1.42 1.42 1.42a2.38 2.38 0 0 0 3.37-3.36l-1.42-1.42 1.42-1.42c.45-.45.71-1.06.71-1.69a2.38 2.38 0 0 0-.71-1.64zm-14.28.1a4.76 4.76 0 1 1 0-9.52 4.76 4.76 0 0 1 0 9.52zm8.33 8.34c-.4.4-.93.6-1.47.6s-1.07-.2-1.47-.6l-1.42-1.42 2.89-2.89 1.47 1.47c.81.81.81 2.13 0 2.94v-.1z"/></svg></div>
       </div>
     </div>
-
-    <div class="logo-cluster-group">
-      <span class="logo-cluster-label">Recent Engagements</span>
-      <div class="logo-wall" style="gap: 32px;">
-        <div class="trusted-logo" style="font-size: 0.9rem; font-weight: 600; opacity: 0.8; line-height: 1.2;">
-          A CSN-based<br>Real Estate Group
-        </div>
-        <div class="trusted-logo" style="font-size: 0.9rem; font-weight: 600; opacity: 0.8; line-height: 1.2;">
-          A Pune-based<br>SaaS Startup
-        </div>
-        <div class="trusted-logo" style="font-size: 0.9rem; font-weight: 600; opacity: 0.8; line-height: 1.2;">
-          A Marathwada-based<br>Manufacturing Firm
-        </div>
+    <div class="flex flex-col items-center">
+      <span class="uppercase tracking-widest text-xs font-semibold mb-6">Recent Engagements</span>
+      <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+        <div class="text-sm font-semibold opacity-80 leading-snug text-center border-l-2 border-teal-200 pl-4">A CSN-based<br>Real Estate Group</div>
+        <div class="text-sm font-semibold opacity-80 leading-snug text-center border-l-2 border-teal-200 pl-4">A Pune-based<br>SaaS Startup</div>
+        <div class="text-sm font-semibold opacity-80 leading-snug text-center border-l-2 border-teal-200 pl-4">A Marathwada-based<br>Manufacturing Firm</div>
       </div>
     </div>
   </section>
 
-  <section class="testimonial-section container" style="padding: 100px 24px;">
-    <div class="section-header" style="text-align: center; margin-bottom: 64px;">
-      <h2>The Vedisha Difference</h2>
-      <p>Why Chhatrapati Sambhajinagar brands are ditching traditional agencies for our AI-first, ROI-driven model.</p>
+  <section class="max-w-5xl mx-auto px-4 py-24">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">The Vedisha Difference</h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">Why Chhatrapati Sambhajinagar brands are ditching traditional agencies for our AI-first, ROI-driven model.</p>
     </div>
-
-    <div class="table-wrapper" style="margin-top: 48px;">
-      <table class="comp-table">
+    
+    <div class="overflow-x-auto mb-20 bg-white rounded-2xl shadow-sm border border-slate-100">
+      <table class="w-full text-left border-collapse">
         <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Traditional Agencies</th>
-            <th>Vedisha Marketing</th>
+          <tr class="bg-slate-50 border-b border-slate-200">
+            <th class="p-4 font-bold text-slate-900">Feature</th>
+            <th class="p-4 font-bold text-slate-900">Traditional Agencies</th>
+            <th class="p-4 font-bold text-teal-600">Vedisha Marketing</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><strong>Focus</strong></td>
-            <td>Vanity metrics (Clicks, Likes, Traffic)</td>
-            <td><span style="color: var(--c-accent);">ROI & Qualified Lead Generation</span></td>
+        <tbody class="divide-y divide-slate-100">
+          <tr class="hover:bg-slate-50">
+            <td class="p-4 font-semibold text-slate-800">Focus</td>
+            <td class="p-4 text-slate-500">Vanity metrics (Clicks, Likes)</td>
+            <td class="p-4 font-medium text-teal-600">ROI & Qualified Lead Generation</td>
           </tr>
-          <tr>
-            <td><strong>Execution</strong></td>
-            <td>Junior account managers</td>
-            <td><span style="color: var(--c-accent);">Senior-led practitioners only</span></td>
+          <tr class="hover:bg-slate-50">
+            <td class="p-4 font-semibold text-slate-800">Execution</td>
+            <td class="p-4 text-slate-500">Junior account managers</td>
+            <td class="p-4 font-medium text-teal-600">Senior-led practitioners only</td>
           </tr>
-          <tr>
-            <td><strong>Search Strategy</strong></td>
-            <td>Old-school Keyword SEO</td>
-            <td><span style="color: var(--c-accent);">AI-Search Optimization (AEO)</span></td>
+          <tr class="hover:bg-slate-50">
+            <td class="p-4 font-semibold text-slate-800">Search Strategy</td>
+            <td class="p-4 text-slate-500">Old-school Keyword SEO</td>
+            <td class="p-4 font-medium text-teal-600">AI-Search Optimization (AEO)</td>
           </tr>
-          <tr>
-            <td><strong>Turnaround</strong></td>
-            <td>Weeks for first deliverable</td>
-            <td><span style="color: var(--c-accent);">5 Days or less sprint models</span></td>
+          <tr class="hover:bg-slate-50">
+            <td class="p-4 font-semibold text-slate-800">Turnaround</td>
+            <td class="p-4 text-slate-500">Weeks for first deliverable</td>
+            <td class="p-4 font-medium text-teal-600">5 Days or less sprint models</td>
           </tr>
-          <tr>
-            <td><strong>Transparency</strong></td>
-            <td>"Black Box" reporting</td>
-            <td><span style="color: var(--c-accent);">Real-time dashboards & direct access</span></td>
+          <tr class="hover:bg-slate-50">
+            <td class="p-4 font-semibold text-slate-800">Transparency</td>
+            <td class="p-4 text-slate-500">"Black Box" reporting</td>
+            <td class="p-4 font-medium text-teal-600">Real-time dashboards & direct access</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="results-grid" style="margin-top: 80px;">
-      <div class="metric-card">
-        <h3 style="color: var(--c-accent); margin-bottom: 12px; font-size: var(--fs-h3);">5 Days or Less</h3>
-        <p style="font-size: var(--fs-sm); color: var(--c-muted);">From initial brief to your first live deliverable. We value speed as much as quality.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <h3 class="text-2xl font-bold text-teal-500 mb-2">5 Days or Less</h3>
+        <p class="text-slate-600">From initial brief to your first live deliverable. We value speed as much as quality.</p>
       </div>
-      <div class="metric-card">
-        <h3 style="color: var(--c-accent); margin-bottom: 12px; font-size: var(--fs-h3);">Zero "Black Box"</h3>
-        <p style="font-size: var(--fs-sm); color: var(--c-muted);">Direct access to practitioners and real-time dashboards. You see what we see.</p>
+      <div>
+        <h3 class="text-2xl font-bold text-teal-500 mb-2">Zero "Black Box"</h3>
+        <p class="text-slate-600">Direct access to practitioners and real-time dashboards. You see what we see.</p>
       </div>
-      <div class="metric-card">
-        <h3 style="color: var(--c-accent); margin-bottom: 12px; font-size: var(--fs-h3);">Pipeline Over Vanity</h3>
-        <p style="font-size: var(--fs-sm); color: var(--c-muted);">We optimize for qualified leads and revenue, not just clicks or impressions.</p>
+      <div>
+        <h3 class="text-2xl font-bold text-teal-500 mb-2">Pipeline Over Vanity</h3>
+        <p class="text-slate-600">We optimize for qualified leads and revenue, not just clicks or impressions.</p>
       </div>
     </div>
   </section>
 
   <!-- Hyper-Local Focus Section -->
-  <section class="section container" style="background: var(--c-surface); border-radius: var(--radius-lg); margin-top: 80px; padding: 80px 40px; border: 1px solid var(--c-border);">
-    <div class="section-header" style="text-align: center; margin-bottom: 64px;">
-      <span class="status-badge" style="margin-bottom: 16px;">Local SEO Leader</span>
-      <h2>Dominating Chhatrapati Sambhajinagar</h2>
-      <p>We combine global marketing standards with deep local expertise in the Marathwada region.</p>
-    </div>
-    <div class="results-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-      <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 24px; border: 1px solid var(--c-border); background: #fff;">
-        <img src="https://images.unsplash.com/photo-1626292539050-482f34731818?auto=format&fit=crop&w=600&q=80" alt="Bibi Ka Maqbara, Chhatrapati Sambhajinagar" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
-        <div style="padding: 24px;">
-          <h3 style="font-size: var(--fs-body); margin-bottom: 12px;">Strategic Local Presence</h3>
-          <p style="font-size: var(--fs-sm); color: var(--c-muted);">From the heights of Daulatabad to the heart of Garkheda, we know what drives the CSN market.</p>
-        </div>
+  <section class="max-w-7xl mx-auto px-4 py-24">
+    <div class="bg-indigo-50 border border-indigo-100 rounded-3xl p-8 md:p-16">
+      <div class="text-center mb-12">
+        <span class="inline-block px-3 py-1 text-sm font-semibold text-indigo-700 bg-indigo-100 rounded-full mb-4">Local SEO Leader</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Dominating Chhatrapati Sambhajinagar</h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">We combine global marketing standards with deep local expertise in the Marathwada region.</p>
       </div>
-      <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 24px; border: 1px solid var(--c-border); background: #fff;">
-        <img src="https://images.unsplash.com/photo-1596402184320-417d7178b2cd?auto=format&fit=crop&w=600&q=80" alt="Ajanta Caves Heritage" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
-        <div style="padding: 24px;">
-          <h3 style="font-size: var(--fs-body); margin-bottom: 12px;">Heritage of Results</h3>
-          <p style="font-size: var(--fs-sm); color: var(--c-muted);">Just like the timeless art of Ajanta, we build marketing systems that stand the test of time and competition in Aurangabad.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1626292539050-482f34731818?auto=format&fit=crop&w=600&q=80" alt="Bibi Ka Maqbara, Chhatrapati Sambhajinagar" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Strategic Local Presence</h3>
+            <p class="text-slate-600">From the heights of Daulatabad to the heart of Garkheda, we know what drives the CSN market.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1596402184320-417d7178b2cd?auto=format&fit=crop&w=600&q=80" alt="Ajanta Caves Heritage" class="w-full h-48 object-cover" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Heritage of Results</h3>
+            <p class="text-slate-600">Just like the timeless art of Ajanta, we build marketing systems that stand the test of time and competition in Aurangabad.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Final CTA -->
-  <section class="cta-banner">
-    <h2>Want a clear plan and a fast first win?</h2>
-    <a href="contact.html" class="primary-btn">Get My Free Revenue Audit</a>
+  <section class="bg-slate-900 py-24 text-center px-4">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-8">Want a clear plan and a fast first win?</h2>
+    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-slate-900 bg-teal-400 rounded-full hover:bg-teal-300 transition shadow-lg shadow-teal-500/30">Get My Free Revenue Audit</a>
   </section>
   </main>
 
