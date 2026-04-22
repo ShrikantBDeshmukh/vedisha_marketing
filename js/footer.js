@@ -76,13 +76,22 @@
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
     const SCROLL_THRESHOLD = 400;
+    // Performance Optimization: Throttle scroll events using requestAnimationFrame
+    // to ensure DOM updates for the 'back to top' button happen at most once per frame.
+    let ticking = false;
     const toggleBackToTop = () => {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        backToTop.classList.remove('opacity-0', 'pointer-events-none');
-        backToTop.classList.add('opacity-100', 'pointer-events-auto');
-      } else {
-        backToTop.classList.add('opacity-0', 'pointer-events-none');
-        backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > SCROLL_THRESHOLD) {
+            backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            backToTop.classList.add('opacity-100', 'pointer-events-auto');
+          } else {
+            backToTop.classList.add('opacity-0', 'pointer-events-none');
+            backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     window.addEventListener('scroll', toggleBackToTop, { passive: true });
