@@ -26,13 +26,13 @@
 
   const linksHtml = navItems
     .map((item) => {
-      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
+      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold underline underline-offset-4 decoration-2"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
       return `<a href="${basePath}${item.href}"${current}>${item.label}</a>`;
     })
     .join('');
 
   const headerHtml = `
-    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 z-[100]" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
       <a class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight" href="${basePath}index.html" aria-label="Vedisha Marketing Home">
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
