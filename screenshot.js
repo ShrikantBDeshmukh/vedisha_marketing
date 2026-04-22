@@ -16,7 +16,8 @@ const fs = require('fs');
     console.log(`PAGE EXCEPTION: ${error.message}`);
   });
 
-  const url = 'file:///D:/vedisha%20marketing%20projects/vedisha_marketing/index.html';
+  const path = require('path');
+  const url = `file://${path.resolve(__dirname, 'index.html')}`;
   console.log('Navigating to', url);
   await page.goto(url, { waitUntil: 'load' });
   
