@@ -78,11 +78,11 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Resources</h4>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h4>
           <ul class="space-y-3 text-slate-600 font-medium">
-            <li><a href="${base}blog.html" class="hover:text-teal-600 transition">Blog</a></li>
-            <li><a href="${base}faq.html" class="hover:text-teal-600 transition">FAQ</a></li>
-            <li><a href="${base}contact.html" class="hover:text-teal-600 transition">Contact</a></li>
+            <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
+            <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
+            <li><a href="mailto:vedishamarketing@gmail.com" class="hover:text-teal-600 transition">vedishamarketing@gmail.com</a></li>
           </ul>
         </div>
       </div>
