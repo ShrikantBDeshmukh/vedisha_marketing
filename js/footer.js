@@ -13,6 +13,41 @@
   const footerHtml = `
   <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 pb-12 border-b border-slate-100">
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Waluj MIDC Hub</h4>
+          <ul class="space-y-2 text-xs text-slate-500 font-medium">
+            <li><a href="${base}web-development-in-waluj-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
+            <li><a href="${base}seo-services-in-waluj-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
+            <li><a href="${base}digital-marketing-in-waluj-midc.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Shendra MIDC Hub</h4>
+          <ul class="space-y-2 text-xs text-slate-500 font-medium">
+            <li><a href="${base}web-development-in-shendra-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
+            <li><a href="${base}seo-services-in-shendra-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
+            <li><a href="${base}digital-marketing-in-shendra-midc.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">CIDCO Local Hub</h4>
+          <ul class="space-y-2 text-xs text-slate-500 font-medium">
+            <li><a href="${base}web-development-in-cidco.html" class="hover:text-blue-600 transition">Web Development</a></li>
+            <li><a href="${base}seo-services-in-cidco.html" class="hover:text-blue-600 transition">SEO Services</a></li>
+            <li><a href="${base}digital-marketing-in-cidco.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Chikalthana Hub</h4>
+          <ul class="space-y-2 text-xs text-slate-500 font-medium">
+            <li><a href="${base}web-development-in-chikalthana.html" class="hover:text-blue-600 transition">Web Development</a></li>
+            <li><a href="${base}seo-services-in-chikalthana.html" class="hover:text-blue-600 transition">SEO Services</a></li>
+            <li><a href="${base}digital-marketing-in-chikalthana.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
         <div class="lg:col-span-2">
           <a href="${base}index.html" class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight mb-4" aria-label="Vedisha Marketing Home">
