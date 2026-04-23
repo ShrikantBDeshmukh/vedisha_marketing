@@ -216,3 +216,5 @@ a:hover { color: #4338ca; }
 @media (prefers-reduced-motion: reduce) {
   .noise-overlay, .reading-progress-container { display: none !important; }
 }
+
+.no-scroll { overflow: hidden !important; }
