@@ -121,6 +121,10 @@ a:hover { color: #4338ca; }
 @media (max-width: 640px) { .section { padding: 72px 0; } }
 
 /* Shared Component Styles */
+.service-card.expanded .service-card-content {
+  display: block !important;
+}
+
 .card {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--c-border);
