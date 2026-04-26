@@ -109,6 +109,13 @@ a {
 
 a:hover { color: #4338ca; }
 
+/* Accessibility: Focus Indicators */
+:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Layout Containers */
 .container {
   max-width: var(--max-w);
