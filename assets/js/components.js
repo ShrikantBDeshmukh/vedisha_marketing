@@ -133,15 +133,19 @@
     const mobileNav = document.getElementById('mobile-nav');
     
     if (navToggle && mobileNav) {
+      const iconPath = navToggle.querySelector('path');
+
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', !expanded);
         if (!expanded) {
           mobileNav.classList.remove('hidden');
           mobileNav.classList.add('flex');
+          if (iconPath) iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
         } else {
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
         }
       });
 
@@ -150,6 +154,7 @@
           navToggle.setAttribute('aria-expanded', 'false');
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
           navToggle.focus();
         }
       });

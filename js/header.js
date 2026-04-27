@@ -71,16 +71,20 @@
         headerSiteNav.classList.add('hidden');
         headerSiteNav.classList.remove('flex');
         headerMenuToggle.setAttribute('aria-expanded', 'false');
+        const iconPath = headerMenuToggle.querySelector('path');
+        if (iconPath) iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       };
 
       headerMenuToggle.addEventListener('click', () => {
         const isHidden = headerSiteNav.classList.contains('hidden');
+        const iconPath = headerMenuToggle.querySelector('path');
         if (!isHidden) {
           closeMenu();
         } else {
           headerSiteNav.classList.remove('hidden');
           headerSiteNav.classList.add('flex');
           headerMenuToggle.setAttribute('aria-expanded', 'true');
+          if (iconPath) iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
         }
       });
 
