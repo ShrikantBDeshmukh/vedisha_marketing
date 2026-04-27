@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Fluid Progress Bar (Reading Progress)
+    // 3. Fluid Progress Bar (Reading Progress) - Throttled with requestAnimationFrame for performance
     const injectProgressBar = () => {
         const progressContainer = document.createElement('div');
         progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent;';
@@ -54,11 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+
+        const updateProgress = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const progress = (scrollTop / scrollHeight) * 100;
             progressBar.style.width = progress + '%';
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();
