@@ -5,3 +5,7 @@
 ## 2025-05-16 - [CSS Waterfall Elimination via Script Injection]
 **Learning:** Using `@import` inside page-specific CSS files to load a `global.css` creates a sequential waterfall (HTML -> Page CSS -> Global CSS) that significantly delays the Critical Rendering Path. In a static site without a complex bundler, automating the injection of global styles directly into HTML `<head>` using maintenance scripts is the most efficient way to achieve parallel loading without manual overhead.
 **Action:** Remove `@import` from CSS and use `sync-components.js` or equivalent build scripts to manage global asset injection with relative path awareness.
+
+## 2026-04-30 - [Payload & Runtime Optimization]
+**Learning:** Even small payload reductions (like removing unused font families) combined with runtime throttling (scroll events) lead to a significantly better "Perceived Performance" score. Standardizing global assets across multiple HTML files without a bundler requires careful script-based injection to avoid drift.
+**Action:** Periodically audit Google Font URLs for unused families/weights and ensure all high-frequency events are throttled.
