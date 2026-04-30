@@ -1,0 +1,5 @@
+127.0.0.1 - - [30/Apr/2026 19:28:28] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2026 19:28:28] "GET /css/global.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2026 19:28:28] "GET /js/global.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2026 19:28:28] "GET /css/branding.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Apr/2026 19:28:28] "GET /assets/js/components.min.js HTTP/1.1" 200 -
