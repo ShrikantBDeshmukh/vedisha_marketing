@@ -54,11 +54,21 @@ document.addEventListener('DOMContentLoaded', () => {
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
+        // PERFORMANCE OPTIMIZATION: Throttle scroll event using requestAnimationFrame
+        // This ensures the progress bar update runs at most once per frame (60fps),
+        // reducing main-thread workload and preventing layout thrashing.
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = progress + '%';
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                    ticking = false;
+                });
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();

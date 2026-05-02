@@ -111,13 +111,22 @@
   const backToTop = document.getElementById('backToTop');
   if (backToTop) {
     const SCROLL_THRESHOLD = 400;
+    // PERFORMANCE OPTIMIZATION: Throttle scroll event using requestAnimationFrame
+    // Reduces CPU usage during scroll by limiting visibility checks for the back-to-top button.
+    let ticking = false;
     const toggleBackToTop = () => {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        backToTop.classList.remove('opacity-0', 'pointer-events-none');
-        backToTop.classList.add('opacity-100', 'pointer-events-auto');
-      } else {
-        backToTop.classList.add('opacity-0', 'pointer-events-none');
-        backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > SCROLL_THRESHOLD) {
+            backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            backToTop.classList.add('opacity-100', 'pointer-events-auto');
+          } else {
+            backToTop.classList.add('opacity-0', 'pointer-events-none');
+            backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     window.addEventListener('scroll', toggleBackToTop, { passive: true });
