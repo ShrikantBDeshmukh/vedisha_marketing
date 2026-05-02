@@ -44,7 +44,7 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle">
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle" aria-label="Toggle navigation menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
@@ -66,11 +66,15 @@
     const headerMenuToggle = headerEl.querySelector('#nav-toggle');
     const headerSiteNav = headerEl.querySelector('#mobile-nav');
 
+    const hamburgerIcon = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+    const closeIcon = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+
     if (headerMenuToggle && headerSiteNav) {
       const closeMenu = () => {
         headerSiteNav.classList.add('hidden');
         headerSiteNav.classList.remove('flex');
         headerMenuToggle.setAttribute('aria-expanded', 'false');
+        headerMenuToggle.innerHTML = hamburgerIcon;
       };
 
       headerMenuToggle.addEventListener('click', () => {
@@ -81,6 +85,7 @@
           headerSiteNav.classList.remove('hidden');
           headerSiteNav.classList.add('flex');
           headerMenuToggle.setAttribute('aria-expanded', 'true');
+          headerMenuToggle.innerHTML = closeIcon;
         }
       });
 

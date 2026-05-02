@@ -38,7 +38,7 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle" aria-label="Toggle navigation menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
@@ -132,6 +132,9 @@
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobile-nav');
     
+    const hamburgerIcon = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+    const closeIcon = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+
     if (navToggle && mobileNav) {
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
@@ -139,9 +142,11 @@
         if (!expanded) {
           mobileNav.classList.remove('hidden');
           mobileNav.classList.add('flex');
+          navToggle.innerHTML = closeIcon;
         } else {
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          navToggle.innerHTML = hamburgerIcon;
         }
       });
 
@@ -150,6 +155,7 @@
           navToggle.setAttribute('aria-expanded', 'false');
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          navToggle.innerHTML = hamburgerIcon;
           navToggle.focus();
         }
       });
