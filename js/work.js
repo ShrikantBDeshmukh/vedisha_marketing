@@ -57,7 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run on load and resize
     window.addEventListener('load', resizeAllMasonryItems);
-    window.addEventListener('resize', resizeAllMasonryItems);
+
+    // PERFORMANCE OPTIMIZATION: Throttle resize event using requestAnimationFrame
+    // Recalculating masonry layouts (getBoundingClientRect + grid span) is expensive;
+    // throttling prevents UI jank during viewport changes.
+    let ticking = false;
+    window.addEventListener('resize', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                resizeAllMasonryItems();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
 
 
     // 3. Modal Logic
