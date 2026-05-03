@@ -5,3 +5,7 @@
 ## 2026-05-22 - [Accessible Interactive Cards]
 **Learning:** Interactive "cards" or "tiles" that use inline `onclick` often lack keyboard support and screen reader context. Simply adding a click listener is insufficient for true accessibility.
 **Action:** Always implement the following for interactive cards: `role="button"`, `tabindex="0"`, `aria-expanded` (if toggling state), and `aria-labelledby` linked to the card's internal heading. In JS, handle both `click` and `keydown` (Enter/Space) to ensure all users can interact with the element.
+
+## 2026-05-03 - [Mobile Menu Toggle Feedback]
+**Learning:** For mobile navigation menus, a simple hamburger icon that doesn't change state when active provides poor visual feedback. Users benefit from the icon swapping to a "Close" (X) symbol when the menu is expanded, reinforcing the current state and the action required to dismiss it.
+**Action:** Implement icon swapping for menu toggles by updating the button's `innerHTML` with the appropriate SVG based on the `aria-expanded` state. Ensure `aria-label` is also present for screen reader accessibility on these icon-only buttons.
