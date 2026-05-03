@@ -14,7 +14,7 @@
   --llc-glass-border: var(--c-border);
   --llc-shadow: var(--shadow-1);
   --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
 body.llc-page {
