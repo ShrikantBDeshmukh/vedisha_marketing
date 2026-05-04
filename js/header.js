@@ -65,12 +65,14 @@
   function setupEventListeners(headerEl) {
     const headerMenuToggle = headerEl.querySelector('#nav-toggle');
     const headerSiteNav = headerEl.querySelector('#mobile-nav');
+    const toggleIconPath = headerMenuToggle ? headerMenuToggle.querySelector('path') : null;
 
     if (headerMenuToggle && headerSiteNav) {
       const closeMenu = () => {
         headerSiteNav.classList.add('hidden');
         headerSiteNav.classList.remove('flex');
         headerMenuToggle.setAttribute('aria-expanded', 'false');
+        if (toggleIconPath) toggleIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       };
 
       headerMenuToggle.addEventListener('click', () => {
@@ -81,6 +83,7 @@
           headerSiteNav.classList.remove('hidden');
           headerSiteNav.classList.add('flex');
           headerMenuToggle.setAttribute('aria-expanded', 'true');
+          if (toggleIconPath) toggleIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
         }
       });
 
@@ -99,4 +102,3 @@
     }
   }
 })();
-

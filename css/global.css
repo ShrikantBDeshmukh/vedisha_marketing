@@ -216,3 +216,13 @@ a:hover { color: #4338ca; }
 @media (prefers-reduced-motion: reduce) {
   .noise-overlay, .reading-progress-container { display: none !important; }
 }
+
+/* --- Mobile Menu Animation --- */
+@keyframes slide-in {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-in {
+  animation: slide-in 0.3s var(--ease-out) forwards;
+}
