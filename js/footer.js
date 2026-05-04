@@ -13,7 +13,7 @@
   const footerHtml = `
   <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 pb-12 border-b border-slate-100">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 pb-12 border-b border-slate-100">
         <div>
           <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Waluj MIDC Hub</h4>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
@@ -46,6 +46,14 @@
             <li><a href="${base}digital-marketing-in-chikalthana.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
           </ul>
         </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Expansion Hubs</h4>
+          <ul class="space-y-2 text-xs text-slate-500 font-medium">
+            <li><a href="${base}digital-marketing-mumbai.html" class="hover:text-blue-600 transition">Mumbai Agency</a></li>
+            <li><a href="${base}seo-services-pune.html" class="hover:text-blue-600 transition">Pune SEO Services</a></li>
+            <li><a href="${base}digital-marketing-agency-in-chhatrapati-sambhajinagar.html" class="hover:text-blue-600 transition">CSN Headquarters</a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
@@ -66,6 +74,7 @@
             <li><a href="${base}about.html" class="hover:text-teal-600 transition">About Us</a></li>
             <li><a href="${base}services.html" class="hover:text-teal-600 transition">Services</a></li>
             <li><a href="${base}work.html" class="hover:text-teal-600 transition">Portfolio</a></li>
+            <li><a href="${base}digital-marketing-agency-in-chhatrapati-sambhajinagar.html" class="hover:text-teal-600 transition">CSN Agency</a></li>
           </ul>
         </div>
         <div>
@@ -83,6 +92,11 @@
             <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
             <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
             <li><a href="mailto:vedishamarketing@gmail.com" class="hover:text-teal-600 transition">vedishamarketing@gmail.com</a></li>
+            <li class="pt-2">
+               <span class="block font-bold text-slate-900 mb-1 text-xs uppercase tracking-wider">Our HQ</span>
+               <span class="text-sm">1st Floor, Malkhare Classic, Shop No. 6, Near Jawahar Nagar Road, Garkheda Area, Chhatrapati Sambhajinagar, Maharashtra 431009</span>
+               <a href="https://www.google.com/maps?cid=5748503421913039127" target="_blank" rel="noopener noreferrer" class="block mt-2 text-xs font-bold text-teal-600 hover:text-teal-700 transition">View Google Business Profile &rarr;</a>
+             </li>
           </ul>
         </div>
       </div>
