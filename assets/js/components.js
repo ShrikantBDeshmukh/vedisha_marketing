@@ -131,6 +131,7 @@
   const setupNavToggle = () => {
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobile-nav');
+    const toggleIconPath = navToggle ? navToggle.querySelector('path') : null;
     
     if (navToggle && mobileNav) {
       navToggle.addEventListener('click', () => {
@@ -139,9 +140,11 @@
         if (!expanded) {
           mobileNav.classList.remove('hidden');
           mobileNav.classList.add('flex');
+          if (toggleIconPath) toggleIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
         } else {
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          if (toggleIconPath) toggleIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
         }
       });
 
@@ -150,6 +153,7 @@
           navToggle.setAttribute('aria-expanded', 'false');
           mobileNav.classList.add('hidden');
           mobileNav.classList.remove('flex');
+          if (toggleIconPath) toggleIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
           navToggle.focus();
         }
       });
