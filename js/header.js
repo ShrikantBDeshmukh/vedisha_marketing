@@ -44,8 +44,10 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle" aria-label="Toggle navigation menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path class="nav-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
         ${linksHtml}
@@ -67,10 +69,15 @@
     const headerSiteNav = headerEl.querySelector('#mobile-nav');
 
     if (headerMenuToggle && headerSiteNav) {
+      const navIcon = headerMenuToggle.querySelector('.nav-icon');
+      const hamburgerPath = 'M4 6h16M4 12h16M4 18h16';
+      const closePath = 'M6 18L18 6M6 6l12 12';
+
       const closeMenu = () => {
         headerSiteNav.classList.add('hidden');
         headerSiteNav.classList.remove('flex');
         headerMenuToggle.setAttribute('aria-expanded', 'false');
+        if (navIcon) navIcon.setAttribute('d', hamburgerPath);
       };
 
       headerMenuToggle.addEventListener('click', () => {
@@ -81,6 +88,7 @@
           headerSiteNav.classList.remove('hidden');
           headerSiteNav.classList.add('flex');
           headerMenuToggle.setAttribute('aria-expanded', 'true');
+          if (navIcon) navIcon.setAttribute('d', closePath);
         }
       });
 

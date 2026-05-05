@@ -38,8 +38,10 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle" aria-label="Toggle navigation menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path class="nav-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
         ${linksHtml}
@@ -133,25 +135,40 @@
     const mobileNav = document.getElementById('mobile-nav');
     
     if (navToggle && mobileNav) {
+      const navIcon = navToggle.querySelector('.nav-icon');
+      const hamburgerPath = 'M4 6h16M4 12h16M4 18h16';
+      const closePath = 'M6 18L18 6M6 6l12 12';
+
+      const closeMenu = () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('flex');
+        if (navIcon) navIcon.setAttribute('d', hamburgerPath);
+      };
+
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !expanded);
-        if (!expanded) {
+        if (expanded) {
+          closeMenu();
+        } else {
+          navToggle.setAttribute('aria-expanded', 'true');
           mobileNav.classList.remove('hidden');
           mobileNav.classList.add('flex');
-        } else {
-          mobileNav.classList.add('hidden');
-          mobileNav.classList.remove('flex');
+          if (navIcon) navIcon.setAttribute('d', closePath);
         }
       });
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          mobileNav.classList.add('hidden');
-          mobileNav.classList.remove('flex');
+          closeMenu();
           navToggle.focus();
         }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (mobileNav.classList.contains('hidden')) return;
+        if (navToggle.contains(e.target) || mobileNav.contains(e.target)) return;
+        closeMenu();
       });
     }
   };
