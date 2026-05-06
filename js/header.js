@@ -20,9 +20,18 @@
     { href: base + 'index.html', label: 'Home', match: ['index.html', ''] },
     { href: base + 'services.html', label: 'Services', match: ['services.html'] },
     { href: base + 'ai-visibility-boost.html', label: 'AI Visibility Boost', match: ['ai-visibility-boost.html'] },
+    { href: base + 'seo-audit-reports.html', label: 'SEO Audit', match: ['seo-audit-reports.html'] },
+    { href: base + 'keyword-research-spreadsheet.html', label: 'Keyword Research', match: ['keyword-research-spreadsheet.html'] },
+    { href: base + 'blog-post-bundles.html', label: 'Blog Bundles', match: ['blog-post-bundles.html'] },
+    { href: base + 'social-media-marketing.html', label: 'Social Media', match: ['social-media-marketing.html'] },
+    { href: base + 'brand-identity-kit.html', label: 'Brand Identity', match: ['brand-identity-kit.html'] },
+    { href: base + 'marketing-strategy-roadmap.html', label: 'Strategy Roadmap', match: ['marketing-strategy-roadmap.html'] },
+    { href: base + 'ai-content-structuring.html', label: 'AI Structuring', match: ['ai-content-structuring.html'] },
+    { href: base + 'branding-services.html', label: 'Branding Agency', match: ['branding-services.html'] },
     { href: base + 'work.html', label: 'Work', match: ['work.html', 'portfolio.html', 'case-studies.html'] },
     { href: base + 'clients.html', label: 'Clients', match: ['clients.html'] },
     { href: base + 'insights.html', label: 'Insights', match: ['insights.html', 'blog.html'] },
+    { href: base + 'careers.html', label: 'Careers', match: ['careers.html'] },
     { href: base + 'about.html', label: 'About', match: ['about.html'] },
   ];
 

@@ -13,9 +13,10 @@
   const footerHtml = `
   <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="sr-only">Footer Navigation</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 pb-12 border-b border-slate-100">
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Waluj MIDC Hub</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Waluj MIDC Hub</h3>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
             <li><a href="${base}web-development-in-waluj-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
             <li><a href="${base}seo-services-in-waluj-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
@@ -23,7 +24,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Shendra MIDC Hub</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Shendra MIDC Hub</h3>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
             <li><a href="${base}web-development-in-shendra-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
             <li><a href="${base}seo-services-in-shendra-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
@@ -31,7 +32,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">CIDCO Local Hub</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">CIDCO Local Hub</h3>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
             <li><a href="${base}web-development-in-cidco.html" class="hover:text-blue-600 transition">Web Development</a></li>
             <li><a href="${base}seo-services-in-cidco.html" class="hover:text-blue-600 transition">SEO Services</a></li>
@@ -39,7 +40,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Chikalthana Hub</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Chikalthana Hub</h3>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
             <li><a href="${base}web-development-in-chikalthana.html" class="hover:text-blue-600 transition">Web Development</a></li>
             <li><a href="${base}seo-services-in-chikalthana.html" class="hover:text-blue-600 transition">SEO Services</a></li>
@@ -47,7 +48,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Expansion Hubs</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Expansion Hubs</h3>
           <ul class="space-y-2 text-xs text-slate-500 font-medium">
             <li><a href="${base}digital-marketing-mumbai.html" class="hover:text-blue-600 transition">Mumbai Agency</a></li>
             <li><a href="${base}seo-services-pune.html" class="hover:text-blue-600 transition">Pune SEO Services</a></li>
@@ -68,7 +69,7 @@
           </p>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h3>
           <ul class="space-y-3 text-slate-600 font-medium">
             <li><a href="${base}index.html" class="hover:text-teal-600 transition">Home</a></li>
             <li><a href="${base}about.html" class="hover:text-teal-600 transition">About Us</a></li>
@@ -78,7 +79,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h3>
           <ul class="space-y-3 text-slate-600 font-medium">
             <li><a href="${base}meta-google-ads-management.html" class="hover:text-teal-600 transition">Paid Ads</a></li>
             <li><a href="${base}local-lead-combo.html" class="hover:text-teal-600 transition">Local Lead Combo</a></li>
@@ -87,7 +88,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h4>
+          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h3>
           <ul class="space-y-3 text-slate-600 font-medium">
             <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
             <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>

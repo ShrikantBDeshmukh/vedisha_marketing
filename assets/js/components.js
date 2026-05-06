@@ -38,7 +38,7 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha Marketing</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle">
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="navToggle" aria-label="Toggle navigation menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
@@ -56,6 +56,7 @@
   const footerHtml = `
     <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden w-full">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Footer Navigation</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
           <div class="lg:col-span-2">
             <a href="${basePath}index.html" class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight mb-4" aria-label="Vedisha Marketing Home">
@@ -67,7 +68,7 @@
             </p>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h4>
+            <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h3>
             <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
               <li><a href="${basePath}index.html" class="hover:text-teal-600 transition">Home</a></li>
               <li><a href="${basePath}about.html" class="hover:text-teal-600 transition">About Us</a></li>
@@ -76,7 +77,7 @@
             </ul>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h4>
+            <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h3>
             <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
               <li><a href="${basePath}meta-google-ads-management.html" class="hover:text-teal-600 transition">Paid Ads</a></li>
               <li><a href="${basePath}local-lead-combo.html" class="hover:text-teal-600 transition">Local Lead Pack</a></li>
@@ -84,7 +85,7 @@
             </ul>
           </div>
           <div>
-            <h4 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h4>
+            <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h3>
             <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
               <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
               <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
