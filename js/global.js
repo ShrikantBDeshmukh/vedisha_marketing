@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: keep observing if you want it to re-animate
-                // observer.unobserve(entry.target);
+                // Performance: Stop observing once element is visible to reduce main thread work
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -54,11 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = progress + '%';
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                    ticking = false;
+                });
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();
