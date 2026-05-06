@@ -1,145 +1,128 @@
-(function () {
-  'use strict';
+(() => {
+    'use strict';
+    if (document.querySelector('.site-footer')) return;
 
-  const existing = document.querySelector('.site-footer');
-  // If it already exists and has content, we might not want to overwrite it
-  // unless we want "auto-updating" from JS.
-  // The user wants a shared, auto-updating footer.
+    const currentYear = new Date().getFullYear();
+    const newFooter = document.createElement('footer');
+    newFooter.className = 'site-footer bg-slate-900 pt-20 pb-10 mt-20';
+    newFooter.setAttribute('itemscope', '');
+    newFooter.setAttribute('itemtype', 'https://schema.org/Organization');
 
-  const path = (window.location.pathname || '').toLowerCase();
-  const inInsightsFolder = path.includes('/insights/');
-  const base = inInsightsFolder ? '../' : '';
+    newFooter.innerHTML = `
+    <meta itemprop="name" content="Vedisha Marketing">
+    <meta itemprop="url" content="https://vedishamarketing.in">
+    <meta itemprop="logo" content="https://vedishamarketing.in/images/logo.png">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Row 1: Brand (2 cols), Company (1 col), Services (1 col) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand -->
+            <div class="lg:col-span-2">
+                <a class="flex items-center gap-3 text-white font-extrabold text-2xl tracking-tight mb-6" href="index.html" aria-label="Vedisha Marketing Home">
+                    <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl">V</span>
+                    <span>Vedisha</span>
+                </a>
+                <p class="text-slate-400 mb-6 max-w-sm leading-relaxed text-sm">The leading digital growth engine in Chhatrapati Sambhajinagar. Driving measurable revenue through SEO, AEO, and performance marketing.</p>
+                <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="text-slate-400 text-sm mb-4">
+                    <p itemprop="streetAddress">1st Floor, Malkhare Classic, Shop No. 6, Garkheda Area</p>
+                    <p><span itemprop="addressLocality">Chhatrapati Sambhajinagar</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">431009</span></p>
+                </div>
+                <a href="tel:+919404124875" itemprop="telephone" class="text-teal-400 font-bold text-lg hover:text-teal-300 transition">+91-9404124875</a>
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-teal-500 hover:text-white transition" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-teal-500 hover:text-white transition" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Company -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm border-b border-slate-700 pb-2 inline-block">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Home</a></li>
+                    <li><a href="work.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Our Work</a></li>
+                    <li><a href="contact.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Contact</a></li>
+                    <li><a href="brand-identity-kit.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Brand Kit</a></li>
+                    <li><a href="privacy-policy.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm border-b border-slate-700 pb-2 inline-block">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="services.html" class="text-slate-400 hover:text-teal-400 transition text-sm font-medium">All Services</a></li>
+                    <li><a href="meta-google-ads-management.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Meta & Google Ads</a></li>
+                    <li><a href="static-website-seo-launch.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Static Website SEO Launch</a></li>
+                    <li><a href="ai-visibility-boost.html" class="text-slate-400 hover:text-teal-400 transition text-sm">AI Visibility Boost</a></li>
+                    <li><a href="ai-content-structuring.html" class="text-slate-400 hover:text-teal-400 transition text-sm">AI Content Structuring</a></li>
+                    <li><a href="marketing-strategy-roadmap.html" class="text-slate-400 hover:text-teal-400 transition text-sm">Marketing Strategy Roadmap</a></li>
+                </ul>
+            </div>
+        </div>
 
-  const footerHtml = `
-  <div class="bg-white border-t border-slate-200 pt-16 pb-8 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="sr-only">Footer Navigation</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 pb-12 border-b border-slate-100">
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Waluj MIDC Hub</h3>
-          <ul class="space-y-2 text-xs text-slate-500 font-medium">
-            <li><a href="${base}web-development-in-waluj-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
-            <li><a href="${base}seo-services-in-waluj-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
-            <li><a href="${base}digital-marketing-in-waluj-midc.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
-          </ul>
+        <!-- Row 2: Four Location Columns in One Row -->
+        <div class="mb-12">
+            <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm border-b border-slate-700 pb-2 inline-block">Locations</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <!-- Waluj MIDC -->
+                <div>
+                    <h5 class="text-teal-300 font-semibold text-xs mb-2 uppercase tracking-wide">Waluj MIDC</h5>
+                    <ul class="space-y-1">
+                        <li><a href="industrial-seo-waluj-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Industrial SEO</a></li>
+                        <li><a href="digital-marketing-in-waluj-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Digital Marketing</a></li>
+                        <li><a href="web-development-in-waluj-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Web Development</a></li>
+                        <li><a href="seo-services-in-waluj-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">SEO Services</a></li>
+                    </ul>
+                </div>
+                <!-- Shendra MIDC -->
+                <div>
+                    <h5 class="text-teal-300 font-semibold text-xs mb-2 uppercase tracking-wide">Shendra MIDC</h5>
+                    <ul class="space-y-1">
+                        <li><a href="b2b-lead-gen-shendra-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">B2B Lead Gen</a></li>
+                        <li><a href="digital-marketing-in-shendra-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Digital Marketing</a></li>
+                        <li><a href="web-development-in-shendra-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Web Development</a></li>
+                        <li><a href="seo-services-in-shendra-midc.html" class="text-slate-400 hover:text-teal-400 transition text-xs">SEO Services</a></li>
+                    </ul>
+                </div>
+                <!-- CIDCO -->
+                <div>
+                    <h5 class="text-teal-300 font-semibold text-xs mb-2 uppercase tracking-wide">CIDCO</h5>
+                    <ul class="space-y-1">
+                        <li><a href="digital-marketing-in-cidco.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Digital Marketing</a></li>
+                        <li><a href="web-development-in-cidco.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Web Development</a></li>
+                        <li><a href="seo-services-in-cidco.html" class="text-slate-400 hover:text-teal-400 transition text-xs">SEO Services</a></li>
+                    </ul>
+                </div>
+                <!-- Chikalthana -->
+                <div>
+                    <h5 class="text-teal-300 font-semibold text-xs mb-2 uppercase tracking-wide">Chikalthana</h5>
+                    <ul class="space-y-1">
+                        <li><a href="digital-marketing-in-chikalthana.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Digital Marketing</a></li>
+                        <li><a href="web-development-in-chikalthana.html" class="text-slate-400 hover:text-teal-400 transition text-xs">Web Development</a></li>
+                        <li><a href="seo-services-in-chikalthana.html" class="text-slate-400 hover:text-teal-400 transition text-xs">SEO Services</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Shendra MIDC Hub</h3>
-          <ul class="space-y-2 text-xs text-slate-500 font-medium">
-            <li><a href="${base}web-development-in-shendra-midc.html" class="hover:text-blue-600 transition">Web Development</a></li>
-            <li><a href="${base}seo-services-in-shendra-midc.html" class="hover:text-blue-600 transition">SEO Services</a></li>
-            <li><a href="${base}digital-marketing-in-shendra-midc.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">CIDCO Local Hub</h3>
-          <ul class="space-y-2 text-xs text-slate-500 font-medium">
-            <li><a href="${base}web-development-in-cidco.html" class="hover:text-blue-600 transition">Web Development</a></li>
-            <li><a href="${base}seo-services-in-cidco.html" class="hover:text-blue-600 transition">SEO Services</a></li>
-            <li><a href="${base}digital-marketing-in-cidco.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Chikalthana Hub</h3>
-          <ul class="space-y-2 text-xs text-slate-500 font-medium">
-            <li><a href="${base}web-development-in-chikalthana.html" class="hover:text-blue-600 transition">Web Development</a></li>
-            <li><a href="${base}seo-services-in-chikalthana.html" class="hover:text-blue-600 transition">SEO Services</a></li>
-            <li><a href="${base}digital-marketing-in-chikalthana.html" class="hover:text-blue-600 transition">Digital Marketing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-[10px]">Expansion Hubs</h3>
-          <ul class="space-y-2 text-xs text-slate-500 font-medium">
-            <li><a href="${base}digital-marketing-mumbai.html" class="hover:text-blue-600 transition">Mumbai Agency</a></li>
-            <li><a href="${base}seo-services-pune.html" class="hover:text-blue-600 transition">Pune SEO Services</a></li>
-            <li><a href="${base}digital-marketing-agency-in-chhatrapati-sambhajinagar.html" class="hover:text-blue-600 transition">CSN Headquarters</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
-        <div class="lg:col-span-2">
-          <a href="${base}index.html" class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight mb-4" aria-label="Vedisha Marketing Home">
-            <span class="bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
-            <span>Vedisha Marketing</span>
-          </a>
-          <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
-            Crafted with <a href="https://codwebsolutions.com" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 font-semibold">Codweb Solutions</a> —
-            built with care for clarity, speed, and trust in Chhatrapati Sambhajinagar.
-          </p>
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input type="email" id="newsletter-email" placeholder="Get growth tips via email" class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 w-64">
+                <button class="bg-teal-600 hover:bg-teal-500 text-white font-semibold px-6 py-2 rounded-lg text-sm transition">Subscribe</button>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 text-sm text-slate-500 items-start sm:items-center">
+                <p>&copy; ${currentYear} Vedisha Marketing. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="privacy-policy.html" class="hover:text-teal-400 transition">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="hover:text-teal-400 transition">Terms of Service</a>
+                </div>
+            </div>
         </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Company</h3>
-          <ul class="space-y-3 text-slate-600 font-medium">
-            <li><a href="${base}index.html" class="hover:text-teal-600 transition">Home</a></li>
-            <li><a href="${base}about.html" class="hover:text-teal-600 transition">About Us</a></li>
-            <li><a href="${base}services.html" class="hover:text-teal-600 transition">Services</a></li>
-            <li><a href="${base}work.html" class="hover:text-teal-600 transition">Portfolio</a></li>
-            <li><a href="${base}digital-marketing-agency-in-chhatrapati-sambhajinagar.html" class="hover:text-teal-600 transition">CSN Agency</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Services</h3>
-          <ul class="space-y-3 text-slate-600 font-medium">
-            <li><a href="${base}meta-google-ads-management.html" class="hover:text-teal-600 transition">Paid Ads</a></li>
-            <li><a href="${base}local-lead-combo.html" class="hover:text-teal-600 transition">Local Lead Combo</a></li>
-            <li><a href="${base}static-website-seo-launch.html" class="hover:text-teal-600 transition">SEO Launch</a></li>
-            <li><a href="${base}content-geo.html" class="hover:text-teal-600 transition">Geo Content Hubs</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h3>
-          <ul class="space-y-3 text-slate-600 font-medium">
-            <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
-            <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
-            <li><a href="mailto:vedishamarketing@gmail.com" class="hover:text-teal-600 transition">vedishamarketing@gmail.com</a></li>
-            <li class="pt-2">
-               <span class="block font-bold text-slate-900 mb-1 text-xs uppercase tracking-wider">Our HQ</span>
-               <span class="text-sm">1st Floor, Malkhare Classic, Shop No. 6, Near Jawahar Nagar Road, Garkheda Area, Chhatrapati Sambhajinagar, Maharashtra 431009</span>
-               <a href="https://www.google.com/maps?cid=5748503421913039127" target="_blank" rel="noopener noreferrer" class="block mt-2 text-xs font-bold text-teal-600 hover:text-teal-700 transition">View Google Business Profile &rarr;</a>
-             </li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-slate-500">&copy; 2026 Vedisha Marketing. All rights reserved.</p>
-        <ul class="flex flex-wrap items-center gap-6 text-sm text-slate-500 font-medium" aria-label="Legal links">
-          <li><a href="${base}privacy-policy.html" class="hover:text-slate-900">Privacy Policy</a></li>
-          <li><a href="${base}terms-of-service.html" class="hover:text-slate-900">Terms of Service</a></li>
-        </ul>
-      </div>
     </div>
-  </div>
-  <button class="fixed bottom-6 right-6 p-3 bg-slate-900 text-white rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-slate-800" id="backToTop" aria-label="Back to top" style="z-index:999;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button>
   `;
-
-  let footer = existing;
-  if (!footer) {
-    footer = document.createElement('footer');
-    footer.className = 'site-footer';
-    footer.id = 'site-footer';
-    document.body.appendChild(footer);
-  }
-  footer.innerHTML = footerHtml;
-
-  /* ── Back-to-Top Button Logic ── */
-  const backToTop = document.getElementById('backToTop');
-  if (backToTop) {
-    const SCROLL_THRESHOLD = 400;
-    const toggleBackToTop = () => {
-      if (window.scrollY > SCROLL_THRESHOLD) {
-        backToTop.classList.remove('opacity-0', 'pointer-events-none');
-        backToTop.classList.add('opacity-100', 'pointer-events-auto');
-      } else {
-        backToTop.classList.add('opacity-0', 'pointer-events-none');
-        backToTop.classList.remove('opacity-100', 'pointer-events-auto');
-      }
-    };
-    window.addEventListener('scroll', toggleBackToTop, { passive: true });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    toggleBackToTop();
-  }
-
+    document.body.insertAdjacentElement('beforeend', newFooter);
 })();

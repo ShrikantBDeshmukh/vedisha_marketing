@@ -71,7 +71,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/global.min.css">
   <link rel="stylesheet" href="css/branding.min.css">
-  <script src="./assets/js/components.min.js" defer></script>
+  <script src="js/header.min.js" defer></script>
+  <script src="js/footer.min.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden pt-20">
 
@@ -86,11 +87,19 @@
 
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 text-center">
     <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Best Digital Marketing Services in <span class="text-blue-600 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-400">CSN.</span></h1>
+
+    <div class="aeo-snippet">
+        <span class="aeo-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Quick Answer
+        </span>
+        <p class="aeo-text">Best Digital Marketing Services in CSN services by Vedisha Marketing in Chhatrapati Sambhajinagar. Contact us for ROI-driven strategies tailored for your business.</p>
+    </div>
     <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We provide diagnostic-led marketing services across Chhatrapati Sambhajinagar and the entire Marathwada region. No generic advice—only proven local growth strategies.</p>
   </section>
 
   <!-- Quick Service Banners -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24" id="main">
+  <main id="main-content"  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24" id="main">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       <div class="bg-blue-600 text-white rounded-2xl p-8 flex flex-col justify-between shadow-md hover:-translate-y-1 transition transform duration-300">
         <div class="mb-6">
@@ -314,7 +323,7 @@
 
       <!-- Post 2: SaaS Audit -->
       <article class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group cursor-pointer">
-        <img src="images/saas-audit-hero.webp" alt="SaaS Audit" class="w-full aspect-video object-cover" loading="lazy" width="600" height="338">
+        <img loading="lazy" src="images/saas-audit-hero.webp" alt="SaaS Audit" class="w-full aspect-video object-cover" loading="lazy" width="600" height="338">
         <div class="p-8 md:p-10 flex flex-col flex-grow">
           <span class="text-xs font-black uppercase text-blue-600 tracking-widest mb-4 block">Research</span>
           <h3 class="text-2xl font-bold text-slate-900 mb-4 leading-snug group-hover:text-blue-600 transition">Indian SaaS Landing Page Audit</h3>

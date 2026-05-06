@@ -1,111 +1,49 @@
+
 (() => {
   'use strict';
-
   let existingHeader = document.querySelector('.site-header');
-  if (existingHeader) {
-    setupEventListeners(existingHeader);
-    return;
-  }
-
-  const path = (window.location.pathname || '').toLowerCase();
-  const file = path.split('/').pop() || 'index.html';
-
-  // Support both:
-  // - file:// local browsing (avoid leading "/" which becomes drive root)
-  // - deployed site at domain root
-  const inInsightsFolder = path.includes('/insights/');
-  const base = inInsightsFolder ? '../' : '';
-
-  const navItems = [
-    { href: base + 'index.html', label: 'Home', match: ['index.html', ''] },
-    { href: base + 'services.html', label: 'Services', match: ['services.html'] },
-    { href: base + 'ai-visibility-boost.html', label: 'AI Visibility Boost', match: ['ai-visibility-boost.html'] },
-    { href: base + 'seo-audit-reports.html', label: 'SEO Audit', match: ['seo-audit-reports.html'] },
-    { href: base + 'keyword-research-spreadsheet.html', label: 'Keyword Research', match: ['keyword-research-spreadsheet.html'] },
-    { href: base + 'blog-post-bundles.html', label: 'Blog Bundles', match: ['blog-post-bundles.html'] },
-    { href: base + 'social-media-marketing.html', label: 'Social Media', match: ['social-media-marketing.html'] },
-    { href: base + 'brand-identity-kit.html', label: 'Brand Identity', match: ['brand-identity-kit.html'] },
-    { href: base + 'marketing-strategy-roadmap.html', label: 'Strategy Roadmap', match: ['marketing-strategy-roadmap.html'] },
-    { href: base + 'ai-content-structuring.html', label: 'AI Structuring', match: ['ai-content-structuring.html'] },
-    { href: base + 'branding-services.html', label: 'Branding Agency', match: ['branding-services.html'] },
-    { href: base + 'work.html', label: 'Work', match: ['work.html', 'portfolio.html', 'case-studies.html'] },
-    { href: base + 'clients.html', label: 'Clients', match: ['clients.html'] },
-    { href: base + 'insights.html', label: 'Insights', match: ['insights.html', 'blog.html'] },
-    { href: base + 'careers.html', label: 'Careers', match: ['careers.html'] },
-    { href: base + 'about.html', label: 'About', match: ['about.html'] },
-  ];
-
-  const isCurrent = (matches) => matches.includes(file);
-
-  const linksHtml = navItems
-    .map((item) => {
-      const current = isCurrent(item.match) ? ' aria-current="page" class="text-blue-600 font-bold"' : ' class="text-slate-600 font-semibold hover:text-blue-600 transition"';
-      return `<a href="${item.href}"${current}>${item.label}</a>`;
-    })
-    .join('');
+  if (existingHeader) return;
 
   const newHeader = document.createElement('header');
-  newHeader.className = 'fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200';
+  newHeader.className = 'site-header fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200 transition-all';
   newHeader.innerHTML = `
-    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 z-[100]" href="#main">Skip to content</a>
+    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 z-[100]" href="#main-content">Skip to content</a>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-      <a class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight" href="${base}index.html" aria-label="Vedisha Marketing Home">
+      <a class="flex items-center gap-3 text-slate-900 font-extrabold text-2xl tracking-tight" href="index.html" aria-label="Vedisha Marketing Home">
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
-        <span>Vedisha Marketing</span>
+        <span>Vedisha</span>
       </a>
       <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary navigation">
-        ${linksHtml}
-        <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition shadow-sm" href="${base}contact.html">Get Free Audit</a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
+        
+<a href="index.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Home</a>
+<div class="relative group">
+    <button class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+    <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid-cols-3 gap-6">
+<div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Services</h4><ul class="space-y-2"><li><a href="services.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Services</a></li><li><a href="meta-google-ads-management.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Meta Google Ads Management</a></li><li><a href="static-website-seo-launch.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Static Website Seo Launch</a></li><li><a href="ai-visibility-boost.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Visibility Boost</a></li><li><a href="ai-content-structuring.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Content Structuring</a></li><li><a href="marketing-strategy-roadmap.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Marketing Strategy Roadmap</a></li><li><a href="brand-identity-kit.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Brand Identity Kit</a></li><li><a href="social-media-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Social Media Marketing</a></li><li><a href="blog-post-bundles.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Blog Post Bundles</a></li><li><a href="keyword-research-spreadsheet.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Keyword Research Spreadsheet</a></li><li><a href="seo-audit-reports.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Audit Reports</a></li><li><a href="local-lead-combo.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Local Lead Combo</a></li><li><a href="gmb.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Gmb</a></li><li><a href="real-estate-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Real Estate Marketing</a></li><li><a href="healthcare-marketing-csn.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Healthcare Marketing Csn</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Waluj MIDC</h4><ul class="space-y-2"><li><a href="industrial-seo-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Industrial Seo Waluj Midc</a></li><li><a href="digital-marketing-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Waluj Midc</a></li><li><a href="web-development-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Waluj Midc</a></li><li><a href="seo-services-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Waluj Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Shendra MIDC</h4><ul class="space-y-2"><li><a href="b2b-lead-gen-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">B2b Lead Gen Shendra Midc</a></li><li><a href="digital-marketing-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Shendra Midc</a></li><li><a href="web-development-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Shendra Midc</a></li><li><a href="seo-services-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Shendra Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">CIDCO</h4><ul class="space-y-2"><li><a href="digital-marketing-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Cidco</a></li><li><a href="web-development-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Cidco</a></li><li><a href="seo-services-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Cidco</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Chikalthana</h4><ul class="space-y-2"><li><a href="digital-marketing-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Chikalthana</a></li><li><a href="web-development-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Chikalthana</a></li><li><a href="seo-services-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Chikalthana</a></li></ul></div></div></div><a href="contact.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Contact</a>
+        <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-teal-500 rounded-full hover:from-blue-700 hover:to-teal-600 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="contact.html">Get Free Audit</a>
       </nav>
     </div>
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-nav" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl flex-col p-4 shadow-lg slide-in">
-        ${navItems.map(item => `<a href="${item.href}" class="block py-3 px-4 font-semibold ${isCurrent(item.match) ? 'text-blue-600 bg-blue-50 rounded-lg' : 'text-slate-600'}">${item.label}</a>`).join('')}
-        <a class="block mt-4 text-center px-6 py-3 font-bold text-white bg-blue-600 rounded-xl" href="${base}contact.html">Get Free Audit</a>
+    <div id="mobile-nav" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-2xl flex-col max-h-[80vh] overflow-y-auto">
+        <a href="index.html" class="block py-3 px-4 font-semibold text-slate-600">Home</a><div class="py-2 px-4 text-xs font-bold uppercase text-teal-600 bg-slate-50">Services</div><a href="services.html" class="block py-2 px-6 text-sm text-slate-600">Services</a><a href="meta-google-ads-management.html" class="block py-2 px-6 text-sm text-slate-600">Meta Google Ads Management</a><a href="static-website-seo-launch.html" class="block py-2 px-6 text-sm text-slate-600">Static Website Seo Launch</a><a href="ai-visibility-boost.html" class="block py-2 px-6 text-sm text-slate-600">Ai Visibility Boost</a><a href="ai-content-structuring.html" class="block py-2 px-6 text-sm text-slate-600">Ai Content Structuring</a><a href="marketing-strategy-roadmap.html" class="block py-2 px-6 text-sm text-slate-600">Marketing Strategy Roadmap</a><a href="brand-identity-kit.html" class="block py-2 px-6 text-sm text-slate-600">Brand Identity Kit</a><a href="social-media-marketing.html" class="block py-2 px-6 text-sm text-slate-600">Social Media Marketing</a><a href="blog-post-bundles.html" class="block py-2 px-6 text-sm text-slate-600">Blog Post Bundles</a><a href="keyword-research-spreadsheet.html" class="block py-2 px-6 text-sm text-slate-600">Keyword Research Spreadsheet</a><a href="seo-audit-reports.html" class="block py-2 px-6 text-sm text-slate-600">Seo Audit Reports</a><a href="local-lead-combo.html" class="block py-2 px-6 text-sm text-slate-600">Local Lead Combo</a><a href="gmb.html" class="block py-2 px-6 text-sm text-slate-600">Gmb</a><a href="real-estate-marketing.html" class="block py-2 px-6 text-sm text-slate-600">Real Estate Marketing</a><a href="healthcare-marketing-csn.html" class="block py-2 px-6 text-sm text-slate-600">Healthcare Marketing Csn</a><div class="py-2 px-4 text-xs font-bold uppercase text-teal-600 bg-slate-50">Waluj MIDC</div><a href="industrial-seo-waluj-midc.html" class="block py-2 px-6 text-sm text-slate-600">Industrial Seo Waluj Midc</a><a href="digital-marketing-in-waluj-midc.html" class="block py-2 px-6 text-sm text-slate-600">Digital Marketing In Waluj Midc</a><a href="web-development-in-waluj-midc.html" class="block py-2 px-6 text-sm text-slate-600">Web Development In Waluj Midc</a><a href="seo-services-in-waluj-midc.html" class="block py-2 px-6 text-sm text-slate-600">Seo Services In Waluj Midc</a><div class="py-2 px-4 text-xs font-bold uppercase text-teal-600 bg-slate-50">Shendra MIDC</div><a href="b2b-lead-gen-shendra-midc.html" class="block py-2 px-6 text-sm text-slate-600">B2b Lead Gen Shendra Midc</a><a href="digital-marketing-in-shendra-midc.html" class="block py-2 px-6 text-sm text-slate-600">Digital Marketing In Shendra Midc</a><a href="web-development-in-shendra-midc.html" class="block py-2 px-6 text-sm text-slate-600">Web Development In Shendra Midc</a><a href="seo-services-in-shendra-midc.html" class="block py-2 px-6 text-sm text-slate-600">Seo Services In Shendra Midc</a><div class="py-2 px-4 text-xs font-bold uppercase text-teal-600 bg-slate-50">CIDCO</div><a href="digital-marketing-in-cidco.html" class="block py-2 px-6 text-sm text-slate-600">Digital Marketing In Cidco</a><a href="web-development-in-cidco.html" class="block py-2 px-6 text-sm text-slate-600">Web Development In Cidco</a><a href="seo-services-in-cidco.html" class="block py-2 px-6 text-sm text-slate-600">Seo Services In Cidco</a><div class="py-2 px-4 text-xs font-bold uppercase text-teal-600 bg-slate-50">Chikalthana</div><a href="digital-marketing-in-chikalthana.html" class="block py-2 px-6 text-sm text-slate-600">Digital Marketing In Chikalthana</a><a href="web-development-in-chikalthana.html" class="block py-2 px-6 text-sm text-slate-600">Web Development In Chikalthana</a><a href="seo-services-in-chikalthana.html" class="block py-2 px-6 text-sm text-slate-600">Seo Services In Chikalthana</a>
+        <div class="p-4 bg-slate-50 border-t border-slate-100">
+            <a class="block w-full text-center px-6 py-3 font-bold text-white bg-blue-600 rounded-xl shadow-sm" href="contact.html">Get Free Audit</a>
+        </div>
     </div>
   `;
 
   document.body.insertAdjacentElement('afterbegin', newHeader);
-  setupEventListeners(newHeader);
-
-  function setupEventListeners(headerEl) {
-    const headerMenuToggle = headerEl.querySelector('#nav-toggle');
-    const headerSiteNav = headerEl.querySelector('#mobile-nav');
-
-    if (headerMenuToggle && headerSiteNav) {
-      const closeMenu = () => {
-        headerSiteNav.classList.add('hidden');
-        headerSiteNav.classList.remove('flex');
-        headerMenuToggle.setAttribute('aria-expanded', 'false');
-      };
-
-      headerMenuToggle.addEventListener('click', () => {
-        const isHidden = headerSiteNav.classList.contains('hidden');
-        if (!isHidden) {
-          closeMenu();
-        } else {
-          headerSiteNav.classList.remove('hidden');
-          headerSiteNav.classList.add('flex');
-          headerMenuToggle.setAttribute('aria-expanded', 'true');
-        }
+  
+  const toggle = newHeader.querySelector('#nav-toggle');
+  const nav = newHeader.querySelector('#mobile-nav');
+  if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+          nav.classList.toggle('hidden');
+          nav.classList.toggle('flex');
+          toggle.setAttribute('aria-expanded', nav.classList.contains('flex'));
       });
-
-      document.addEventListener('click', (e) => {
-        if (headerSiteNav.classList.contains('hidden')) return;
-        if (headerEl.contains(e.target)) return;
-        closeMenu();
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !headerSiteNav.classList.contains('hidden')) {
-          closeMenu();
-          headerMenuToggle.focus();
-        }
-      });
-    }
   }
 })();
-

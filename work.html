@@ -21,17 +21,26 @@
 
   <link rel="stylesheet" href="css/global.min.css">
   <link rel="stylesheet" href="css/branding.min.css">
-  <script src="./assets/js/components.min.js" defer></script>
+  <script src="js/header.min.js" defer></script>
+  <script src="js/footer.min.js" defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased pt-20 overflow-x-hidden">
   <div class="noise-overlay"></div>
 
-  <main id="main" class="pt-12 pb-24">
+  <main id="main-content"  id="main" class="pt-12 pb-24">
     <!-- Hero -->
     <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
       <span class="inline-block bg-blue-100 text-blue-700 font-bold px-4 py-1.5 text-xs uppercase tracking-widest rounded-full mb-6">Our Portfolio</span>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">Sample work you can expect from a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">new</span> studio.</h1>
+
+    <div class="aeo-snippet">
+        <span class="aeo-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Quick Answer
+        </span>
+        <p class="aeo-text">Our Work & Case Studies services by Vedisha Marketing in Chhatrapati Sambhajinagar. Contact us for ROI-driven strategies tailored for your business.</p>
+    </div>
       <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">We're focused on high-impact deliverables: sharp positioning, PR readiness, and performance growth. Early partners get senior attention and boutique speed. <a href="contact.html" class="text-blue-600 font-bold hover:text-blue-700 underline underline-offset-4 transition">Let's talk.</a></p>
     </section>
 
@@ -50,7 +59,7 @@
         <!-- Case 1: Branding -->
         <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="branding">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="images/work-sample-1.webp" alt="B2B SaaS Messaging Sprint" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
+            <img loading="lazy" src="images/work-sample-1.webp" alt="B2B SaaS Messaging Sprint" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
           </div>
           <div class="p-8 flex flex-col flex-grow">
             <span class="text-teal-700 text-xs font-bold uppercase tracking-widest mb-3">Branding & Messaging</span>
@@ -75,7 +84,7 @@
         <!-- Case 2: PR -->
         <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="pr">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="images/work-sample-2.webp" alt="Reputation Response Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
+            <img loading="lazy" src="images/work-sample-2.webp" alt="Reputation Response Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
           </div>
           <div class="p-8 flex flex-col flex-grow">
             <span class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">PR & Reputation</span>
@@ -100,7 +109,7 @@
         <!-- Case 3: Growth -->
         <article class="work-card bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition duration-300 group flex flex-col" data-category="growth">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="images/work-sample-3.webp" alt="Creative Testing System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
+            <img loading="lazy" src="images/work-sample-3.webp" alt="Creative Testing System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" width="600" height="450">
           </div>
           <div class="p-8 flex flex-col flex-grow">
             <span class="text-indigo-600 text-xs font-bold uppercase tracking-widest mb-3">Performance & Growth</span>
