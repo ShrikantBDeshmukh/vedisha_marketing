@@ -63,4 +63,42 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     injectProgressBar();
 
+    // 4. Back to Top Button
+    const injectBackToTop = () => {
+        if (document.getElementById('backToTop')) return;
+
+        const btn = document.createElement('button');
+        btn.id = 'backToTop';
+        btn.setAttribute('aria-label', 'Back to top');
+        // Tailwind classes for styling & animation
+        btn.className = 'fixed bottom-8 right-8 z-[100] p-3 bg-teal-600 text-white rounded-full shadow-lg opacity-0 translate-y-10 invisible transition-all duration-300 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2';
+        btn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+
+        document.body.appendChild(btn);
+
+        // Click to scroll top
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Visibility on scroll
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 500) {
+                        btn.classList.remove('opacity-0', 'translate-y-10', 'invisible');
+                        btn.classList.add('opacity-100', 'translate-y-0', 'visible');
+                    } else {
+                        btn.classList.add('opacity-0', 'translate-y-10', 'invisible');
+                        btn.classList.remove('opacity-100', 'translate-y-0', 'visible');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    };
+    injectBackToTop();
+
 });
