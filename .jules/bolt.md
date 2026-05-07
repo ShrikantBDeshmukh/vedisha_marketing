@@ -5,3 +5,7 @@
 ## 2025-05-16 - [CSS Waterfall Elimination via Script Injection]
 **Learning:** Using `@import` inside page-specific CSS files to load a `global.css` creates a sequential waterfall (HTML -> Page CSS -> Global CSS) that significantly delays the Critical Rendering Path. In a static site without a complex bundler, automating the injection of global styles directly into HTML `<head>` using maintenance scripts is the most efficient way to achieve parallel loading without manual overhead.
 **Action:** Remove `@import` from CSS and use `sync-components.js` or equivalent build scripts to manage global asset injection with relative path awareness.
+
+## 2025-05-20 - [Compositor-Only Animations for Progress Bars]
+**Learning:** Animating `width` on a high-frequency scroll event (like a reading progress bar) triggers the full Layout/Paint/Composite pipeline, causing unnecessary CPU load and potential frame drops. Using `transform: scaleX()` with `transform-origin: left` keeps the animation in the Composite stage only.
+**Action:** Always prefer `transform` or `opacity` for high-frequency animations over layout-inducing properties like `width`, `height`, or `top/left`.
