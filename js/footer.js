@@ -26,7 +26,7 @@
                     <p itemprop="streetAddress">1st Floor, Malkhare Classic, Shop No. 6, Garkheda Area</p>
                     <p><span itemprop="addressLocality">Chhatrapati Sambhajinagar</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">431009</span></p>
                 </div>
-                <a href="tel:+919404124875" itemprop="telephone" class="text-teal-400 font-bold text-lg hover:text-teal-300 transition">+91-9404124875</a>
+                <a href="tel:+919049317078" itemprop="telephone" class="text-teal-400 font-bold text-lg hover:text-teal-300 transition">+91-9049317078</a>
                 <div class="flex gap-4 mt-8">
                     <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-teal-500 hover:text-white transition" aria-label="LinkedIn">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>

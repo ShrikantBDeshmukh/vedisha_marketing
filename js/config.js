@@ -3,7 +3,7 @@
  * centralize your dynamic IDs here for site-wide updates.
  */
 window.VEDISHA_CONFIG = {
-    WHATSAPP_NUMBER: "919404124875",
+    WHATSAPP_NUMBER: "919049317078",
     GOOGLE_TAG_ID: "G-XXXXXXXXXX",
     BUSINESS_EMAIL: "vedishamarketing@gmail.com",
     SOCIAL_LINKS: {

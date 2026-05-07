@@ -185,7 +185,7 @@ const footerJs = `
                     <p itemprop="streetAddress">1st Floor, Malkhare Classic, Shop No. 6, Garkheda Area</p>
                     <p><span itemprop="addressLocality">Chhatrapati Sambhajinagar</span>, <span itemprop="addressRegion">Maharashtra</span> <span itemprop="postalCode">431009</span></p>
                 </div>
-                <a href="tel:+919404124875" itemprop="telephone" class="text-teal-400 font-bold text-lg hover:text-teal-300 transition">+91-9404124875</a>
+                <a href="tel:+919049317078" itemprop="telephone" class="text-teal-400 font-bold text-lg hover:text-teal-300 transition">+91-9049317078</a>
                 <div class="flex gap-4 mt-8">
                     <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-teal-500 hover:text-white transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-teal-500 hover:text-white transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
@@ -245,7 +245,7 @@ for (const filename of filesToProcess) {
           "url": "https://vedishamarketing.in",
           "logo": "https://vedishamarketing.in/images/office-studio.webp",
           "description": "${metaDesc}",
-          "telephone": "+91-9404124875",
+          "telephone": "+91-9049317078",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "1st Floor, Malkhare Classic, Shop No. 6, Near Jawahar Nagar Road, Garkheda Area",

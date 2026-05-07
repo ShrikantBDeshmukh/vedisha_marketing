@@ -87,8 +87,8 @@
           <div>
             <h3 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-sm">Get in Touch</h3>
             <ul class="space-y-3 text-slate-600 font-medium list-none p-0 m-0">
-              <li><a href="tel:+919404124875" class="hover:text-teal-600 transition">+91 94041 24875</a></li>
-              <li><a href="https://wa.me/919404124875" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
+              <li><a href="tel:+919049317078" class="hover:text-teal-600 transition">+91 90493 17078</a></li>
+              <li><a href="https://wa.me/919049317078" class="hover:text-emerald-600 transition">WhatsApp Support</a></li>
               <li><a href="mailto:vedishamarketing@gmail.com" class="hover:text-teal-600 transition">vedishamarketing@gmail.com</a></li>
             </ul>
           </div>
@@ -108,21 +108,21 @@
     // Header
     let header = document.getElementById('site-header');
     if (!header) {
-        header = document.createElement('header');
-        header.id = 'site-header';
-        // Add absolute positioning for the header component container natively
-        header.className = 'fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200';
-        document.body.insertAdjacentElement('afterbegin', header);
+      header = document.createElement('header');
+      header.id = 'site-header';
+      // Add absolute positioning for the header component container natively
+      header.className = 'fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200';
+      document.body.insertAdjacentElement('afterbegin', header);
     }
     header.innerHTML = headerHtml;
 
     // Footer
     let footer = document.getElementById('site-footer');
     if (!footer) {
-        footer = document.createElement('footer');
-        footer.id = 'site-footer';
-        footer.className = 'w-full block';
-        document.body.insertAdjacentElement('beforeend', footer);
+      footer = document.createElement('footer');
+      footer.id = 'site-footer';
+      footer.className = 'w-full block';
+      document.body.insertAdjacentElement('beforeend', footer);
     }
     footer.innerHTML = footerHtml;
 
@@ -132,7 +132,7 @@
   const setupNavToggle = () => {
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobile-nav');
-    
+
     if (navToggle && mobileNav) {
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
