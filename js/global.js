@@ -63,4 +63,36 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     injectProgressBar();
 
+    // 4. "Back to Top" Button with optimized scroll listener
+    const injectBackToTop = () => {
+        const btn = document.createElement('button');
+        btn.id = 'backToTop';
+        btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path></svg>';
+        btn.className = 'fixed bottom-8 right-8 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 opacity-0 invisible translate-y-10 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2';
+        btn.setAttribute('aria-label', 'Back to top');
+        document.body.appendChild(btn);
+
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 500) {
+                        btn.classList.remove('opacity-0', 'invisible', 'translate-y-10');
+                        btn.classList.add('opacity-100', 'visible', 'translate-y-0');
+                    } else {
+                        btn.classList.add('opacity-0', 'invisible', 'translate-y-10');
+                        btn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    };
+    injectBackToTop();
+
 });
