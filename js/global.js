@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: keep observing if you want it to re-animate
-                // observer.unobserve(entry.target);
+                // Performance Optimization: Stop observing once visible
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -50,15 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const progressContainer = document.createElement('div');
         progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent;';
         const progressBar = document.createElement('div');
-        progressBar.style = 'width:0%; height:100%; background:var(--c-accent); transition: width 0.1s;';
+        // Performance Optimization: Use transform instead of width to avoid reflows
+        progressBar.style = 'width:100%; height:100%; background:var(--c-accent); transition: transform 0.1s; transform: scaleX(0); transform-origin: left;';
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+        const updateProgress = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = progress + '%';
+            const progress = (scrollTop / scrollHeight);
+            progressBar.style.transform = `scaleX(${progress})`;
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();
