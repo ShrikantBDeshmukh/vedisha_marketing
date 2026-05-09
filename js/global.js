@@ -63,4 +63,50 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     injectProgressBar();
 
+    // 4. Back to Top Button
+    const injectBackToTop = () => {
+        const backToTop = document.createElement('button');
+        backToTop.id = 'backToTop';
+        backToTop.setAttribute('aria-label', 'Back to top');
+
+        // Base classes for positioning and transition
+        backToTop.className = 'fixed bottom-8 right-8 z-[2000] p-4 rounded-2xl text-white shadow-xl transition-all duration-300 opacity-0 translate-y-10 pointer-events-none hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2';
+
+        // Apply brand accent color with fallback
+        backToTop.style.backgroundColor = 'var(--c-accent, #0d9488)';
+
+        backToTop.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        `;
+        document.body.appendChild(backToTop);
+
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 500) {
+                        backToTop.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTop.classList.add('opacity-100', 'translate-y-0');
+                    } else {
+                        backToTop.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTop.classList.remove('opacity-100', 'translate-y-0');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    };
+    injectBackToTop();
+
 });
