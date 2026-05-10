@@ -13,15 +13,15 @@
         <span class="bg-gradient-to-br from-teal-400 to-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-xl shadow-md" aria-hidden="true">V</span>
         <span>Vedisha</span>
       </a>
-      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle">
+      <button class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" type="button" aria-expanded="false" aria-controls="mobile-nav" id="nav-toggle" aria-label="Toggle navigation menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
         
 <a href="index.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Home</a>
 <div class="relative group">
-    <button class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-    <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid-cols-3 gap-6">
+    <button class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1" id="expertise-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="expertise-menu">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+    <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid grid-cols-3 gap-6 transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto" id="expertise-menu">
 <div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Services</h4><ul class="space-y-2"><li><a href="services.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Services</a></li><li><a href="meta-google-ads-management.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Meta Google Ads Management</a></li><li><a href="static-website-seo-launch.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Static Website Seo Launch</a></li><li><a href="ai-visibility-boost.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Visibility Boost</a></li><li><a href="ai-content-structuring.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Content Structuring</a></li><li><a href="marketing-strategy-roadmap.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Marketing Strategy Roadmap</a></li><li><a href="brand-identity-kit.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Brand Identity Kit</a></li><li><a href="social-media-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Social Media Marketing</a></li><li><a href="blog-post-bundles.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Blog Post Bundles</a></li><li><a href="keyword-research-spreadsheet.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Keyword Research Spreadsheet</a></li><li><a href="seo-audit-reports.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Audit Reports</a></li><li><a href="local-lead-combo.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Local Lead Combo</a></li><li><a href="gmb.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Gmb</a></li><li><a href="real-estate-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Real Estate Marketing</a></li><li><a href="healthcare-marketing-csn.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Healthcare Marketing Csn</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Waluj MIDC</h4><ul class="space-y-2"><li><a href="industrial-seo-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Industrial Seo Waluj Midc</a></li><li><a href="digital-marketing-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Waluj Midc</a></li><li><a href="web-development-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Waluj Midc</a></li><li><a href="seo-services-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Waluj Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Shendra MIDC</h4><ul class="space-y-2"><li><a href="b2b-lead-gen-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">B2b Lead Gen Shendra Midc</a></li><li><a href="digital-marketing-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Shendra Midc</a></li><li><a href="web-development-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Shendra Midc</a></li><li><a href="seo-services-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Shendra Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">CIDCO</h4><ul class="space-y-2"><li><a href="digital-marketing-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Cidco</a></li><li><a href="web-development-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Cidco</a></li><li><a href="seo-services-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Cidco</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Chikalthana</h4><ul class="space-y-2"><li><a href="digital-marketing-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Chikalthana</a></li><li><a href="web-development-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Chikalthana</a></li><li><a href="seo-services-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Chikalthana</a></li></ul></div></div></div><a href="contact.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Contact</a>
         <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-teal-500 rounded-full hover:from-blue-700 hover:to-teal-600 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="contact.html">Get Free Audit</a>
       </nav>
@@ -44,6 +44,36 @@
           nav.classList.toggle('hidden');
           nav.classList.toggle('flex');
           toggle.setAttribute('aria-expanded', nav.classList.contains('flex'));
+      });
+  }
+
+  // Mega Menu logic
+  const expertiseToggle = newHeader.querySelector('#expertise-toggle');
+  const expertiseMenu = newHeader.querySelector('#expertise-menu');
+
+  if (expertiseToggle && expertiseMenu) {
+      const toggleMenu = (show) => {
+          expertiseMenu.classList.toggle('is-open', show);
+          expertiseToggle.setAttribute('aria-expanded', show);
+      };
+
+      expertiseToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = expertiseMenu.classList.contains('is-open');
+          toggleMenu(!isOpen);
+      });
+
+      document.addEventListener('click', (e) => {
+          if (!expertiseMenu.contains(e.target) && e.target !== expertiseToggle) {
+              toggleMenu(false);
+          }
+      });
+
+      document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && expertiseMenu.classList.contains('is-open')) {
+              toggleMenu(false);
+              expertiseToggle.focus();
+          }
       });
   }
 })();
