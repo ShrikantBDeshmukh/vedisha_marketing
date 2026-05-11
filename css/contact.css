@@ -112,6 +112,26 @@
   color: #10b981;
 }
 
+.copy-btn.copied .copy-icon {
+  display: none;
+}
+
+.copy-btn.copied .check-icon {
+  display: block;
+  animation: scaleIn 0.2s var(--ease-out);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .preferred-method {
   margin-top: 40px;
   padding: 32px;
