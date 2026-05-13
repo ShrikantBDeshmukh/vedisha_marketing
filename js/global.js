@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: keep observing if you want it to re-animate
-                // observer.unobserve(entry.target);
+                // Optimization: Unobserve once visible to reduce main-thread workload.
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -48,17 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Fluid Progress Bar (Reading Progress)
     const injectProgressBar = () => {
         const progressContainer = document.createElement('div');
-        progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent;';
+        progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent; pointer-events:none;';
+
         const progressBar = document.createElement('div');
-        progressBar.style = 'width:0%; height:100%; background:var(--c-accent); transition: width 0.1s;';
+        // Optimization: Use transform instead of width to avoid layout reflows.
+        // Also added transform-origin and will-change for GPU acceleration.
+        progressBar.style = 'width:100%; height:100%; background:var(--c-accent); transform: scaleX(0); transform-origin: left; will-change: transform; transition: transform 0.1s;';
+
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
+        let ticking = false;
+
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = progress + '%';
+            if (!ticking) {
+                // Optimization: Throttle scroll event with requestAnimationFrame.
+                window.requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) : 0;
+
+                    progressBar.style.transform = `scaleX(${progress})`;
+                    ticking = false;
+                });
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();

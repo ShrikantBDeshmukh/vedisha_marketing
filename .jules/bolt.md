@@ -5,3 +5,7 @@
 ## 2025-05-16 - [CSS Waterfall Elimination via Script Injection]
 **Learning:** Using `@import` inside page-specific CSS files to load a `global.css` creates a sequential waterfall (HTML -> Page CSS -> Global CSS) that significantly delays the Critical Rendering Path. In a static site without a complex bundler, automating the injection of global styles directly into HTML `<head>` using maintenance scripts is the most efficient way to achieve parallel loading without manual overhead.
 **Action:** Remove `@import` from CSS and use `sync-components.js` or equivalent build scripts to manage global asset injection with relative path awareness.
+
+## 2026-05-13 - [Compositor-Only Animations & Event Throttling]
+**Learning:** Switching from layout-triggering properties like `width` to compositor-only properties like `transform: scaleX()` for progress bars prevents expensive layout reflows on every scroll event. Additionally, throttling high-frequency scroll listeners with `requestAnimationFrame` ensures that DOM updates are synchronized with the browser's refresh rate, significantly reducing CPU overhead and jank. Unobserving elements in an `IntersectionObserver` once they are visible further optimizes long-term page performance by reducing background monitoring.
+**Action:** Always prefer `transform` and `opacity` for animations. Throttle scroll/resize handlers with `requestAnimationFrame`. Use `unobserve` for one-time entry animations.
