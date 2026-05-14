@@ -408,5 +408,25 @@
 
 
   <script src="./js/global.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      const serviceCards = document.querySelectorAll('article[role="button"]');
+      serviceCards.forEach(card => {
+        function toggleCard() {
+          const isExpanded = card.getAttribute('aria-expanded') === 'true';
+          card.setAttribute('aria-expanded', !isExpanded);
+          card.classList.toggle('is-expanded');
+        }
+        card.addEventListener('click', toggleCard);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCard();
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
