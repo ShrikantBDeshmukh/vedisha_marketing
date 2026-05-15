@@ -32,6 +32,14 @@
     margin-top: 0.5rem;
 }
 /* Mega Menu overrides */
-.group:hover .mega-menu {
-    display: flex !important;
+.group:hover .mega-menu,
+.mega-menu.is-active {
+    display: grid !important;
+}
+
+/* Global focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
 }

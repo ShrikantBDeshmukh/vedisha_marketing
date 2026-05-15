@@ -20,7 +20,7 @@
         
 <a href="index.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Home</a>
 <div class="relative group">
-    <button class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+    <button id="expertise-btn" aria-haspopup="true" aria-expanded="false" class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
     <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid-cols-3 gap-6">
 <div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Services</h4><ul class="space-y-2"><li><a href="services.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Services</a></li><li><a href="meta-google-ads-management.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Meta Google Ads Management</a></li><li><a href="static-website-seo-launch.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Static Website Seo Launch</a></li><li><a href="ai-visibility-boost.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Visibility Boost</a></li><li><a href="ai-content-structuring.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Content Structuring</a></li><li><a href="marketing-strategy-roadmap.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Marketing Strategy Roadmap</a></li><li><a href="brand-identity-kit.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Brand Identity Kit</a></li><li><a href="social-media-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Social Media Marketing</a></li><li><a href="blog-post-bundles.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Blog Post Bundles</a></li><li><a href="keyword-research-spreadsheet.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Keyword Research Spreadsheet</a></li><li><a href="seo-audit-reports.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Audit Reports</a></li><li><a href="local-lead-combo.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Local Lead Combo</a></li><li><a href="gmb.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Gmb</a></li><li><a href="real-estate-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Real Estate Marketing</a></li><li><a href="healthcare-marketing-csn.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Healthcare Marketing Csn</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Waluj MIDC</h4><ul class="space-y-2"><li><a href="industrial-seo-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Industrial Seo Waluj Midc</a></li><li><a href="digital-marketing-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Waluj Midc</a></li><li><a href="web-development-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Waluj Midc</a></li><li><a href="seo-services-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Waluj Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Shendra MIDC</h4><ul class="space-y-2"><li><a href="b2b-lead-gen-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">B2b Lead Gen Shendra Midc</a></li><li><a href="digital-marketing-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Shendra Midc</a></li><li><a href="web-development-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Shendra Midc</a></li><li><a href="seo-services-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Shendra Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">CIDCO</h4><ul class="space-y-2"><li><a href="digital-marketing-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Cidco</a></li><li><a href="web-development-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Cidco</a></li><li><a href="seo-services-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Cidco</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Chikalthana</h4><ul class="space-y-2"><li><a href="digital-marketing-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Chikalthana</a></li><li><a href="web-development-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Chikalthana</a></li><li><a href="seo-services-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Chikalthana</a></li></ul></div></div></div><a href="contact.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Contact</a>
         <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-teal-500 rounded-full hover:from-blue-700 hover:to-teal-600 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="contact.html">Get Free Audit</a>
@@ -46,4 +46,71 @@
           toggle.setAttribute('aria-expanded', nav.classList.contains('flex'));
       });
   }
+
+  // Mega-menu JS logic
+  const expertiseBtn = newHeader.querySelector('#expertise-btn');
+  const megaMenu = newHeader.querySelector('.mega-menu');
+  const expertiseGroup = newHeader.querySelector('.relative.group');
+
+  if (expertiseBtn && megaMenu && expertiseGroup) {
+    let closeTimeout;
+
+    const openMenu = () => {
+      clearTimeout(closeTimeout);
+      megaMenu.classList.add('is-active');
+      expertiseBtn.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+      megaMenu.classList.remove('is-active');
+      expertiseBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    expertiseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isActive = megaMenu.classList.contains('is-active');
+      isActive ? closeMenu() : openMenu();
+    });
+
+    // Restore hover-like behavior with delay for better UX
+    expertiseGroup.addEventListener('mouseenter', openMenu);
+    expertiseGroup.addEventListener('mouseleave', () => {
+      closeTimeout = setTimeout(closeMenu, 150);
+    });
+
+    // Support keyboard focus
+    expertiseGroup.addEventListener('focusin', openMenu);
+    expertiseGroup.addEventListener('focusout', (e) => {
+      if (!expertiseGroup.contains(e.relatedTarget)) {
+        closeMenu();
+      }
+    });
+
+    // Close on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!expertiseGroup.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  }
+
+  // Active link highlighting
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const allNavLinks = newHeader.querySelectorAll('nav a, #mobile-nav a');
+  allNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath) {
+      link.classList.add('text-blue-600');
+      link.classList.remove('text-slate-600');
+      if (link.closest('#mobile-nav')) {
+        link.classList.add('bg-blue-50');
+      }
+    }
+  });
 })();
