@@ -35,3 +35,16 @@
 .group:hover .mega-menu {
     display: flex !important;
 }
+
+/* Service Card Expansion Styles */
+.service-card.is-expanded .hidden {
+    display: block !important;
+}
+
+.service-card .expand-icon {
+    transition: transform 0.4s ease-out;
+}
+
+.service-card.is-expanded .expand-icon {
+    transform: rotate(180deg);
+}

@@ -4,22 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
 
     const toggleCard = (card) => {
-        const isExpanded = card.classList.contains('expanded');
+        const isExpanded = card.classList.contains('is-expanded');
 
         // Close all other cards (accordion style)
         serviceCards.forEach(c => {
             if (c !== card) {
-                c.classList.remove('expanded');
+                c.classList.remove('is-expanded');
                 c.setAttribute('aria-expanded', 'false');
             }
         });
 
         // Toggle the clicked card
         if (isExpanded) {
-            card.classList.remove('expanded');
+            card.classList.remove('is-expanded');
             card.setAttribute('aria-expanded', 'false');
         } else {
-            card.classList.add('expanded');
+            card.classList.add('is-expanded');
             card.setAttribute('aria-expanded', 'true');
         }
     };
