@@ -17,12 +17,11 @@
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <nav class="hidden md:flex items-center gap-8" aria-label="Primary navigation">
-        
-<a href="index.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Home</a>
-<div class="relative group">
-    <button class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-    <div class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid-cols-3 gap-6">
-<div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Services</h4><ul class="space-y-2"><li><a href="services.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Services</a></li><li><a href="meta-google-ads-management.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Meta Google Ads Management</a></li><li><a href="static-website-seo-launch.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Static Website Seo Launch</a></li><li><a href="ai-visibility-boost.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Visibility Boost</a></li><li><a href="ai-content-structuring.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Content Structuring</a></li><li><a href="marketing-strategy-roadmap.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Marketing Strategy Roadmap</a></li><li><a href="brand-identity-kit.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Brand Identity Kit</a></li><li><a href="social-media-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Social Media Marketing</a></li><li><a href="blog-post-bundles.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Blog Post Bundles</a></li><li><a href="keyword-research-spreadsheet.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Keyword Research Spreadsheet</a></li><li><a href="seo-audit-reports.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Audit Reports</a></li><li><a href="local-lead-combo.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Local Lead Combo</a></li><li><a href="gmb.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Gmb</a></li><li><a href="real-estate-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Real Estate Marketing</a></li><li><a href="healthcare-marketing-csn.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Healthcare Marketing Csn</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Waluj MIDC</h4><ul class="space-y-2"><li><a href="industrial-seo-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Industrial Seo Waluj Midc</a></li><li><a href="digital-marketing-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Waluj Midc</a></li><li><a href="web-development-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Waluj Midc</a></li><li><a href="seo-services-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Waluj Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Shendra MIDC</h4><ul class="space-y-2"><li><a href="b2b-lead-gen-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">B2b Lead Gen Shendra Midc</a></li><li><a href="digital-marketing-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Shendra Midc</a></li><li><a href="web-development-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Shendra Midc</a></li><li><a href="seo-services-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Shendra Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">CIDCO</h4><ul class="space-y-2"><li><a href="digital-marketing-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Cidco</a></li><li><a href="web-development-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Cidco</a></li><li><a href="seo-services-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Cidco</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Chikalthana</h4><ul class="space-y-2"><li><a href="digital-marketing-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Chikalthana</a></li><li><a href="web-development-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Chikalthana</a></li><li><a href="seo-services-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Chikalthana</a></li></ul></div></div></div><a href="contact.html" class="text-slate-600 font-semibold hover:text-blue-600 transition">Contact</a>
+        <a href="index.html" data-nav-link class="text-slate-600 font-semibold hover:text-blue-600 transition">Home</a>
+        <div class="relative group" data-hover-group>
+            <button data-mega-trigger aria-haspopup="true" aria-expanded="false" class="text-slate-600 font-semibold hover:text-blue-600 transition inline-flex items-center gap-1">Expertise <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            <div data-mega-panel class="mega-menu hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white shadow-2xl border border-slate-100 rounded-2xl p-6 w-[800px] grid grid-cols-3 gap-6 opacity-0 invisible scale-95 transition-all duration-200 origin-top">
+                <div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Services</h4><ul class="space-y-2"><li><a href="services.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Services</a></li><li><a href="meta-google-ads-management.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Meta Google Ads Management</a></li><li><a href="static-website-seo-launch.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Static Website Seo Launch</a></li><li><a href="ai-visibility-boost.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Visibility Boost</a></li><li><a href="ai-content-structuring.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Ai Content Structuring</a></li><li><a href="marketing-strategy-roadmap.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Marketing Strategy Roadmap</a></li><li><a href="brand-identity-kit.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Brand Identity Kit</a></li><li><a href="social-media-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Social Media Marketing</a></li><li><a href="blog-post-bundles.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Blog Post Bundles</a></li><li><a href="keyword-research-spreadsheet.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Keyword Research Spreadsheet</a></li><li><a href="seo-audit-reports.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Audit Reports</a></li><li><a href="local-lead-combo.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Local Lead Combo</a></li><li><a href="gmb.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Gmb</a></li><li><a href="real-estate-marketing.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Real Estate Marketing</a></li><li><a href="healthcare-marketing-csn.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Healthcare Marketing Csn</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Waluj MIDC</h4><ul class="space-y-2"><li><a href="industrial-seo-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Industrial Seo Waluj Midc</a></li><li><a href="digital-marketing-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Waluj Midc</a></li><li><a href="web-development-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Waluj Midc</a></li><li><a href="seo-services-in-waluj-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Waluj Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Shendra MIDC</h4><ul class="space-y-2"><li><a href="b2b-lead-gen-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">B2b Lead Gen Shendra Midc</a></li><li><a href="digital-marketing-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Shendra Midc</a></li><li><a href="web-development-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Shendra Midc</a></li><li><a href="seo-services-in-shendra-midc.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Shendra Midc</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">CIDCO</h4><ul class="space-y-2"><li><a href="digital-marketing-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Cidco</a></li><li><a href="web-development-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Cidco</a></li><li><a href="seo-services-in-cidco.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Cidco</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-3 border-b border-slate-100 pb-2">Chikalthana</h4><ul class="space-y-2"><li><a href="digital-marketing-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Digital Marketing In Chikalthana</a></li><li><a href="web-development-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Web Development In Chikalthana</a></li><li><a href="seo-services-in-chikalthana.html" class="text-sm text-slate-600 hover:text-blue-600 transition block py-1">Seo Services In Chikalthana</a></li></ul></div></div></div><a href="contact.html" data-nav-link class="text-slate-600 font-semibold hover:text-blue-600 transition">Contact</a>
         <a class="ml-4 inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-teal-500 rounded-full hover:from-blue-700 hover:to-teal-600 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5" href="contact.html">Get Free Audit</a>
       </nav>
     </div>
@@ -38,12 +37,89 @@
   document.body.insertAdjacentElement('afterbegin', newHeader);
   
   const toggle = newHeader.querySelector('#nav-toggle');
-  const nav = newHeader.querySelector('#mobile-nav');
-  if (toggle && nav) {
+  const mobileNav = newHeader.querySelector('#mobile-nav');
+  if (toggle && mobileNav) {
       toggle.addEventListener('click', () => {
-          nav.classList.toggle('hidden');
-          nav.classList.toggle('flex');
-          toggle.setAttribute('aria-expanded', nav.classList.contains('flex'));
+          mobileNav.classList.toggle('hidden');
+          mobileNav.classList.toggle('flex');
+          toggle.setAttribute('aria-expanded', mobileNav.classList.contains('flex'));
       });
   }
+
+  // Mega Menu Hover & Keyboard Logic
+  const megaGroup = newHeader.querySelector('[data-hover-group]');
+  const megaPanel = newHeader.querySelector('[data-mega-panel]');
+  const megaTrigger = newHeader.querySelector('[data-mega-trigger]');
+  const arrowIcon = megaTrigger.querySelector('svg');
+  let hideTimeout;
+
+  function showMenu() {
+    clearTimeout(hideTimeout);
+    megaPanel.classList.remove('hidden', 'opacity-0', 'invisible', 'scale-95');
+    megaPanel.classList.add('grid', 'opacity-100', 'visible', 'scale-100');
+    megaTrigger.setAttribute('aria-expanded', 'true');
+    arrowIcon.classList.add('rotate-180');
+  }
+
+  function hideMenu() {
+    hideTimeout = setTimeout(() => {
+      megaPanel.classList.add('opacity-0', 'invisible', 'scale-95');
+      megaPanel.classList.remove('opacity-100', 'visible', 'scale-100');
+      setTimeout(() => {
+          if (megaPanel.classList.contains('invisible')) {
+              megaPanel.classList.add('hidden');
+              megaPanel.classList.remove('grid');
+          }
+      }, 200);
+      megaTrigger.setAttribute('aria-expanded', 'false');
+      arrowIcon.classList.remove('rotate-180');
+    }, 150);
+  }
+
+  megaGroup.addEventListener('mouseenter', showMenu);
+  megaGroup.addEventListener('mouseleave', hideMenu);
+
+  megaTrigger.addEventListener('focusin', showMenu);
+  megaPanel.addEventListener('focusin', showMenu);
+
+  megaTrigger.addEventListener('focusout', (e) => {
+    setTimeout(() => {
+      if (!megaGroup.contains(document.activeElement)) hideMenu();
+    }, 50);
+  });
+  megaPanel.addEventListener('focusout', (e) => {
+    setTimeout(() => {
+      if (!megaGroup.contains(document.activeElement)) hideMenu();
+    }, 50);
+  });
+
+  megaTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (megaTrigger.getAttribute('aria-expanded') === 'true') {
+          hideMenu();
+      } else {
+          showMenu();
+      }
+  });
+
+  // Active Link Highlighting
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = newHeader.querySelectorAll('[data-nav-link]');
+  const megaLinks = megaPanel.querySelectorAll('a');
+
+  navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+          link.classList.add('text-blue-600');
+          link.classList.remove('text-slate-600');
+      }
+  });
+
+  megaLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+          link.classList.add('text-blue-600', 'font-bold');
+          megaTrigger.classList.add('text-blue-600');
+          megaTrigger.classList.remove('text-slate-600');
+      }
+  });
+
 })();
