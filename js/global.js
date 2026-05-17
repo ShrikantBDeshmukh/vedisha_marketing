@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: keep observing if you want it to re-animate
-                // observer.unobserve(entry.target);
+                // Performance: Stop observing once visible to reduce main-thread overhead
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -48,17 +48,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Fluid Progress Bar (Reading Progress)
     const injectProgressBar = () => {
         const progressContainer = document.createElement('div');
-        progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent;';
+        // Performance: Ensure container doesn't intercept pointer events
+        progressContainer.style = 'position:fixed; top:0; left:0; width:100%; height:3px; z-index:2000; background:transparent; pointer-events:none;';
+
         const progressBar = document.createElement('div');
-        progressBar.style = 'width:0%; height:100%; background:var(--c-accent); transition: width 0.1s;';
+        // Performance: Use transform: scaleX() instead of width to avoid layout reflows.
+        // Moving updates to the compositor thread significantly improves scroll smoothness.
+        progressBar.style = 'width:100%; height:100%; background:var(--c-accent); transform: scaleX(0); transform-origin: left; will-change: transform; transition: transform 0.1s linear;';
+
         progressContainer.appendChild(progressBar);
         document.body.appendChild(progressContainer);
 
-        window.addEventListener('scroll', () => {
+        let ticking = false;
+
+        const updateProgress = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            progressBar.style.width = progress + '%';
+
+            if (scrollHeight > 0) {
+                // Performance: Clamp progress between 0 and 1
+                const progress = Math.min(Math.max(scrollTop / scrollHeight, 0), 1);
+                progressBar.style.transform = `scaleX(${progress})`;
+            }
+
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                // Performance: Throttle high-frequency scroll events using requestAnimationFrame
+                window.requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
         }, { passive: true });
     };
     injectProgressBar();
