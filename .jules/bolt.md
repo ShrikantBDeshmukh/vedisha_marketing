@@ -5,3 +5,7 @@
 ## 2025-05-16 - [CSS Waterfall Elimination via Script Injection]
 **Learning:** Using `@import` inside page-specific CSS files to load a `global.css` creates a sequential waterfall (HTML -> Page CSS -> Global CSS) that significantly delays the Critical Rendering Path. In a static site without a complex bundler, automating the injection of global styles directly into HTML `<head>` using maintenance scripts is the most efficient way to achieve parallel loading without manual overhead.
 **Action:** Remove `@import` from CSS and use `sync-components.js` or equivalent build scripts to manage global asset injection with relative path awareness.
+
+## 2025-05-19 - [Compositor-Friendly Scroll Progress & DOM Caching]
+**Learning:** Updating `width` on a high-frequency scroll event forces the browser to recalculate the entire layout (reflow), which is extremely expensive. Switching to `transform: scaleX()` moves the work to the compositor thread. Furthermore, reading `scrollHeight` inside the scroll loop causes layout thrashing; using a `ResizeObserver` to cache these values ensures the scroll handler only performs a single write, eliminating nearly all main-thread overhead for scroll-driven UI.
+**Action:** Always use `transform` for scale/position updates and cache layout properties outside of high-frequency event loops using `ResizeObserver`.
