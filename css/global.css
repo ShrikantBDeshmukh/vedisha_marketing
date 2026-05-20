@@ -35,3 +35,27 @@
 .group:hover .mega-menu {
     display: flex !important;
 }
+
+/* Service Card Accordion Styles */
+.service-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card.is-expanded .service-details {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0; /* slate-200 */
+}
+
+.expand-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card.is-expanded .expand-icon {
+    transform: rotate(180deg);
+}
