@@ -35,3 +35,13 @@
 .group:hover .mega-menu {
     display: flex !important;
 }
+
+/* Service Card Expandable Logic */
+.service-card.is-expanded .hidden {
+    display: block !important;
+}
+
+.service-card.is-expanded .expand-icon {
+    transform: rotate(180deg);
+    color: #2563eb; /* blue-600 */
+}
